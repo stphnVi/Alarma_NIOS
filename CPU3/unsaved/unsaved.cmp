@@ -1,0 +1,6 @@
+	component unsaved is
+		port (
+			onchip_memory2_0_clk1_clk : in std_logic := 'X'  -- clk
+		);
+	end component unsaved;
+

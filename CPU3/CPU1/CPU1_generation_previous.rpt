@@ -1,0 +1,54 @@
+Info: Starting: Create simulation model
+Info: qsys-generate /home/duesan/Downloads/CPU3/CPU1.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=/home/duesan/Downloads/CPU3/CPU1/simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading CPU3/CPU1.qsys
+Progress: Reading input file
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: CPU1: Generating CPU1 "CPU1" for SIM_VERILOG
+Info: CPU1: Done "CPU1" with 1 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=/home/duesan/Downloads/CPU3/CPU1/CPU1.spd --output-directory=/home/duesan/Downloads/CPU3/CPU1/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=/home/duesan/Downloads/CPU3/CPU1/CPU1.spd --output-directory=/home/duesan/Downloads/CPU3/CPU1/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in /home/duesan/Downloads/CPU3/CPU1/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in /home/duesan/Downloads/CPU3/CPU1/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in /home/duesan/Downloads/CPU3/CPU1/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in /home/duesan/Downloads/CPU3/CPU1/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: Generating the following file(s) for RIVIERA simulator in /home/duesan/Downloads/CPU3/CPU1/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under /home/duesan/Downloads/CPU3/CPU1/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/duesan/Downloads/CPU3/CPU1.qsys --block-symbol-file --output-directory=/home/duesan/Downloads/CPU3/CPU1 --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading CPU3/CPU1.qsys
+Progress: Reading input file
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/duesan/Downloads/CPU3/CPU1.qsys --synthesis=VERILOG --output-directory=/home/duesan/Downloads/CPU3/CPU1/synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading CPU3/CPU1.qsys
+Progress: Reading input file
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: CPU1: Generating CPU1 "CPU1" for QUARTUS_SYNTH
+Info: CPU1: Done "CPU1" with 1 modules, 1 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
