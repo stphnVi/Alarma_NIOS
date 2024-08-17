@@ -29,7 +29,7 @@ Thumbs.db
 # Ignorar archivos de configuración específicos de NIOS
 *.elf
 *.map
-*.srec
+#*.srec
 *.hex
 
 # Ignorar archivos generados de compilación
