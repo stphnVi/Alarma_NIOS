@@ -27,10 +27,10 @@ Thumbs.db
 *.jic
 
 # Ignorar archivos de configuración específicos de NIOS
-*.elf
-*.map
+#*.elf
+#*.map
 #*.srec
-*.hex
+#*.hex
 
 # Ignorar archivos generados de compilación
 build/
