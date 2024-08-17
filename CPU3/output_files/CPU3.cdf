@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/TEC/Documents/CPU3/output_files/") File("CPU3.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("/home/steph/Documents/GitHub/Alarma_NIOS/CPU3/output_files/") File("CPU3.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -24,12 +24,25 @@
          value = "2";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
    }
    element jtag_uart_0.avalon_jtag_slave
    {
       datum baseAddress
       {
          value = "12328";
+         type = "String";
+      }
+   }
+   element jtag_uart_0.clk
+   {
+      datum _tags
+      {
+         value = "";
          type = "String";
       }
    }
@@ -433,9 +446,9 @@
   <parameter name="baseAddress" value="0x3010" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection kind="clock" version="18.1" start="clk_0.clk" end="jtag_uart_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="nios2_gen2_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="pio_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="jtag_uart_0.clk" />
  <connection
    kind="clock"
    version="18.1"
