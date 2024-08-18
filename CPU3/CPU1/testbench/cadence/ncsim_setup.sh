@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 linux 2024.08.16.18:03:27
+# ACDS 18.1 625 win32 2024.08.17.12:51:56
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,12 +106,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2024.08.16.18:03:27
+# ACDS 18.1 625 win32 2024.08.17.12:51:56
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="CPU1_tb"
 QSYS_SIMDIR="./../"
-QUARTUS_INSTALL_DIR="/home/steph/intelFPGA_lite/18.1/quartus/"
+QUARTUS_INSTALL_DIR="C:/intelfpga_lite/18.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_DEV_COM=0
 SKIP_COM=0
@@ -164,12 +164,19 @@ mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
-mkdir -p ./libraries/pio_0/
+mkdir -p ./libraries/pio_swich_alarm/
+mkdir -p ./libraries/pio_s1/
+mkdir -p ./libraries/pio_leds_0/
+mkdir -p ./libraries/pio_buzz_0/
+mkdir -p ./libraries/pio_button_hours/
 mkdir -p ./libraries/onchip_memory2_0/
 mkdir -p ./libraries/nios2_gen2_0/
 mkdir -p ./libraries/jtag_uart_0/
+mkdir -p ./libraries/CPU1_inst_s1_bfm/
 mkdir -p ./libraries/CPU1_inst_leds_bfm/
+mkdir -p ./libraries/CPU1_inst_hours_bfm/
 mkdir -p ./libraries/CPU1_inst_clk_bfm/
+mkdir -p ./libraries/CPU1_inst_buz_bfm/
 mkdir -p ./libraries/CPU1_inst/
 mkdir -p ./libraries/altera_ver/
 mkdir -p ./libraries/lpm_ver/
@@ -183,15 +190,15 @@ mkdir -p ./libraries/cyclonev_pcie_hip_ver/
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_onchip_memory2_0.hex ./
 fi
 
@@ -233,20 +240,27 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_merlin_slave_translator.sv"                           -work jtag_uart_0_avalon_jtag_slave_translator     -cdslib ./cds_libs/jtag_uart_0_avalon_jtag_slave_translator.cds.lib    
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_merlin_master_translator.sv"                          -work nios2_gen2_0_data_master_translator          -cdslib ./cds_libs/nios2_gen2_0_data_master_translator.cds.lib         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu.v"                                     -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_sysclk.v"                  -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_reset_controller.v"                                   -work rst_controller                               -cdslib ./cds_libs/rst_controller.cds.lib                              
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_reset_synchronizer.v"                                 -work rst_controller                               -cdslib ./cds_libs/rst_controller.cds.lib                              
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_irq_mapper.sv"                                          -work irq_mapper                                   -cdslib ./cds_libs/irq_mapper.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_mm_interconnect_0.v"                                    -work mm_interconnect_0                            -cdslib ./cds_libs/mm_interconnect_0.cds.lib                           
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_0.v"                                                -work pio_0                                        -cdslib ./cds_libs/pio_0.cds.lib                                       
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_swich_alarm.v"                                      -work pio_swich_alarm                              -cdslib ./cds_libs/pio_swich_alarm.cds.lib                             
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_s1.v"                                               -work pio_s1                                       -cdslib ./cds_libs/pio_s1.cds.lib                                      
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_leds_0.v"                                           -work pio_leds_0                                   -cdslib ./cds_libs/pio_leds_0.cds.lib                                  
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_buzz_0.v"                                           -work pio_buzz_0                                   -cdslib ./cds_libs/pio_buzz_0.cds.lib                                  
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_button_hours.v"                                     -work pio_button_hours                             -cdslib ./cds_libs/pio_button_hours.cds.lib                            
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_onchip_memory2_0.v"                                     -work onchip_memory2_0                             -cdslib ./cds_libs/onchip_memory2_0.cds.lib                            
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0.v"                                         -work nios2_gen2_0                                 -cdslib ./cds_libs/nios2_gen2_0.cds.lib                                
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_jtag_uart_0.v"                                          -work jtag_uart_0                                  -cdslib ./cds_libs/jtag_uart_0.cds.lib                                 
-  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm.sv"                                       -work CPU1_inst_leds_bfm                           -cdslib ./cds_libs/CPU1_inst_leds_bfm.cds.lib                          
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0004.sv"                                  -work CPU1_inst_s1_bfm                             -cdslib ./cds_libs/CPU1_inst_s1_bfm.cds.lib                            
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0003.sv"                                  -work CPU1_inst_leds_bfm                           -cdslib ./cds_libs/CPU1_inst_leds_bfm.cds.lib                          
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                  -work CPU1_inst_hours_bfm                          -cdslib ./cds_libs/CPU1_inst_hours_bfm.cds.lib                         
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_avalon_clock_source.sv"                               -work CPU1_inst_clk_bfm                            -cdslib ./cds_libs/CPU1_inst_clk_bfm.cds.lib                           
+  ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm.sv"                                       -work CPU1_inst_buz_bfm                            -cdslib ./cds_libs/CPU1_inst_buz_bfm.cds.lib                           
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1.v"                                                      -work CPU1_inst                                    -cdslib ./cds_libs/CPU1_inst.cds.lib                                   
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/CPU1_tb.v"                                                                                                                                                                                        
 fi

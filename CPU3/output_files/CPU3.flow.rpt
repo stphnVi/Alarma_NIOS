@@ -1,5 +1,5 @@
 Flow report for CPU3
-Sat Aug 17 10:38:52 2024
+Sat Aug 17 13:49:45 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Aug 17 10:38:46 2024       ;
+; Flow Status                     ; Successful - Sat Aug 17 13:49:36 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CPU3                                        ;
 ; Top-level Entity Name           ; CPU1_inst                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 697 / 32,070 ( 2 % )                        ;
-; Total registers                 ; 940                                         ;
-; Total pins                      ; 4 / 457 ( < 1 % )                           ;
+; Logic utilization (in ALMs)     ; 1,013 / 32,070 ( 3 % )                      ;
+; Total registers                 ; 1212                                        ;
+; Total pins                      ; 39 / 457 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 44,032 / 4,065,280 ( 1 % )                  ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/17/2024 10:37:21 ;
+; Start date & time ; 08/17/2024 13:47:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPU3                ;
 +-------------------+---------------------+
@@ -78,22 +78,22 @@ refer to the applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 246337685012443.172391264113613                        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 5311875297761.172392405206008                          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                      ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                      ; --            ; --          ; --             ;
-; MISC_FILE                           ; NIOS/synthesis/../CPU1.cmp                             ; --            ; --          ; --             ;
-; MISC_FILE                           ; NIOS/synthesis/../../CPU1.qsys                         ; --            ; --          ; --             ;
+; MISC_FILE                           ; CPU1/synthesis/../CPU1.cmp                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; CPU1/synthesis/../../CPU1.qsys                         ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                 ; --            ; CPU1_inst   ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                 ; --            ; CPU1_inst   ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                 ; --            ; CPU1_inst   ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                           ; --            ; --          ; --             ;
-; SLD_FILE                            ; NIOS/synthesis/CPU1.regmap                             ; --            ; --          ; --             ;
-; SLD_FILE                            ; NIOS/synthesis/CPU1.debuginfo                          ; --            ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME CPU1 HAS_SOPCINFO 1 GENERATION_ID 1723132355 ; --            ; CPU1        ; --             ;
-; SOPCINFO_FILE                       ; NIOS/synthesis/../../CPU1.sopcinfo                     ; --            ; --          ; --             ;
+; SLD_FILE                            ; CPU1/synthesis/CPU1.regmap                             ; --            ; --          ; --             ;
+; SLD_FILE                            ; CPU1/synthesis/CPU1.debuginfo                          ; --            ; --          ; --             ;
+; SLD_INFO                            ; QSYS_NAME CPU1 HAS_SOPCINFO 1 GENERATION_ID 1723921819 ; --            ; CPU1        ; --             ;
+; SOPCINFO_FILE                       ; CPU1/synthesis/../../CPU1.sopcinfo                     ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                     ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; CPU1_inst                                              ; CPU3          ; --          ; --             ;
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
@@ -104,24 +104,24 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 1170 MB             ; 00:00:56                           ;
-; Fitter               ; 00:00:47     ; 1.1                     ; 2767 MB             ; 00:02:40                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 966 MB              ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.9                     ; 1299 MB             ; 00:00:09                           ;
-; Total                ; 00:01:26     ; --                      ; --                  ; 00:03:51                           ;
+; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 5023 MB             ; 00:00:27                           ;
+; Fitter               ; 00:01:18     ; 1.1                     ; 6838 MB             ; 00:01:18                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 4858 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.8                     ; 5228 MB             ; 00:00:11                           ;
+; Total                ; 00:02:06     ; --                      ; --                  ; 00:02:03                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+----------------------+------------------+---------------+---------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name       ; OS Version    ; Processor type ;
-+----------------------+------------------+---------------+---------------+----------------+
-; Analysis & Synthesis ; steph            ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
-; Fitter               ; steph            ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
-; Assembler            ; steph            ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
-; Timing Analyzer      ; steph            ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
-+----------------------+------------------+---------------+---------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-6SFU59JI  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-6SFU59JI  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-6SFU59JI  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-6SFU59JI  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------

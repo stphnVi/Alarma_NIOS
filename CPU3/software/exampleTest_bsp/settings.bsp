@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 17, 2024 10:43:26 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1723913006411</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>/home/steph/Documents/GitHub/Alarma_NIOS/CPU3/software/exampleTest_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>18/08/2024 12:19:21 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1723961961402</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\yangr\Documents\GitHub\Alarma_NIOS\CPU3\software\exampleTest_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>../../CPU1.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>..\..\CPU1.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -905,14 +905,80 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_0</slaveDescriptor>
-                <addressRange>0x00003010 - 0x0000301F</addressRange>
+                <slaveDescriptor>pio_button_minutes</slaveDescriptor>
+                <addressRange>0x000030C0 - 0x000030CF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_button_hours</slaveDescriptor>
+                <addressRange>0x000030D0 - 0x000030DF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_switch_reset</slaveDescriptor>
+                <addressRange>0x000030E0 - 0x000030EF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_switch_clock</slaveDescriptor>
+                <addressRange>0x000030F0 - 0x000030FF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_set_alarm</slaveDescriptor>
+                <addressRange>0x00003100 - 0x0000310F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_switch_off</slaveDescriptor>
+                <addressRange>0x00003110 - 0x0000311F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_buzz_0</slaveDescriptor>
+                <addressRange>0x00003120 - 0x0000312F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_s3</slaveDescriptor>
+                <addressRange>0x00003130 - 0x0000313F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_s2</slaveDescriptor>
+                <addressRange>0x00003140 - 0x0000314F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_s1</slaveDescriptor>
+                <addressRange>0x00003150 - 0x0000315F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_s4</slaveDescriptor>
+                <addressRange>0x00003160 - 0x0000316F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_leds_0</slaveDescriptor>
+                <addressRange>0x00003170 - 0x0000317F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00003028 - 0x0000302F</addressRange>
+                <addressRange>0x00003188 - 0x0000318F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

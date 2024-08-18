@@ -6,12 +6,38 @@
 module CPU1_tb (
 	);
 
-	wire        cpu1_inst_clk_bfm_clk_clk; // CPU1_inst_clk_bfm:clk -> CPU1_inst:clk_clk
-	wire  [1:0] cpu1_inst_leds_export;     // CPU1_inst:leds_export -> CPU1_inst_leds_bfm:sig_export
+	wire        cpu1_inst_clk_bfm_clk_clk;                // CPU1_inst_clk_bfm:clk -> CPU1_inst:clk_clk
+	wire        cpu1_inst_buz_export;                     // CPU1_inst:buz_export -> CPU1_inst_buz_bfm:sig_export
+	wire  [0:0] cpu1_inst_hours_bfm_conduit_export;       // CPU1_inst_hours_bfm:sig_export -> CPU1_inst:hours_export
+	wire  [1:0] cpu1_inst_leds_export;                    // CPU1_inst:leds_export -> CPU1_inst_leds_bfm:sig_export
+	wire  [0:0] cpu1_inst_minutes_bfm_conduit_export;     // CPU1_inst_minutes_bfm:sig_export -> CPU1_inst:minutes_export
+	wire  [0:0] cpu1_inst_off_bfm_conduit_export;         // CPU1_inst_off_bfm:sig_export -> CPU1_inst:off_export
+	wire  [6:0] cpu1_inst_s1_export;                      // CPU1_inst:s1_export -> CPU1_inst_s1_bfm:sig_export
+	wire  [6:0] cpu1_inst_s2_export;                      // CPU1_inst:s2_export -> CPU1_inst_s2_bfm:sig_export
+	wire  [6:0] cpu1_inst_s3_export;                      // CPU1_inst:s3_export -> CPU1_inst_s3_bfm:sig_export
+	wire  [6:0] cpu1_inst_s4_export;                      // CPU1_inst:s4_export -> CPU1_inst_s4_bfm:sig_export
+	wire  [0:0] cpu1_inst_set_alarm_bfm_conduit_export;   // CPU1_inst_set_alarm_bfm:sig_export -> CPU1_inst:set_alarm_export
+	wire  [0:0] cpu1_inst_set_clock_bfm_conduit_export;   // CPU1_inst_set_clock_bfm:sig_export -> CPU1_inst:set_clock_export
+	wire  [0:0] cpu1_inst_swich_reset_bfm_conduit_export; // CPU1_inst_swich_reset_bfm:sig_export -> CPU1_inst:swich_reset_export
 
 	CPU1 cpu1_inst (
-		.clk_clk     (cpu1_inst_clk_bfm_clk_clk), //  clk.clk
-		.leds_export (cpu1_inst_leds_export)      // leds.export
+		.buz_export         (cpu1_inst_buz_export),                     //         buz.export
+		.clk_clk            (cpu1_inst_clk_bfm_clk_clk),                //         clk.clk
+		.hours_export       (cpu1_inst_hours_bfm_conduit_export),       //       hours.export
+		.leds_export        (cpu1_inst_leds_export),                    //        leds.export
+		.minutes_export     (cpu1_inst_minutes_bfm_conduit_export),     //     minutes.export
+		.off_export         (cpu1_inst_off_bfm_conduit_export),         //         off.export
+		.s1_export          (cpu1_inst_s1_export),                      //          s1.export
+		.s2_export          (cpu1_inst_s2_export),                      //          s2.export
+		.s3_export          (cpu1_inst_s3_export),                      //          s3.export
+		.s4_export          (cpu1_inst_s4_export),                      //          s4.export
+		.set_alarm_export   (cpu1_inst_set_alarm_bfm_conduit_export),   //   set_alarm.export
+		.set_clock_export   (cpu1_inst_set_clock_bfm_conduit_export),   //   set_clock.export
+		.swich_reset_export (cpu1_inst_swich_reset_bfm_conduit_export)  // swich_reset.export
+	);
+
+	altera_conduit_bfm cpu1_inst_buz_bfm (
+		.sig_export (cpu1_inst_buz_export)  // conduit.export
 	);
 
 	altera_avalon_clock_source #(
@@ -21,8 +47,48 @@ module CPU1_tb (
 		.clk (cpu1_inst_clk_bfm_clk_clk)  // clk.clk
 	);
 
-	altera_conduit_bfm cpu1_inst_leds_bfm (
+	altera_conduit_bfm_0002 cpu1_inst_hours_bfm (
+		.sig_export (cpu1_inst_hours_bfm_conduit_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0003 cpu1_inst_leds_bfm (
 		.sig_export (cpu1_inst_leds_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0002 cpu1_inst_minutes_bfm (
+		.sig_export (cpu1_inst_minutes_bfm_conduit_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0002 cpu1_inst_off_bfm (
+		.sig_export (cpu1_inst_off_bfm_conduit_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0004 cpu1_inst_s1_bfm (
+		.sig_export (cpu1_inst_s1_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0004 cpu1_inst_s2_bfm (
+		.sig_export (cpu1_inst_s2_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0004 cpu1_inst_s3_bfm (
+		.sig_export (cpu1_inst_s3_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0004 cpu1_inst_s4_bfm (
+		.sig_export (cpu1_inst_s4_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0002 cpu1_inst_set_alarm_bfm (
+		.sig_export (cpu1_inst_set_alarm_bfm_conduit_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0002 cpu1_inst_set_clock_bfm (
+		.sig_export (cpu1_inst_set_clock_bfm_conduit_export)  // conduit.export
+	);
+
+	altera_conduit_bfm_0002 cpu1_inst_swich_reset_bfm (
+		.sig_export (cpu1_inst_swich_reset_bfm_conduit_export)  // conduit.export
 	);
 
 endmodule

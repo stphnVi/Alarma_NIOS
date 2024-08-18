@@ -32,19 +32,20 @@ Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/ip_component_cate
 Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/CPU1.ipx
 Progress: Loading CPU3/CPU1.qsys
-Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/* matched 17 files in 0.00 seconds
+Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/* matched 19 files in 0.00 seconds
 Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/ip/**/* matched 0 files in 0.00 seconds
-Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/*/* matched 342 files in 0.03 seconds
-Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/CPU1.ipx described 0 plugins, 3 paths, in 0.03 seconds
-Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/* matched 4 files in 0.03 seconds
-Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/*/* matched 0 files in 0.00 seconds
+Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/*/* matched 346 files in 0.00 seconds
+Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/CPU1.ipx described 0 plugins, 3 paths, in 0.01 seconds
+Progress: Loading testbench/CPU1_tb.qsys
+Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/* matched 12 files in 0.01 seconds
+Info: /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/*/* matched 9 files in 0.00 seconds
 Info: /home/steph/.altera.quartus/ip/18.1/**/* matched 0 files in 0.00 seconds
 Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
 Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
 Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
 Info: Reading index /home/steph/intelFPGA_lite/18.1/ip/altera/altera_components.ipx
-Info: /home/steph/intelFPGA_lite/18.1/ip/altera/altera_components.ipx described 2035 plugins, 0 paths, in 0.11 seconds
-Info: /home/steph/intelFPGA_lite/18.1/ip/**/* matched 139 files in 0.11 seconds
+Info: /home/steph/intelFPGA_lite/18.1/ip/altera/altera_components.ipx described 2035 plugins, 0 paths, in 0.15 seconds
+Info: /home/steph/intelFPGA_lite/18.1/ip/**/* matched 139 files in 0.15 seconds
 Info: /home/steph/intelFPGA_lite/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/builtin.ipx
 Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/builtin.ipx described 83 plugins, 0 paths, in 0.00 seconds
@@ -53,8 +54,8 @@ Info: Reading index /home/steph/intelFPGA_lite/18.1/quartus/common/librarian/fac
 Info: /home/steph/intelFPGA_lite/18.1/quartus/common/librarian/factories/index.ipx described 151 plugins, 0 paths, in 0.01 seconds
 Info: /home/steph/intelFPGA_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
 Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.15 seconds
-Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.15 seconds
+Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx described 0 plugins, 13 paths, in 0.18 seconds
+Info: /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.18 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -146,16 +147,16 @@ Info: CPU1_inst_clk_bfm: "CPU1_tb" instantiated altera_avalon_clock_source "CPU1
 Info: CPU1_inst_leds_bfm: "CPU1_tb" instantiated altera_conduit_bfm "CPU1_inst_leds_bfm"
 Info: Reusing file /home/steph/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/CPU1_tb/simulation/submodules/verbosity_pkg.sv
 Info: jtag_uart_0: Starting RTL generation for module 'CPU1_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=CPU1_jtag_uart_0 --dir=/tmp/alt9951_2668185486994501286.dir/0041_jtag_uart_0_gen/ --quartus_dir=/home/steph/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9951_2668185486994501286.dir/0041_jtag_uart_0_gen//CPU1_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9951_2668185486994501286.dir/0041_jtag_uart_0_gen/  ]
+Info: jtag_uart_0:   Generation command is [exec /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=CPU1_jtag_uart_0 --dir=/tmp/alt9952_749402466072851321.dir/0041_jtag_uart_0_gen/ --quartus_dir=/home/steph/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9952_749402466072851321.dir/0041_jtag_uart_0_gen//CPU1_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9952_749402466072851321.dir/0041_jtag_uart_0_gen/  ]
 Info: jtag_uart_0: Done RTL generation for module 'CPU1_jtag_uart_0'
 Info: jtag_uart_0: "CPU1_inst" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "CPU1_inst" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'CPU1_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=CPU1_onchip_memory2_0 --dir=/tmp/alt9951_2668185486994501286.dir/0042_onchip_memory2_0_gen/ --quartus_dir=/home/steph/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9951_2668185486994501286.dir/0042_onchip_memory2_0_gen//CPU1_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9951_2668185486994501286.dir/0042_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0:   Generation command is [exec /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=CPU1_onchip_memory2_0 --dir=/tmp/alt9952_749402466072851321.dir/0042_onchip_memory2_0_gen/ --quartus_dir=/home/steph/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9952_749402466072851321.dir/0042_onchip_memory2_0_gen//CPU1_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9952_749402466072851321.dir/0042_onchip_memory2_0_gen/  ]
 Info: onchip_memory2_0: Done RTL generation for module 'CPU1_onchip_memory2_0'
 Info: onchip_memory2_0: "CPU1_inst" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: pio_0: Starting RTL generation for module 'CPU1_pio_0'
-Info: pio_0:   Generation command is [exec /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_0 --dir=/tmp/alt9951_2668185486994501286.dir/0043_pio_0_gen/ --quartus_dir=/home/steph/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9951_2668185486994501286.dir/0043_pio_0_gen//CPU1_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9951_2668185486994501286.dir/0043_pio_0_gen/  ]
+Info: pio_0:   Generation command is [exec /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/steph/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_0 --dir=/tmp/alt9952_749402466072851321.dir/0043_pio_0_gen/ --quartus_dir=/home/steph/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt9952_749402466072851321.dir/0043_pio_0_gen//CPU1_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9952_749402466072851321.dir/0043_pio_0_gen/  ]
 Info: pio_0: Done RTL generation for module 'CPU1_pio_0'
 Info: pio_0: "CPU1_inst" instantiated altera_avalon_pio "pio_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -166,20 +167,20 @@ Info: mm_interconnect_0: "CPU1_inst" instantiated altera_mm_interconnect "mm_int
 Info: irq_mapper: "CPU1_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "CPU1_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'CPU1_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec /home/steph/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/steph/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=CPU1_nios2_gen2_0_cpu --dir=/tmp/alt9951_2668185486994501286.dir/0046_cpu_gen/ --quartus_bindir=/home/steph/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt9951_2668185486994501286.dir/0046_cpu_gen//CPU1_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9951_2668185486994501286.dir/0046_cpu_gen/  ]
-Info: cpu: # 2024.08.16 17:51:20 (*) Starting Nios II generation
-Info: cpu: # 2024.08.16 17:51:20 (*)   Checking for plaintext license.
-Info: cpu: # 2024.08.16 17:51:20 (*)   Couldn't query license setup in Quartus directory /home/steph/intelFPGA_lite/18.1/quartus/linux64/
-Info: cpu: # 2024.08.16 17:51:20 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2024.08.16 17:51:20 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2024.08.16 17:51:20 (*)   Plaintext license not found.
-Info: cpu: # 2024.08.16 17:51:20 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2024.08.16 17:51:20 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2024.08.16 17:51:20 (*)   Creating all objects for CPU
-Info: cpu: # 2024.08.16 17:51:21 (*)   Creating '/tmp/alt9951_2668185486994501286.dir/0046_cpu_gen//CPU1_nios2_gen2_0_cpu_nios2_waves.do'
-Info: cpu: # 2024.08.16 17:51:21 (*)   Generating RTL from CPU objects
-Info: cpu: # 2024.08.16 17:51:21 (*)   Creating plain-text RTL
-Info: cpu: # 2024.08.16 17:51:21 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/steph/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/steph/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/steph/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/steph/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=CPU1_nios2_gen2_0_cpu --dir=/tmp/alt9952_749402466072851321.dir/0046_cpu_gen/ --quartus_bindir=/home/steph/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt9952_749402466072851321.dir/0046_cpu_gen//CPU1_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=/tmp/alt9952_749402466072851321.dir/0046_cpu_gen/  ]
+Info: cpu: # 2024.08.16 18:03:24 (*) Starting Nios II generation
+Info: cpu: # 2024.08.16 18:03:24 (*)   Checking for plaintext license.
+Info: cpu: # 2024.08.16 18:03:25 (*)   Couldn't query license setup in Quartus directory /home/steph/intelFPGA_lite/18.1/quartus/linux64/
+Info: cpu: # 2024.08.16 18:03:25 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.08.16 18:03:25 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2024.08.16 18:03:25 (*)   Plaintext license not found.
+Info: cpu: # 2024.08.16 18:03:25 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2024.08.16 18:03:25 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.08.16 18:03:25 (*)   Creating all objects for CPU
+Info: cpu: # 2024.08.16 18:03:25 (*)   Creating '/tmp/alt9952_749402466072851321.dir/0046_cpu_gen//CPU1_nios2_gen2_0_cpu_nios2_waves.do'
+Info: cpu: # 2024.08.16 18:03:25 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.08.16 18:03:25 (*)   Creating plain-text RTL
+Info: cpu: # 2024.08.16 18:03:26 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'CPU1_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"

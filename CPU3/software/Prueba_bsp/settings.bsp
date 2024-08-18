@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 14, 2024 5:01:04 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1723633264946</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>/home/duesan/Downloads/CPU3/software/Prueba_bsp</BspGeneratedLocation>
-        <BspSettingsFile>./settings.bsp</BspSettingsFile>
-        <SopcDesignFile>../../CPU1.sopcinfo</SopcDesignFile>
+        <BspGeneratedTimeStamp>17/08/2024 12:11:26 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1723918286412</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\yangr\Documents\GitHub\Alarma_NIOS\CPU3\software\Prueba_bsp</BspGeneratedLocation>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
+        <SopcDesignFile>..\..\CPU1.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
         <SchemaVersion>1.9</SchemaVersion>

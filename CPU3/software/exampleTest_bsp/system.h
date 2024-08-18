@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'CPU1'
  * SOPC Builder design path: ../../CPU1.sopcinfo
  *
- * Generated: Fri Aug 16 23:30:40 CST 2024
+ * Generated: Sat Aug 17 13:51:19 CST 2024
  */
 
 /*
@@ -155,19 +155,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x3028
+#define ALT_STDERR_BASE 0x3188
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x3028
+#define ALT_STDIN_BASE 0x3188
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x3028
+#define ALT_STDOUT_BASE 0x3188
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -192,7 +192,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x3028
+#define JTAG_UART_0_BASE 0x3188
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -234,29 +234,326 @@
 
 
 /*
- * pio_0 configuration
+ * pio_button_hours configuration
  *
  */
 
-#define ALT_MODULE_CLASS_pio_0 altera_avalon_pio
-#define PIO_0_BASE 0x3010
-#define PIO_0_BIT_CLEARING_EDGE_REGISTER 0
-#define PIO_0_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define PIO_0_CAPTURE 0
-#define PIO_0_DATA_WIDTH 2
-#define PIO_0_DO_TEST_BENCH_WIRING 0
-#define PIO_0_DRIVEN_SIM_VALUE 0
-#define PIO_0_EDGE_TYPE "NONE"
-#define PIO_0_FREQ 50000000
-#define PIO_0_HAS_IN 0
-#define PIO_0_HAS_OUT 1
-#define PIO_0_HAS_TRI 0
-#define PIO_0_IRQ -1
-#define PIO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define PIO_0_IRQ_TYPE "NONE"
-#define PIO_0_NAME "/dev/pio_0"
-#define PIO_0_RESET_VALUE 0
-#define PIO_0_SPAN 16
-#define PIO_0_TYPE "altera_avalon_pio"
+#define ALT_MODULE_CLASS_pio_button_hours altera_avalon_pio
+#define PIO_BUTTON_HOURS_BASE 0x30d0
+#define PIO_BUTTON_HOURS_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_BUTTON_HOURS_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_BUTTON_HOURS_CAPTURE 1
+#define PIO_BUTTON_HOURS_DATA_WIDTH 1
+#define PIO_BUTTON_HOURS_DO_TEST_BENCH_WIRING 0
+#define PIO_BUTTON_HOURS_DRIVEN_SIM_VALUE 0
+#define PIO_BUTTON_HOURS_EDGE_TYPE "FALLING"
+#define PIO_BUTTON_HOURS_FREQ 50000000
+#define PIO_BUTTON_HOURS_HAS_IN 1
+#define PIO_BUTTON_HOURS_HAS_OUT 0
+#define PIO_BUTTON_HOURS_HAS_TRI 0
+#define PIO_BUTTON_HOURS_IRQ 1
+#define PIO_BUTTON_HOURS_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define PIO_BUTTON_HOURS_IRQ_TYPE "LEVEL"
+#define PIO_BUTTON_HOURS_NAME "/dev/pio_button_hours"
+#define PIO_BUTTON_HOURS_RESET_VALUE 0
+#define PIO_BUTTON_HOURS_SPAN 16
+#define PIO_BUTTON_HOURS_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_button_minutes configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_button_minutes altera_avalon_pio
+#define PIO_BUTTON_MINUTES_BASE 0x30c0
+#define PIO_BUTTON_MINUTES_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_BUTTON_MINUTES_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_BUTTON_MINUTES_CAPTURE 1
+#define PIO_BUTTON_MINUTES_DATA_WIDTH 1
+#define PIO_BUTTON_MINUTES_DO_TEST_BENCH_WIRING 0
+#define PIO_BUTTON_MINUTES_DRIVEN_SIM_VALUE 0
+#define PIO_BUTTON_MINUTES_EDGE_TYPE "FALLING"
+#define PIO_BUTTON_MINUTES_FREQ 50000000
+#define PIO_BUTTON_MINUTES_HAS_IN 1
+#define PIO_BUTTON_MINUTES_HAS_OUT 0
+#define PIO_BUTTON_MINUTES_HAS_TRI 0
+#define PIO_BUTTON_MINUTES_IRQ 2
+#define PIO_BUTTON_MINUTES_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define PIO_BUTTON_MINUTES_IRQ_TYPE "LEVEL"
+#define PIO_BUTTON_MINUTES_NAME "/dev/pio_button_minutes"
+#define PIO_BUTTON_MINUTES_RESET_VALUE 0
+#define PIO_BUTTON_MINUTES_SPAN 16
+#define PIO_BUTTON_MINUTES_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_buzz_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_buzz_0 altera_avalon_pio
+#define PIO_BUZZ_0_BASE 0x3120
+#define PIO_BUZZ_0_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_BUZZ_0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_BUZZ_0_CAPTURE 0
+#define PIO_BUZZ_0_DATA_WIDTH 1
+#define PIO_BUZZ_0_DO_TEST_BENCH_WIRING 0
+#define PIO_BUZZ_0_DRIVEN_SIM_VALUE 0
+#define PIO_BUZZ_0_EDGE_TYPE "NONE"
+#define PIO_BUZZ_0_FREQ 50000000
+#define PIO_BUZZ_0_HAS_IN 0
+#define PIO_BUZZ_0_HAS_OUT 1
+#define PIO_BUZZ_0_HAS_TRI 0
+#define PIO_BUZZ_0_IRQ -1
+#define PIO_BUZZ_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_BUZZ_0_IRQ_TYPE "NONE"
+#define PIO_BUZZ_0_NAME "/dev/pio_buzz_0"
+#define PIO_BUZZ_0_RESET_VALUE 0
+#define PIO_BUZZ_0_SPAN 16
+#define PIO_BUZZ_0_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_leds_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_leds_0 altera_avalon_pio
+#define PIO_LEDS_0_BASE 0x3170
+#define PIO_LEDS_0_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_LEDS_0_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_LEDS_0_CAPTURE 0
+#define PIO_LEDS_0_DATA_WIDTH 2
+#define PIO_LEDS_0_DO_TEST_BENCH_WIRING 0
+#define PIO_LEDS_0_DRIVEN_SIM_VALUE 0
+#define PIO_LEDS_0_EDGE_TYPE "NONE"
+#define PIO_LEDS_0_FREQ 50000000
+#define PIO_LEDS_0_HAS_IN 0
+#define PIO_LEDS_0_HAS_OUT 1
+#define PIO_LEDS_0_HAS_TRI 0
+#define PIO_LEDS_0_IRQ -1
+#define PIO_LEDS_0_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_LEDS_0_IRQ_TYPE "NONE"
+#define PIO_LEDS_0_NAME "/dev/pio_leds_0"
+#define PIO_LEDS_0_RESET_VALUE 0
+#define PIO_LEDS_0_SPAN 16
+#define PIO_LEDS_0_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_s1 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_s1 altera_avalon_pio
+#define PIO_S1_BASE 0x3150
+#define PIO_S1_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_S1_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_S1_CAPTURE 0
+#define PIO_S1_DATA_WIDTH 7
+#define PIO_S1_DO_TEST_BENCH_WIRING 0
+#define PIO_S1_DRIVEN_SIM_VALUE 0
+#define PIO_S1_EDGE_TYPE "NONE"
+#define PIO_S1_FREQ 50000000
+#define PIO_S1_HAS_IN 0
+#define PIO_S1_HAS_OUT 1
+#define PIO_S1_HAS_TRI 0
+#define PIO_S1_IRQ -1
+#define PIO_S1_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_S1_IRQ_TYPE "NONE"
+#define PIO_S1_NAME "/dev/pio_s1"
+#define PIO_S1_RESET_VALUE 0
+#define PIO_S1_SPAN 16
+#define PIO_S1_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_s2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_s2 altera_avalon_pio
+#define PIO_S2_BASE 0x3140
+#define PIO_S2_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_S2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_S2_CAPTURE 0
+#define PIO_S2_DATA_WIDTH 7
+#define PIO_S2_DO_TEST_BENCH_WIRING 0
+#define PIO_S2_DRIVEN_SIM_VALUE 0
+#define PIO_S2_EDGE_TYPE "NONE"
+#define PIO_S2_FREQ 50000000
+#define PIO_S2_HAS_IN 0
+#define PIO_S2_HAS_OUT 1
+#define PIO_S2_HAS_TRI 0
+#define PIO_S2_IRQ -1
+#define PIO_S2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_S2_IRQ_TYPE "NONE"
+#define PIO_S2_NAME "/dev/pio_s2"
+#define PIO_S2_RESET_VALUE 0
+#define PIO_S2_SPAN 16
+#define PIO_S2_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_s3 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_s3 altera_avalon_pio
+#define PIO_S3_BASE 0x3130
+#define PIO_S3_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_S3_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_S3_CAPTURE 0
+#define PIO_S3_DATA_WIDTH 7
+#define PIO_S3_DO_TEST_BENCH_WIRING 0
+#define PIO_S3_DRIVEN_SIM_VALUE 0
+#define PIO_S3_EDGE_TYPE "NONE"
+#define PIO_S3_FREQ 50000000
+#define PIO_S3_HAS_IN 0
+#define PIO_S3_HAS_OUT 1
+#define PIO_S3_HAS_TRI 0
+#define PIO_S3_IRQ -1
+#define PIO_S3_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_S3_IRQ_TYPE "NONE"
+#define PIO_S3_NAME "/dev/pio_s3"
+#define PIO_S3_RESET_VALUE 0
+#define PIO_S3_SPAN 16
+#define PIO_S3_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_s4 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_s4 altera_avalon_pio
+#define PIO_S4_BASE 0x3160
+#define PIO_S4_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_S4_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_S4_CAPTURE 0
+#define PIO_S4_DATA_WIDTH 7
+#define PIO_S4_DO_TEST_BENCH_WIRING 0
+#define PIO_S4_DRIVEN_SIM_VALUE 0
+#define PIO_S4_EDGE_TYPE "NONE"
+#define PIO_S4_FREQ 50000000
+#define PIO_S4_HAS_IN 0
+#define PIO_S4_HAS_OUT 1
+#define PIO_S4_HAS_TRI 0
+#define PIO_S4_IRQ -1
+#define PIO_S4_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_S4_IRQ_TYPE "NONE"
+#define PIO_S4_NAME "/dev/pio_s4"
+#define PIO_S4_RESET_VALUE 0
+#define PIO_S4_SPAN 16
+#define PIO_S4_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_set_alarm configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_set_alarm altera_avalon_pio
+#define PIO_SET_ALARM_BASE 0x3100
+#define PIO_SET_ALARM_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_SET_ALARM_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_SET_ALARM_CAPTURE 0
+#define PIO_SET_ALARM_DATA_WIDTH 1
+#define PIO_SET_ALARM_DO_TEST_BENCH_WIRING 0
+#define PIO_SET_ALARM_DRIVEN_SIM_VALUE 0
+#define PIO_SET_ALARM_EDGE_TYPE "NONE"
+#define PIO_SET_ALARM_FREQ 50000000
+#define PIO_SET_ALARM_HAS_IN 1
+#define PIO_SET_ALARM_HAS_OUT 0
+#define PIO_SET_ALARM_HAS_TRI 0
+#define PIO_SET_ALARM_IRQ -1
+#define PIO_SET_ALARM_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_SET_ALARM_IRQ_TYPE "NONE"
+#define PIO_SET_ALARM_NAME "/dev/pio_set_alarm"
+#define PIO_SET_ALARM_RESET_VALUE 0
+#define PIO_SET_ALARM_SPAN 16
+#define PIO_SET_ALARM_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_switch_clock configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_switch_clock altera_avalon_pio
+#define PIO_SWITCH_CLOCK_BASE 0x30f0
+#define PIO_SWITCH_CLOCK_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_SWITCH_CLOCK_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_SWITCH_CLOCK_CAPTURE 0
+#define PIO_SWITCH_CLOCK_DATA_WIDTH 1
+#define PIO_SWITCH_CLOCK_DO_TEST_BENCH_WIRING 0
+#define PIO_SWITCH_CLOCK_DRIVEN_SIM_VALUE 0
+#define PIO_SWITCH_CLOCK_EDGE_TYPE "NONE"
+#define PIO_SWITCH_CLOCK_FREQ 50000000
+#define PIO_SWITCH_CLOCK_HAS_IN 1
+#define PIO_SWITCH_CLOCK_HAS_OUT 0
+#define PIO_SWITCH_CLOCK_HAS_TRI 0
+#define PIO_SWITCH_CLOCK_IRQ -1
+#define PIO_SWITCH_CLOCK_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_SWITCH_CLOCK_IRQ_TYPE "NONE"
+#define PIO_SWITCH_CLOCK_NAME "/dev/pio_switch_clock"
+#define PIO_SWITCH_CLOCK_RESET_VALUE 0
+#define PIO_SWITCH_CLOCK_SPAN 16
+#define PIO_SWITCH_CLOCK_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_switch_off configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_switch_off altera_avalon_pio
+#define PIO_SWITCH_OFF_BASE 0x3110
+#define PIO_SWITCH_OFF_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_SWITCH_OFF_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_SWITCH_OFF_CAPTURE 0
+#define PIO_SWITCH_OFF_DATA_WIDTH 1
+#define PIO_SWITCH_OFF_DO_TEST_BENCH_WIRING 0
+#define PIO_SWITCH_OFF_DRIVEN_SIM_VALUE 0
+#define PIO_SWITCH_OFF_EDGE_TYPE "NONE"
+#define PIO_SWITCH_OFF_FREQ 50000000
+#define PIO_SWITCH_OFF_HAS_IN 1
+#define PIO_SWITCH_OFF_HAS_OUT 0
+#define PIO_SWITCH_OFF_HAS_TRI 0
+#define PIO_SWITCH_OFF_IRQ -1
+#define PIO_SWITCH_OFF_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_SWITCH_OFF_IRQ_TYPE "NONE"
+#define PIO_SWITCH_OFF_NAME "/dev/pio_switch_off"
+#define PIO_SWITCH_OFF_RESET_VALUE 0
+#define PIO_SWITCH_OFF_SPAN 16
+#define PIO_SWITCH_OFF_TYPE "altera_avalon_pio"
+
+
+/*
+ * pio_switch_reset configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_pio_switch_reset altera_avalon_pio
+#define PIO_SWITCH_RESET_BASE 0x30e0
+#define PIO_SWITCH_RESET_BIT_CLEARING_EDGE_REGISTER 0
+#define PIO_SWITCH_RESET_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define PIO_SWITCH_RESET_CAPTURE 0
+#define PIO_SWITCH_RESET_DATA_WIDTH 1
+#define PIO_SWITCH_RESET_DO_TEST_BENCH_WIRING 0
+#define PIO_SWITCH_RESET_DRIVEN_SIM_VALUE 0
+#define PIO_SWITCH_RESET_EDGE_TYPE "NONE"
+#define PIO_SWITCH_RESET_FREQ 50000000
+#define PIO_SWITCH_RESET_HAS_IN 1
+#define PIO_SWITCH_RESET_HAS_OUT 0
+#define PIO_SWITCH_RESET_HAS_TRI 0
+#define PIO_SWITCH_RESET_IRQ -1
+#define PIO_SWITCH_RESET_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define PIO_SWITCH_RESET_IRQ_TYPE "NONE"
+#define PIO_SWITCH_RESET_NAME "/dev/pio_switch_reset"
+#define PIO_SWITCH_RESET_RESET_VALUE 0
+#define PIO_SWITCH_RESET_SPAN 16
+#define PIO_SWITCH_RESET_TYPE "altera_avalon_pio"
 
 #endif /* __SYSTEM_H_ */

@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 linux 2024.08.16.18:03:27
+# ACDS 18.1 625 win32 2024.08.17.12:51:56
 
 # ----------------------------------------
 # vcsmx - auto-generated simulation script
@@ -107,12 +107,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2024.08.16.18:03:27
+# ACDS 18.1 625 win32 2024.08.17.12:51:56
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="CPU1_tb"
 QSYS_SIMDIR="./../../"
-QUARTUS_INSTALL_DIR="/home/steph/intelFPGA_lite/18.1/quartus/"
+QUARTUS_INSTALL_DIR="C:/intelfpga_lite/18.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_DEV_COM=0
 SKIP_COM=0
@@ -165,12 +165,19 @@ mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
-mkdir -p ./libraries/pio_0/
+mkdir -p ./libraries/pio_swich_alarm/
+mkdir -p ./libraries/pio_s1/
+mkdir -p ./libraries/pio_leds_0/
+mkdir -p ./libraries/pio_buzz_0/
+mkdir -p ./libraries/pio_button_hours/
 mkdir -p ./libraries/onchip_memory2_0/
 mkdir -p ./libraries/nios2_gen2_0/
 mkdir -p ./libraries/jtag_uart_0/
+mkdir -p ./libraries/CPU1_inst_s1_bfm/
 mkdir -p ./libraries/CPU1_inst_leds_bfm/
+mkdir -p ./libraries/CPU1_inst_hours_bfm/
 mkdir -p ./libraries/CPU1_inst_clk_bfm/
+mkdir -p ./libraries/CPU1_inst_buz_bfm/
 mkdir -p ./libraries/CPU1_inst/
 mkdir -p ./libraries/altera_ver/
 mkdir -p ./libraries/lpm_ver/
@@ -184,15 +191,15 @@ mkdir -p ./libraries/cyclonev_pcie_hip_ver/
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
-  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
   cp -f $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_onchip_memory2_0.hex ./
 fi
 
@@ -234,20 +241,27 @@ if [ $SKIP_COM -eq 0 ]; then
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_merlin_slave_translator.sv"                           -work jtag_uart_0_avalon_jtag_slave_translator    
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_merlin_master_translator.sv"                          -work nios2_gen2_0_data_master_translator         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu.v"                                     -work cpu                                         
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_sysclk.v"                  -work cpu                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                         
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                         
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_reset_controller.v"                                   -work rst_controller                              
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_reset_synchronizer.v"                                 -work rst_controller                              
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_irq_mapper.sv"                                          -work irq_mapper                                  
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_mm_interconnect_0.v"                                    -work mm_interconnect_0                           
-  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_0.v"                                                -work pio_0                                       
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_swich_alarm.v"                                      -work pio_swich_alarm                             
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_s1.v"                                               -work pio_s1                                      
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_leds_0.v"                                           -work pio_leds_0                                  
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_buzz_0.v"                                           -work pio_buzz_0                                  
+  vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_button_hours.v"                                     -work pio_button_hours                            
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_onchip_memory2_0.v"                                     -work onchip_memory2_0                            
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0.v"                                         -work nios2_gen2_0                                
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_jtag_uart_0.v"                                          -work jtag_uart_0                                 
-  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm.sv"                                       -work CPU1_inst_leds_bfm                          
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0004.sv"                                  -work CPU1_inst_s1_bfm                            
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0003.sv"                                  -work CPU1_inst_leds_bfm                          
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                  -work CPU1_inst_hours_bfm                         
   vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_avalon_clock_source.sv"                               -work CPU1_inst_clk_bfm                           
+  vlogan +v2k -sverilog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm.sv"                                       -work CPU1_inst_buz_bfm                           
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1.v"                                                      -work CPU1_inst                                   
   vlogan +v2k $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS           "$QSYS_SIMDIR/CPU1_tb/simulation/CPU1_tb.v"                                                                                                                
 fi

@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2024.08.16.18:03:27
+# ACDS 18.1 625 win32 2024.08.17.12:51:56
 
 # ----------------------------------------
 # Initialize variables
@@ -113,7 +113,7 @@ if ![info exists QSYS_SIMDIR] {
 }
 
 if ![info exists QUARTUS_INSTALL_DIR] { 
-  set QUARTUS_INSTALL_DIR "/home/steph/intelFPGA_lite/18.1/quartus/"
+  set QUARTUS_INSTALL_DIR "C:/intelfpga_lite/18.1/quartus/"
 }
 
 if ![info exists USER_DEFINED_COMPILE_OPTIONS] { 
@@ -141,15 +141,15 @@ if ![ string match "*-64 vsim*" [ vsim -version ] ] {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat ./
+  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
-  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
-  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
-  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
   file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
   file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif ./
+  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
   file copy -force $QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_onchip_memory2_0.hex ./
 }
 
@@ -214,18 +214,32 @@ ensure_lib                                              ./libraries/irq_mapper/
 vmap       irq_mapper                                   ./libraries/irq_mapper/                                  
 ensure_lib                                              ./libraries/mm_interconnect_0/                           
 vmap       mm_interconnect_0                            ./libraries/mm_interconnect_0/                           
-ensure_lib                                              ./libraries/pio_0/                                       
-vmap       pio_0                                        ./libraries/pio_0/                                       
+ensure_lib                                              ./libraries/pio_swich_alarm/                             
+vmap       pio_swich_alarm                              ./libraries/pio_swich_alarm/                             
+ensure_lib                                              ./libraries/pio_s1/                                      
+vmap       pio_s1                                       ./libraries/pio_s1/                                      
+ensure_lib                                              ./libraries/pio_leds_0/                                  
+vmap       pio_leds_0                                   ./libraries/pio_leds_0/                                  
+ensure_lib                                              ./libraries/pio_buzz_0/                                  
+vmap       pio_buzz_0                                   ./libraries/pio_buzz_0/                                  
+ensure_lib                                              ./libraries/pio_button_hours/                            
+vmap       pio_button_hours                             ./libraries/pio_button_hours/                            
 ensure_lib                                              ./libraries/onchip_memory2_0/                            
 vmap       onchip_memory2_0                             ./libraries/onchip_memory2_0/                            
 ensure_lib                                              ./libraries/nios2_gen2_0/                                
 vmap       nios2_gen2_0                                 ./libraries/nios2_gen2_0/                                
 ensure_lib                                              ./libraries/jtag_uart_0/                                 
 vmap       jtag_uart_0                                  ./libraries/jtag_uart_0/                                 
+ensure_lib                                              ./libraries/CPU1_inst_s1_bfm/                            
+vmap       CPU1_inst_s1_bfm                             ./libraries/CPU1_inst_s1_bfm/                            
 ensure_lib                                              ./libraries/CPU1_inst_leds_bfm/                          
 vmap       CPU1_inst_leds_bfm                           ./libraries/CPU1_inst_leds_bfm/                          
+ensure_lib                                              ./libraries/CPU1_inst_hours_bfm/                         
+vmap       CPU1_inst_hours_bfm                          ./libraries/CPU1_inst_hours_bfm/                         
 ensure_lib                                              ./libraries/CPU1_inst_clk_bfm/                           
 vmap       CPU1_inst_clk_bfm                            ./libraries/CPU1_inst_clk_bfm/                           
+ensure_lib                                              ./libraries/CPU1_inst_buz_bfm/                           
+vmap       CPU1_inst_buz_bfm                            ./libraries/CPU1_inst_buz_bfm/                           
 ensure_lib                                              ./libraries/CPU1_inst/                                   
 vmap       CPU1_inst                                    ./libraries/CPU1_inst/                                   
 
@@ -271,20 +285,27 @@ alias com {
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_merlin_slave_translator.sv"                           -L altera_common_sv_packages -work jtag_uart_0_avalon_jtag_slave_translator    
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_merlin_master_translator.sv"                          -L altera_common_sv_packages -work nios2_gen2_0_data_master_translator         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu.v"                                                                  -work cpu                                         
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                                              -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_sysclk.v"                                               -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_tck.v"                                                  -work cpu                                         
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                                              -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0_cpu_test_bench.v"                                                       -work cpu                                         
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_reset_controller.v"                                                                -work rst_controller                              
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_reset_synchronizer.v"                                                              -work rst_controller                              
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_irq_mapper.sv"                                          -L altera_common_sv_packages -work irq_mapper                                  
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_mm_interconnect_0.v"                                                                 -work mm_interconnect_0                           
-  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_0.v"                                                                             -work pio_0                                       
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_swich_alarm.v"                                                                   -work pio_swich_alarm                             
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_s1.v"                                                                            -work pio_s1                                      
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_leds_0.v"                                                                        -work pio_leds_0                                  
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_buzz_0.v"                                                                        -work pio_buzz_0                                  
+  eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_button_hours.v"                                                                  -work pio_button_hours                            
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_onchip_memory2_0.v"                                                                  -work onchip_memory2_0                            
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_nios2_gen2_0.v"                                                                      -work nios2_gen2_0                                
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_jtag_uart_0.v"                                                                       -work jtag_uart_0                                 
-  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm.sv"                                       -L altera_common_sv_packages -work CPU1_inst_leds_bfm                          
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0004.sv"                                  -L altera_common_sv_packages -work CPU1_inst_s1_bfm                            
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0003.sv"                                  -L altera_common_sv_packages -work CPU1_inst_leds_bfm                          
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm_0002.sv"                                  -L altera_common_sv_packages -work CPU1_inst_hours_bfm                         
   eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_avalon_clock_source.sv"                               -L altera_common_sv_packages -work CPU1_inst_clk_bfm                           
+  eval  vlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_conduit_bfm.sv"                                       -L altera_common_sv_packages -work CPU1_inst_buz_bfm                           
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1.v"                                                                                   -work CPU1_inst                                   
   eval  vlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/CPU1_tb.v"                                                                                                                                             
 }
@@ -293,14 +314,14 @@ alias com {
 # Elaborate top level design
 alias elab {
   echo "\[exec\] elab"
-  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_002 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L pio_0 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L CPU1_inst_leds_bfm -L CPU1_inst_clk_bfm -L CPU1_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
+  eval vsim -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_002 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L pio_swich_alarm -L pio_s1 -L pio_leds_0 -L pio_buzz_0 -L pio_button_hours -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L CPU1_inst_s1_bfm -L CPU1_inst_leds_bfm -L CPU1_inst_hours_bfm -L CPU1_inst_clk_bfm -L CPU1_inst_buz_bfm -L CPU1_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------
 # Elaborate the top level design with novopt option
 alias elab_debug {
   echo "\[exec\] elab_debug"
-  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_002 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L pio_0 -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L CPU1_inst_leds_bfm -L CPU1_inst_clk_bfm -L CPU1_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
+  eval vsim -novopt -t ps $ELAB_OPTIONS $USER_DEFINED_ELAB_OPTIONS -L work -L work_lib -L altera_common_sv_packages -L error_adapter_0 -L avalon_st_adapter -L rsp_mux -L rsp_demux -L cmd_mux -L cmd_demux -L router_002 -L router -L jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo -L jtag_uart_0_avalon_jtag_slave_agent -L nios2_gen2_0_data_master_agent -L jtag_uart_0_avalon_jtag_slave_translator -L nios2_gen2_0_data_master_translator -L cpu -L rst_controller -L irq_mapper -L mm_interconnect_0 -L pio_swich_alarm -L pio_s1 -L pio_leds_0 -L pio_buzz_0 -L pio_button_hours -L onchip_memory2_0 -L nios2_gen2_0 -L jtag_uart_0 -L CPU1_inst_s1_bfm -L CPU1_inst_leds_bfm -L CPU1_inst_hours_bfm -L CPU1_inst_clk_bfm -L CPU1_inst_buz_bfm -L CPU1_inst -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver $TOP_LEVEL_NAME
 }
 
 # ----------------------------------------

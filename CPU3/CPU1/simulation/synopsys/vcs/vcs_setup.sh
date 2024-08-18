@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 linux 2024.08.17.10:41:12
+# ACDS 18.1 625 win32 2024.08.17.13:56:25
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,12 +94,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2024.08.17.10:41:12
+# ACDS 18.1 625 win32 2024.08.17.13:56:25
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="CPU1"
 QSYS_SIMDIR="./../../"
-QUARTUS_INSTALL_DIR="/home/steph/intelFPGA_lite/18.1/quartus/"
+QUARTUS_INSTALL_DIR="C:/intelfpga_lite/18.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_SIM=0
 USER_DEFINED_ELAB_OPTIONS=""
@@ -130,15 +130,15 @@ fi
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_onchip_memory2_0.hex ./
 fi
 
@@ -171,15 +171,19 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv \
   $QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv \
   $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu.v \
-  $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v \
   $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_sysclk.v \
   $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_tck.v \
+  $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v \
   $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_test_bench.v \
   $QSYS_SIMDIR/submodules/altera_reset_controller.v \
   $QSYS_SIMDIR/submodules/altera_reset_synchronizer.v \
   $QSYS_SIMDIR/submodules/CPU1_irq_mapper.sv \
   $QSYS_SIMDIR/submodules/CPU1_mm_interconnect_0.v \
-  $QSYS_SIMDIR/submodules/CPU1_pio_0.v \
+  $QSYS_SIMDIR/submodules/CPU1_pio_set_alarm.v \
+  $QSYS_SIMDIR/submodules/CPU1_pio_s1.v \
+  $QSYS_SIMDIR/submodules/CPU1_pio_leds_0.v \
+  $QSYS_SIMDIR/submodules/CPU1_pio_buzz_0.v \
+  $QSYS_SIMDIR/submodules/CPU1_pio_button_hours.v \
   $QSYS_SIMDIR/submodules/CPU1_onchip_memory2_0.v \
   $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0.v \
   $QSYS_SIMDIR/submodules/CPU1_jtag_uart_0.v \

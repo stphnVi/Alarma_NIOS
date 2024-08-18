@@ -1,7 +1,18 @@
 	component CPU1 is
 		port (
-			clk_clk     : in  std_logic                    := 'X'; -- clk
-			leds_export : out std_logic_vector(1 downto 0)         -- export
+			buz_export          : out std_logic;                           -- export
+			clk_clk             : in  std_logic                    := 'X'; -- clk
+			hours_export        : in  std_logic                    := 'X'; -- export
+			leds_export         : out std_logic_vector(1 downto 0);        -- export
+			minutes_export      : in  std_logic                    := 'X'; -- export
+			off_export          : in  std_logic                    := 'X'; -- export
+			s1_export           : out std_logic_vector(6 downto 0);        -- export
+			s2_export           : out std_logic_vector(6 downto 0);        -- export
+			s3_export           : out std_logic_vector(6 downto 0);        -- export
+			s4_export           : out std_logic_vector(6 downto 0);        -- export
+			set_alarm_export    : in  std_logic                    := 'X'; -- export
+			set_clock_export    : in  std_logic                    := 'X'; -- export
+			switch_reset_export : in  std_logic                    := 'X'  -- export
 		);
 	end component CPU1;
 
