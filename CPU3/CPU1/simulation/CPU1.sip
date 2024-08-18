@@ -25,6 +25,7 @@ set_global_assignment -library "lib_CPU1" -name MISC_FILE [file join $::quartus(
 set_global_assignment -library "lib_CPU1" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_merlin_master_agent.sv"]
 set_global_assignment -library "lib_CPU1" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_merlin_slave_translator.sv"]
 set_global_assignment -library "lib_CPU1" -name MISC_FILE [file join $::quartus(sip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "lib_CPU1" -name MISC_FILE [file join $::quartus(sip_path) "submodules/CPU1_timer_0.v"]
 set_global_assignment -library "lib_CPU1" -name MISC_FILE [file join $::quartus(sip_path) "submodules/CPU1_pio_set_alarm.v"]
 set_global_assignment -library "lib_CPU1" -name MISC_FILE [file join $::quartus(sip_path) "submodules/CPU1_pio_s1.v"]
 set_global_assignment -library "lib_CPU1" -name MISC_FILE [file join $::quartus(sip_path) "submodules/CPU1_pio_leds_0.v"]

@@ -8,7 +8,8 @@
    <name preferredWidth="222" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
+ <library
+   expandedCategories="Library/Processors and Peripherals,Library,Library/Processors and Peripherals/Peripherals,Project" />
  <window width="1920" height="1020" x="0" y="0" />
  <generation simulation="VERILOG" />
 </preferences>

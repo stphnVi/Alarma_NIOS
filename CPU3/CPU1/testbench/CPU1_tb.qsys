@@ -113,7 +113,7 @@
          type = "int";
       }
    }
-   element CPU1_inst_swich_reset_bfm
+   element CPU1_inst_switch_reset_bfm
    {
       datum _sortIndex
       {
@@ -282,7 +282,7 @@
   <parameter name="SIGNAL_WIDTHS" value="1" />
  </module>
  <module
-   name="CPU1_inst_swich_reset_bfm"
+   name="CPU1_inst_switch_reset_bfm"
    kind="altera_conduit_bfm"
    version="18.1"
    enabled="1">
@@ -421,8 +421,8 @@
  <connection
    kind="conduit"
    version="18.1"
-   start="CPU1_inst_swich_reset_bfm.conduit"
-   end="CPU1_inst.swich_reset">
+   start="CPU1_inst_switch_reset_bfm.conduit"
+   end="CPU1_inst.switch_reset">
   <parameter name="endPort" value="" />
   <parameter name="endPortLSB" value="0" />
   <parameter name="startPort" value="" />

@@ -20,7 +20,8 @@ cpu:                                          ./libraries/cpu/
 rst_controller:                               ./libraries/rst_controller/                              
 irq_mapper:                                   ./libraries/irq_mapper/                                  
 mm_interconnect_0:                            ./libraries/mm_interconnect_0/                           
-pio_swich_alarm:                              ./libraries/pio_swich_alarm/                             
+timer_0:                                      ./libraries/timer_0/                                     
+pio_set_alarm:                                ./libraries/pio_set_alarm/                               
 pio_s1:                                       ./libraries/pio_s1/                                      
 pio_leds_0:                                   ./libraries/pio_leds_0/                                  
 pio_buzz_0:                                   ./libraries/pio_buzz_0/                                  

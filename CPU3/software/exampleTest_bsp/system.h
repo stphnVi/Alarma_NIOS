@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'CPU1'
  * SOPC Builder design path: ../../CPU1.sopcinfo
  *
- * Generated: Sat Aug 17 13:51:19 CST 2024
+ * Generated: Sun Aug 18 01:01:45 CST 2024
  */
 
 /*
@@ -136,6 +136,7 @@
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_ONCHIP_MEMORY2
 #define __ALTERA_AVALON_PIO
+#define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_GEN2
 
 
@@ -155,19 +156,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x3188
+#define ALT_STDERR_BASE 0x31c8
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x3188
+#define ALT_STDIN_BASE 0x31c8
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x3188
+#define ALT_STDOUT_BASE 0x31c8
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -192,7 +193,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x3188
+#define JTAG_UART_0_BASE 0x31c8
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -239,7 +240,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_button_hours altera_avalon_pio
-#define PIO_BUTTON_HOURS_BASE 0x30d0
+#define PIO_BUTTON_HOURS_BASE 0x3110
 #define PIO_BUTTON_HOURS_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_BUTTON_HOURS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_BUTTON_HOURS_CAPTURE 1
@@ -266,7 +267,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_button_minutes altera_avalon_pio
-#define PIO_BUTTON_MINUTES_BASE 0x30c0
+#define PIO_BUTTON_MINUTES_BASE 0x3100
 #define PIO_BUTTON_MINUTES_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_BUTTON_MINUTES_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_BUTTON_MINUTES_CAPTURE 1
@@ -293,7 +294,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_buzz_0 altera_avalon_pio
-#define PIO_BUZZ_0_BASE 0x3120
+#define PIO_BUZZ_0_BASE 0x3160
 #define PIO_BUZZ_0_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_BUZZ_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_BUZZ_0_CAPTURE 0
@@ -320,7 +321,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_leds_0 altera_avalon_pio
-#define PIO_LEDS_0_BASE 0x3170
+#define PIO_LEDS_0_BASE 0x31b0
 #define PIO_LEDS_0_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_LEDS_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_LEDS_0_CAPTURE 0
@@ -347,7 +348,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_s1 altera_avalon_pio
-#define PIO_S1_BASE 0x3150
+#define PIO_S1_BASE 0x3190
 #define PIO_S1_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_S1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_S1_CAPTURE 0
@@ -374,7 +375,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_s2 altera_avalon_pio
-#define PIO_S2_BASE 0x3140
+#define PIO_S2_BASE 0x3180
 #define PIO_S2_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_S2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_S2_CAPTURE 0
@@ -401,7 +402,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_s3 altera_avalon_pio
-#define PIO_S3_BASE 0x3130
+#define PIO_S3_BASE 0x3170
 #define PIO_S3_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_S3_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_S3_CAPTURE 0
@@ -428,7 +429,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_s4 altera_avalon_pio
-#define PIO_S4_BASE 0x3160
+#define PIO_S4_BASE 0x31a0
 #define PIO_S4_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_S4_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_S4_CAPTURE 0
@@ -455,7 +456,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_set_alarm altera_avalon_pio
-#define PIO_SET_ALARM_BASE 0x3100
+#define PIO_SET_ALARM_BASE 0x3140
 #define PIO_SET_ALARM_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_SET_ALARM_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_SET_ALARM_CAPTURE 0
@@ -482,7 +483,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_switch_clock altera_avalon_pio
-#define PIO_SWITCH_CLOCK_BASE 0x30f0
+#define PIO_SWITCH_CLOCK_BASE 0x3130
 #define PIO_SWITCH_CLOCK_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_SWITCH_CLOCK_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_SWITCH_CLOCK_CAPTURE 0
@@ -509,7 +510,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_switch_off altera_avalon_pio
-#define PIO_SWITCH_OFF_BASE 0x3110
+#define PIO_SWITCH_OFF_BASE 0x3150
 #define PIO_SWITCH_OFF_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_SWITCH_OFF_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_SWITCH_OFF_CAPTURE 0
@@ -536,7 +537,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_switch_reset altera_avalon_pio
-#define PIO_SWITCH_RESET_BASE 0x30e0
+#define PIO_SWITCH_RESET_BASE 0x3120
 #define PIO_SWITCH_RESET_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_SWITCH_RESET_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_SWITCH_RESET_CAPTURE 0
@@ -555,5 +556,31 @@
 #define PIO_SWITCH_RESET_RESET_VALUE 0
 #define PIO_SWITCH_RESET_SPAN 16
 #define PIO_SWITCH_RESET_TYPE "altera_avalon_pio"
+
+
+/*
+ * timer_0 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_timer_0 altera_avalon_timer
+#define TIMER_0_ALWAYS_RUN 1
+#define TIMER_0_BASE 0x3020
+#define TIMER_0_COUNTER_SIZE 32
+#define TIMER_0_FIXED_PERIOD 1
+#define TIMER_0_FREQ 50000000
+#define TIMER_0_IRQ 3
+#define TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define TIMER_0_LOAD_VALUE 49999999
+#define TIMER_0_MULT 1.0
+#define TIMER_0_NAME "/dev/timer_0"
+#define TIMER_0_PERIOD 1
+#define TIMER_0_PERIOD_UNITS "s"
+#define TIMER_0_RESET_OUTPUT 0
+#define TIMER_0_SNAPSHOT 0
+#define TIMER_0_SPAN 32
+#define TIMER_0_TICKS_PER_SEC 1
+#define TIMER_0_TIMEOUT_PULSE_OUTPUT 0
+#define TIMER_0_TYPE "altera_avalon_timer"
 
 #endif /* __SYSTEM_H_ */

@@ -26,6 +26,7 @@ DEFINE cpu                                          ./libraries/cpu/
 DEFINE rst_controller                               ./libraries/rst_controller/                              
 DEFINE irq_mapper                                   ./libraries/irq_mapper/                                  
 DEFINE mm_interconnect_0                            ./libraries/mm_interconnect_0/                           
+DEFINE timer_0                                      ./libraries/timer_0/                                     
 DEFINE pio_set_alarm                                ./libraries/pio_set_alarm/                               
 DEFINE pio_s1                                       ./libraries/pio_s1/                                      
 DEFINE pio_leds_0                                   ./libraries/pio_leds_0/                                  

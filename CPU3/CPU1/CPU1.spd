@@ -149,6 +149,10 @@
    type="VERILOG"
    library="mm_interconnect_0" />
  <file
+   path="simulation/submodules/CPU1_timer_0.v"
+   type="VERILOG"
+   library="timer_0" />
+ <file
    path="simulation/submodules/CPU1_pio_set_alarm.v"
    type="VERILOG"
    library="pio_set_alarm" />

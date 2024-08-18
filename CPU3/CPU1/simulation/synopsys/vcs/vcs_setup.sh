@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2024.08.17.13:56:25
+# ACDS 18.1 625 win32 2024.08.18.00:52:55
 
 # ----------------------------------------
 # vcs - auto-generated simulation script
@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2024.08.17.13:56:25
+# ACDS 18.1 625 win32 2024.08.18.00:52:55
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="CPU1"
@@ -179,6 +179,7 @@ vcs -lca -timescale=1ps/1ps -sverilog +verilog2001ext+.v -ntb_opts dtm $ELAB_OPT
   $QSYS_SIMDIR/submodules/altera_reset_synchronizer.v \
   $QSYS_SIMDIR/submodules/CPU1_irq_mapper.sv \
   $QSYS_SIMDIR/submodules/CPU1_mm_interconnect_0.v \
+  $QSYS_SIMDIR/submodules/CPU1_timer_0.v \
   $QSYS_SIMDIR/submodules/CPU1_pio_set_alarm.v \
   $QSYS_SIMDIR/submodules/CPU1_pio_s1.v \
   $QSYS_SIMDIR/submodules/CPU1_pio_leds_0.v \

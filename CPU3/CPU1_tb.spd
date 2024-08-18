@@ -154,9 +154,13 @@
    type="VERILOG"
    library="mm_interconnect_0" />
  <file
-   path="CPU1/testbench/CPU1_tb/simulation/submodules/CPU1_pio_swich_alarm.v"
+   path="CPU1/testbench/CPU1_tb/simulation/submodules/CPU1_timer_0.v"
    type="VERILOG"
-   library="pio_swich_alarm" />
+   library="timer_0" />
+ <file
+   path="CPU1/testbench/CPU1_tb/simulation/submodules/CPU1_pio_set_alarm.v"
+   type="VERILOG"
+   library="pio_set_alarm" />
  <file
    path="CPU1/testbench/CPU1_tb/simulation/submodules/CPU1_pio_s1.v"
    type="VERILOG"

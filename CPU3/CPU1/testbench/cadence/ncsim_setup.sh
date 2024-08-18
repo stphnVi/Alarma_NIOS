@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2024.08.17.12:51:56
+# ACDS 18.1 625 win32 2024.08.18.00:55:41
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,7 +106,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2024.08.17.12:51:56
+# ACDS 18.1 625 win32 2024.08.18.00:55:41
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="CPU1_tb"
@@ -164,7 +164,8 @@ mkdir -p ./libraries/cpu/
 mkdir -p ./libraries/rst_controller/
 mkdir -p ./libraries/irq_mapper/
 mkdir -p ./libraries/mm_interconnect_0/
-mkdir -p ./libraries/pio_swich_alarm/
+mkdir -p ./libraries/timer_0/
+mkdir -p ./libraries/pio_set_alarm/
 mkdir -p ./libraries/pio_s1/
 mkdir -p ./libraries/pio_leds_0/
 mkdir -p ./libraries/pio_buzz_0/
@@ -248,7 +249,8 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/altera_reset_synchronizer.v"                                 -work rst_controller                               -cdslib ./cds_libs/rst_controller.cds.lib                              
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_irq_mapper.sv"                                          -work irq_mapper                                   -cdslib ./cds_libs/irq_mapper.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_mm_interconnect_0.v"                                    -work mm_interconnect_0                            -cdslib ./cds_libs/mm_interconnect_0.cds.lib                           
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_swich_alarm.v"                                      -work pio_swich_alarm                              -cdslib ./cds_libs/pio_swich_alarm.cds.lib                             
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_timer_0.v"                                              -work timer_0                                      -cdslib ./cds_libs/timer_0.cds.lib                                     
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_set_alarm.v"                                        -work pio_set_alarm                                -cdslib ./cds_libs/pio_set_alarm.cds.lib                               
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_s1.v"                                               -work pio_s1                                       -cdslib ./cds_libs/pio_s1.cds.lib                                      
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_leds_0.v"                                           -work pio_leds_0                                   -cdslib ./cds_libs/pio_leds_0.cds.lib                                  
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/CPU1_tb/simulation/submodules/CPU1_pio_buzz_0.v"                                           -work pio_buzz_0                                   -cdslib ./cds_libs/pio_buzz_0.cds.lib                                  
