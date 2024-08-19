@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2024.08.19.11:27:05
+# ACDS 18.1 625 linux 2024.08.19.17:22:43
 # ----------------------------------------
 # Auto-generated simulation script rivierapro_setup.tcl
 # ----------------------------------------
@@ -113,7 +113,7 @@ if ![info exists QSYS_SIMDIR] {
 }
 
 if ![info exists QUARTUS_INSTALL_DIR] { 
-  set QUARTUS_INSTALL_DIR "C:/intelfpga_lite/18.1/quartus/"
+  set QUARTUS_INSTALL_DIR "/home/steph/intelFPGA_lite/18.1/quartus/"
 }
 
 if ![info exists USER_DEFINED_COMPILE_OPTIONS] { 
@@ -152,15 +152,15 @@ if { [ string match "Active" $Aldec ] } {
 # Copy ROM/RAM files to simulation directory
 alias file_copy {
   echo "\[exec\] file_copy"
-  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat ./
   file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat ./
   file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat ./
-  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
-  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif ./
-  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
   file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
   file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
+  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
+  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  file copy -force $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif ./
   file copy -force $QSYS_SIMDIR/submodules/CPU1_onchip_memory2_0.hex ./
 }
 
@@ -278,9 +278,9 @@ alias com {
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv"                           -work jtag_uart_0_avalon_jtag_slave_translator    
   eval  vlog  $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS      "$QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv"                          -work nios2_gen2_0_data_master_translator         
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu.v"                                     -work cpu                                         
+  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_sysclk.v"                  -work cpu                                         
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                         
-  eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                         
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                         
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_reset_controller.v"                                   -work rst_controller                              
   eval  vlog -v2k5 $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                 -work rst_controller                              

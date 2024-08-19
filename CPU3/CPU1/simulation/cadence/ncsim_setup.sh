@@ -12,7 +12,7 @@
 # or its authorized distributors. Please refer to the applicable 
 # agreement for further details.
 
-# ACDS 18.1 625 win32 2024.08.19.11:27:05
+# ACDS 18.1 625 linux 2024.08.19.17:22:43
 
 # ----------------------------------------
 # ncsim - auto-generated simulation script
@@ -106,12 +106,12 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 win32 2024.08.19.11:27:05
+# ACDS 18.1 625 linux 2024.08.19.17:22:43
 # ----------------------------------------
 # initialize variables
 TOP_LEVEL_NAME="CPU1"
 QSYS_SIMDIR="./../"
-QUARTUS_INSTALL_DIR="C:/intelfpga_lite/18.1/quartus/"
+QUARTUS_INSTALL_DIR="/home/steph/intelFPGA_lite/18.1/quartus/"
 SKIP_FILE_COPY=0
 SKIP_DEV_COM=0
 SKIP_COM=0
@@ -184,15 +184,15 @@ mkdir -p ./libraries/cyclonev_pcie_hip_ver/
 # ----------------------------------------
 # copy RAM/ROM files to simulation directory
 if [ $SKIP_FILE_COPY -eq 0 ]; then
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.mif ./
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat ./
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif ./
-  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat ./
+  cp -f $QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif ./
   cp -f $QSYS_SIMDIR/submodules/CPU1_onchip_memory2_0.hex ./
 fi
 
@@ -233,9 +233,9 @@ if [ $SKIP_COM -eq 0 ]; then
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_slave_translator.sv"                           -work jtag_uart_0_avalon_jtag_slave_translator     -cdslib ./cds_libs/jtag_uart_0_avalon_jtag_slave_translator.cds.lib    
   ncvlog -sv $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_merlin_master_translator.sv"                          -work nios2_gen2_0_data_master_translator          -cdslib ./cds_libs/nios2_gen2_0_data_master_translator.cds.lib         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu.v"                                     -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
+  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_sysclk.v"                  -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_tck.v"                     -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
-  ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v"                 -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/CPU1_nios2_gen2_0_cpu_test_bench.v"                          -work cpu                                          -cdslib ./cds_libs/cpu.cds.lib                                         
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_reset_controller.v"                                   -work rst_controller                               -cdslib ./cds_libs/rst_controller.cds.lib                              
   ncvlog $USER_DEFINED_VERILOG_COMPILE_OPTIONS $USER_DEFINED_COMPILE_OPTIONS     "$QSYS_SIMDIR/submodules/altera_reset_synchronizer.v"                                 -work rst_controller                               -cdslib ./cds_libs/rst_controller.cds.lib                              

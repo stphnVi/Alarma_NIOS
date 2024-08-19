@@ -1,5 +1,5 @@
 Flow report for CPU3
-Mon Aug 19 10:41:48 2024
+Mon Aug 19 14:12:39 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Aug 19 10:41:32 2024       ;
+; Flow Status                     ; Successful - Mon Aug 19 14:12:29 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CPU3                                        ;
 ; Top-level Entity Name           ; CPU1_inst                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,062 / 32,070 ( 3 % )                      ;
-; Total registers                 ; 1261                                        ;
+; Logic utilization (in ALMs)     ; 1,057 / 32,070 ( 3 % )                      ;
+; Total registers                 ; 1262                                        ;
 ; Total pins                      ; 39 / 457 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 44,032 / 4,065,280 ( 1 % )                  ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/19/2024 10:37:39 ;
+; Start date & time ; 08/19/2024 14:10:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPU3                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 5311875297761.172408545802316                          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 246337685012443.172409825005567                        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                      ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                      ; --            ; --          ; --             ;
@@ -92,7 +92,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                           ; --            ; --          ; --             ;
 ; SLD_FILE                            ; CPU1/synthesis/CPU1.regmap                             ; --            ; --          ; --             ;
 ; SLD_FILE                            ; CPU1/synthesis/CPU1.debuginfo                          ; --            ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME CPU1 HAS_SOPCINFO 1 GENERATION_ID 1724085363 ; --            ; CPU1        ; --             ;
+; SLD_INFO                            ; QSYS_NAME CPU1 HAS_SOPCINFO 1 GENERATION_ID 1724093943 ; --            ; CPU1        ; --             ;
 ; SOPCINFO_FILE                       ; CPU1/synthesis/../../CPU1.sopcinfo                     ; --            ; --          ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                     ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; CPU1_inst                                              ; CPU3          ; --          ; --             ;
@@ -104,24 +104,24 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:00     ; 1.0                     ; 5039 MB             ; 00:01:13                           ;
-; Fitter               ; 00:02:27     ; 1.1                     ; 6844 MB             ; 00:02:24                           ;
-; Assembler            ; 00:00:17     ; 1.0                     ; 4848 MB             ; 00:00:13                           ;
-; Timing Analyzer      ; 00:00:14     ; 1.8                     ; 5230 MB             ; 00:00:20                           ;
-; Total                ; 00:03:58     ; --                      ; --                  ; 00:04:10                           ;
+; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 1232 MB             ; 00:01:13                           ;
+; Fitter               ; 00:00:48     ; 1.2                     ; 2784 MB             ; 00:02:23                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 970 MB              ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:09     ; 2.0                     ; 1312 MB             ; 00:00:14                           ;
+; Total                ; 00:01:43     ; --                      ; --                  ; 00:03:56                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-6SFU59JI  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-6SFU59JI  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-6SFU59JI  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-6SFU59JI  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++----------------------+------------------+---------------+---------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name       ; OS Version    ; Processor type ;
++----------------------+------------------+---------------+---------------+----------------+
+; Analysis & Synthesis ; steph            ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; Fitter               ; steph            ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; Assembler            ; steph            ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
+; Timing Analyzer      ; steph            ; Manjaro Linux ; Manjaro Linux ; x86_64         ;
++----------------------+------------------+---------------+---------------+----------------+
 
 
 ------------
