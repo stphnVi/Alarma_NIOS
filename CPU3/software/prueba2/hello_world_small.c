@@ -37,14 +37,14 @@ static void timer_isr(void * context, alt_u32 id){
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
 
 	if (count%2==0){
-			  *seg1 = 78;
+			  //*seg1 = 78;
 			  *led1=1;
 		  }
 		  else{
-			  *seg2 = 79;
+			  //*seg2 = 79;
 			  *led1=2;
-			  *seg3 = 80;
-			  *seg4 = 81;
+			  //*seg3 = 80;
+			  //*seg4 = 81;
 		  }
 
 	count++;

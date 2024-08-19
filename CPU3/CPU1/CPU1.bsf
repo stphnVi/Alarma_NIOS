@@ -141,7 +141,7 @@ refer to the applicable agreement for further details.
 		(text "export" (rect 117 507 270 1024)(font "Arial" (color 0 0 0)))
 		(text "switch_reset" (rect 38 523 148 1059)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 117 547 270 1104)(font "Arial" (color 0 0 0)))
-		(text " CPU1 " (rect 245 568 526 1146)(font "Arial" ))
+		(text " system " (rect 237 568 522 1146)(font "Arial" ))
 		(line (pt 112 32)(pt 160 32)(line_width 1))
 		(line (pt 160 32)(pt 160 568)(line_width 1))
 		(line (pt 112 568)(pt 160 568)(line_width 1))

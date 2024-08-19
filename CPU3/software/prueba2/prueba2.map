@@ -119,7 +119,7 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 0x0000000000001180                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000000001020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000000001180      0x398
+.text           0x0000000000001180      0x364
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -166,43 +166,43 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000000001180       0x3c ../prueba2_bsp//obj/HAL/src/crt0.o
                 0x0000000000001180                _start
- .text          0x00000000000011bc       0xa4 obj/default/hello_world_small.o
-                0x0000000000001224                init_timer_interrupt
- .text.startup  0x0000000000001260       0x10 obj/default/hello_world_small.o
-                0x0000000000001260                main
- .text          0x0000000000001270       0x8c ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
-                0x0000000000001270                alt_ic_isr_register
-                0x0000000000001274                alt_ic_irq_enable
-                0x00000000000012ac                alt_ic_irq_disable
-                0x00000000000012e4                alt_ic_irq_enabled
- .text          0x00000000000012fc       0x68 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
-                0x00000000000012fc                alt_iic_isr_register
- .text          0x0000000000001364        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .text          0x0000000000001364        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .text          0x0000000000001364        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .text          0x0000000000001364       0xe0 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
-                0x0000000000001364                alt_load
- .text          0x0000000000001444       0x2c ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000001444                alt_main
- .text          0x0000000000001470       0x24 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x0000000000001470                alt_irq_init
-                0x0000000000001490                alt_sys_init
- .text          0x0000000000001494        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000000001494                alt_dcache_flush_all
- .text          0x0000000000001498        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .text          0x0000000000001498        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x0000000000001498                alt_icache_flush_all
- .text          0x000000000000149c       0x74 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x000000000000149c                alt_exception_cause_generated_bad_addr
- .text          0x0000000000001510        0x8 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000001510                altera_nios2_gen2_irq_init
+ .text          0x00000000000011bc       0x70 obj/default/hello_world_small.o
+                0x00000000000011f0                init_timer_interrupt
+ .text.startup  0x000000000000122c       0x10 obj/default/hello_world_small.o
+                0x000000000000122c                main
+ .text          0x000000000000123c       0x8c ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
+                0x000000000000123c                alt_ic_isr_register
+                0x0000000000001240                alt_ic_irq_enable
+                0x0000000000001278                alt_ic_irq_disable
+                0x00000000000012b0                alt_ic_irq_enabled
+ .text          0x00000000000012c8       0x68 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x00000000000012c8                alt_iic_isr_register
+ .text          0x0000000000001330        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x0000000000001330        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x0000000000001330        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x0000000000001330       0xe0 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
+                0x0000000000001330                alt_load
+ .text          0x0000000000001410       0x2c ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000001410                alt_main
+ .text          0x000000000000143c       0x24 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x000000000000143c                alt_irq_init
+                0x000000000000145c                alt_sys_init
+ .text          0x0000000000001460        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000001460                alt_dcache_flush_all
+ .text          0x0000000000001464        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000000001464        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000001464                alt_icache_flush_all
+ .text          0x0000000000001468       0x74 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000001468                alt_exception_cause_generated_bad_addr
+ .text          0x00000000000014dc        0x8 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x00000000000014dc                altera_nios2_gen2_irq_init
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000000001518                . = ALIGN (0x4)
+                0x00000000000014e4                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -224,105 +224,105 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0000000000001518                . = ALIGN (0x4)
+                0x00000000000014e4                . = ALIGN (0x4)
 
-.rodata         0x0000000000001518        0x0
-                0x0000000000001518                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0000000000001518                . = ALIGN (0x4)
+.rodata         0x00000000000014e4        0x0
+                0x00000000000014e4                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x00000000000014e4                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  *(.rodata1)
-                0x0000000000001518                . = ALIGN (0x4)
-                0x0000000000001518                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0000000000001518                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x00000000000014e4                . = ALIGN (0x4)
+                0x00000000000014e4                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x00000000000014e4                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0000000000001518        0x8 load address 0x0000000000001520
-                0x0000000000001518                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x0000000000001518                . = ALIGN (0x4)
+.rwdata         0x00000000000014e4        0x8 load address 0x00000000000014ec
+                0x00000000000014e4                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x00000000000014e4                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000001518        0x0 ../prueba2_bsp//obj/HAL/src/crt0.o
- .data          0x0000000000001518        0x0 obj/default/hello_world_small.o
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .data          0x0000000000001518        0x0 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000009518                _gp = ABSOLUTE ((. + 0x8000))
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp//obj/HAL/src/crt0.o
+ .data          0x00000000000014e4        0x0 obj/default/hello_world_small.o
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .data          0x00000000000014e4        0x0 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x00000000000094e4                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x0000000000001518        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000001518                alt_priority_mask
- .sdata         0x000000000000151c        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x000000000000151c                jtag_uart_0
+ .sdata         0x00000000000014e4        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x00000000000014e4                alt_priority_mask
+ .sdata         0x00000000000014e8        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00000000000014e8                jtag_uart_0
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x0000000000001520                . = ALIGN (0x4)
-                0x0000000000001520                _edata = ABSOLUTE (.)
+                0x00000000000014ec                . = ALIGN (0x4)
+                0x00000000000014ec                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x0000000000001520                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x0000000000001520                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x00000000000014ec                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x00000000000014ec                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000000001528      0x118
-                0x0000000000001528                __bss_start = ABSOLUTE (.)
+.bss            0x00000000000014f4      0x118
+                0x00000000000014f4                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000001528        0x4 obj/default/hello_world_small.o
- .sbss          0x000000000000152c        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                0x000000000000152c                alt_irq_active
- .sbss          0x0000000000001530        0xc ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000001530                alt_envp
-                0x0000000000001534                alt_argv
-                0x0000000000001538                alt_argc
- .sbss          0x000000000000153c        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x000000000000153c                alt_instruction_exception_handler
+ .sbss          0x00000000000014f4        0x4 obj/default/hello_world_small.o
+ .sbss          0x00000000000014f8        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x00000000000014f8                alt_irq_active
+ .sbss          0x00000000000014fc        0xc ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
+                0x00000000000014fc                alt_envp
+                0x0000000000001500                alt_argv
+                0x0000000000001504                alt_argc
+ .sbss          0x0000000000001508        0x4 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000001508                alt_instruction_exception_handler
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000000001540        0x0 obj/default/hello_world_small.o
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .bss           0x0000000000001540        0x0 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp//obj/HAL/src/crt0.o
+ .bss           0x000000000000150c        0x0 obj/default/hello_world_small.o
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x000000000000150c        0x0 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
  *(COMMON)
- COMMON         0x0000000000001540      0x100 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
-                0x0000000000001540                alt_irq
-                0x0000000000001640                . = ALIGN (0x4)
-                0x0000000000001640                __bss_end = ABSOLUTE (.)
+ COMMON         0x000000000000150c      0x100 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x000000000000150c                alt_irq
+                0x000000000000160c                . = ALIGN (0x4)
+                0x000000000000160c                __bss_end = ABSOLUTE (.)
 
 .onchip_memory2_0
-                0x0000000000001640        0x0
+                0x000000000000160c        0x0
                 [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
  *(.onchip_memory2_0 .onchip_memory2_0. onchip_memory2_0.*)
-                0x0000000000001640                . = ALIGN (0x4)
+                0x000000000000160c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
-                0x0000000000001640                _end = ABSOLUTE (.)
-                0x0000000000001640                end = ABSOLUTE (.)
-                0x0000000000001640                __alt_stack_base = ABSOLUTE (.)
+                0x000000000000160c                _end = ABSOLUTE (.)
+                0x000000000000160c                end = ABSOLUTE (.)
+                0x000000000000160c                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
 
 .stab
@@ -407,23 +407,23 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1370
+.debug_info     0x0000000000000000     0x136e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x7a ../prueba2_bsp//obj/HAL/src/crt0.o
- .debug_info    0x000000000000007a      0x1a0 obj/default/hello_world_small.o
- .debug_info    0x000000000000021a      0x38a ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_info    0x00000000000005a4      0x232 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_info    0x00000000000007d6       0x83 ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_info    0x0000000000000859      0x184 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_info    0x00000000000009dd       0x88 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_info    0x0000000000000a65      0x1c9 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
- .debug_info    0x0000000000000c2e      0x169 ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000000d97      0x19d ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x0000000000000f34       0x92 ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x0000000000000fc6       0x89 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_info    0x000000000000104f       0x92 ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x00000000000010e1      0x1fd ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_info    0x00000000000012de       0x92 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x000000000000007a      0x19e obj/default/hello_world_small.o
+ .debug_info    0x0000000000000218      0x38a ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x00000000000005a2      0x232 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x00000000000007d4       0x83 ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000000857      0x184 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x00000000000009db       0x88 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000000a63      0x1c9 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000c2c      0x169 ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000000d95      0x19d ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000000f32       0x92 ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000000fc4       0x89 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x000000000000104d       0x92 ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00000000000010df      0x1fd ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x00000000000012dc       0x92 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
 .debug_abbrev   0x0000000000000000      0xa5f
  *(.debug_abbrev)
@@ -443,23 +443,23 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .debug_abbrev  0x0000000000000936       0xe7 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
  .debug_abbrev  0x0000000000000a1d       0x42 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_line     0x0000000000000000      0x91d
+.debug_line     0x0000000000000000      0x919
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../prueba2_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066       0xb7 obj/default/hello_world_small.o
- .debug_line    0x000000000000011d       0xf1 ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_line    0x000000000000020e       0xd6 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_line    0x00000000000002e4       0x6b ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x000000000000034f       0xa5 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x00000000000003f4       0x50 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x0000000000000444       0xa4 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x00000000000004e8       0xbd ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x00000000000005a5      0x11a ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x00000000000006bf       0x4e ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x000000000000070d       0xb3 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x00000000000007c0       0x4e ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x000000000000080e       0xbf ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_line    0x00000000000008cd       0x50 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000066       0xb3 obj/default/hello_world_small.o
+ .debug_line    0x0000000000000119       0xf1 ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x000000000000020a       0xd6 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x00000000000002e0       0x6b ../prueba2_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x000000000000034b       0xa5 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x00000000000003f0       0x50 ../prueba2_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000000440       0xa4 ../prueba2_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000000000004e4       0xbd ../prueba2_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000005a1      0x11a ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000000000006bb       0x4e ../prueba2_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000000709       0xb3 ../prueba2_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x00000000000007bc       0x4e ../prueba2_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x000000000000080a       0xbf ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x00000000000008c9       0x50 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
 .debug_frame    0x0000000000000000      0x230
  *(.debug_frame)
@@ -502,14 +502,14 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .debug_str     0x0000000000000a85       0x20 ../prueba2_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
                                         0x168 (size before relaxing)
 
-.debug_loc      0x0000000000000000      0x456
+.debug_loc      0x0000000000000000      0x41c
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x5b obj/default/hello_world_small.o
- .debug_loc     0x000000000000005b      0x170 ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_loc     0x00000000000001cb      0x193 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_loc     0x000000000000035e       0x72 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_loc     0x00000000000003d0       0x21 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x00000000000003f1       0x65 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_loc     0x0000000000000000       0x21 obj/default/hello_world_small.o
+ .debug_loc     0x0000000000000021      0x170 ../prueba2_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x0000000000000191      0x193 ../prueba2_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x0000000000000324       0x72 ../prueba2_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x0000000000000396       0x21 ../prueba2_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x00000000000003b7       0x65 ../prueba2_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
 
 .debug_macinfo
  *(.debug_macinfo)
