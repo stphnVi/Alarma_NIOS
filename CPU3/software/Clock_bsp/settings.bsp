@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 19, 2024 5:56:22 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1724111782230</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Aug 19, 2024 11:05:32 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1724130332065</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/steph/Documents/GitHub/Alarma_NIOS/CPU3/software/Clock_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../CPU1.sopcinfo</SopcDesignFile>
