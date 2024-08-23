@@ -21,22 +21,22 @@ preplace inst CPU1.clk_0 -pg 1 -lvl 2 -y 380
 preplace inst CPU1.pio_switch_reset -pg 1 -lvl 3 -y 1170
 preplace inst CPU1.pio_buzz_0 -pg 1 -lvl 3 -y 1270
 preplace inst CPU1.timer_0 -pg 1 -lvl 3 -y 130
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_switch_reset.external_connection,(SLAVE)CPU1.switch_reset) 1 0 3 NJ 1200 NJ 1200 NJ
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_leds_0.external_connection,(SLAVE)CPU1.leds) 1 0 3 NJ 40 NJ 40 NJ
-preplace netloc FAN_OUT<net_container>CPU1</net_container>(SLAVE)pio_button_hours.irq,(MASTER)nios2_gen2_0.irq,(SLAVE)timer_0.irq,(SLAVE)jtag_uart_0.irq,(SLAVE)pio_button_minutes.irq) 1 1 2 580 160 920
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.set_clock,(SLAVE)pio_switch_clock.external_connection) 1 0 3 NJ 1000 NJ 1000 NJ
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.minutes,(SLAVE)pio_button_minutes.external_connection) 1 0 3 NJ 340 NJ 340 NJ
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.buz,(SLAVE)pio_buzz_0.external_connection) 1 0 3 NJ 1300 NJ 1300 NJ
-preplace netloc INTERCONNECT<net_container>CPU1</net_container>(MASTER)clk_0.clk_reset,(SLAVE)pio_switch_reset.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)pio_s2.reset,(SLAVE)pio_set_alarm.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)pio_button_minutes.reset,(SLAVE)pio_s3.reset,(SLAVE)pio_s4.reset,(SLAVE)pio_switch_off.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)clk_0.clk_in_reset,(SLAVE)pio_buzz_0.reset,(SLAVE)timer_0.reset,(SLAVE)pio_button_hours.reset,(SLAVE)pio_switch_clock.reset,(SLAVE)pio_leds_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)pio_s1.reset) 1 0 3 160 270 540 320 900
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_switch_off.external_connection,(SLAVE)CPU1.off) 1 0 3 NJ 1100 NJ 1100 NJ
-preplace netloc FAN_OUT<net_container>CPU1</net_container>(SLAVE)pio_s2.clk,(SLAVE)timer_0.clk,(SLAVE)pio_set_alarm.clk,(SLAVE)pio_button_hours.clk,(SLAVE)pio_switch_clock.clk,(SLAVE)pio_switch_off.clk,(SLAVE)pio_s4.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)pio_button_minutes.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)pio_switch_reset.clk,(SLAVE)pio_s3.clk,(SLAVE)pio_s1.clk,(MASTER)clk_0.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)pio_leds_0.clk,(SLAVE)pio_buzz_0.clk) 1 0 3 120 230 560 140 860
+preplace netloc INTERCONNECT<net_container>CPU1</net_container>(SLAVE)nios2_gen2_0.reset,(SLAVE)pio_s4.reset,(SLAVE)pio_leds_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)pio_s1.reset,(SLAVE)pio_s3.reset,(SLAVE)clk_0.clk_in_reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)pio_switch_off.reset,(SLAVE)timer_0.reset,(SLAVE)pio_s2.reset,(SLAVE)pio_buzz_0.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)pio_button_hours.reset,(SLAVE)pio_switch_clock.reset,(SLAVE)pio_button_minutes.reset,(SLAVE)pio_switch_reset.reset,(SLAVE)pio_set_alarm.reset,(SLAVE)jtag_uart_0.reset) 1 0 3 160 270 540 300 900
+preplace netloc FAN_OUT<net_container>CPU1</net_container>(SLAVE)pio_button_minutes.irq,(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart_0.irq,(SLAVE)timer_0.irq,(SLAVE)pio_button_hours.irq) 1 1 2 580 160 920
+preplace netloc INTERCONNECT<net_container>CPU1</net_container>(SLAVE)pio_switch_clock.s1,(SLAVE)pio_s1.s1,(SLAVE)pio_s4.s1,(SLAVE)pio_button_minutes.s1,(SLAVE)pio_switch_reset.s1,(SLAVE)pio_s3.s1,(SLAVE)onchip_memory2_0.s1,(SLAVE)pio_s2.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)pio_button_hours.s1,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)pio_switch_off.s1,(SLAVE)timer_0.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)pio_leds_0.s1,(SLAVE)pio_buzz_0.s1,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)pio_set_alarm.s1) 1 0 3 140 250 520 180 860
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.switch_reset,(SLAVE)pio_switch_reset.external_connection) 1 0 3 NJ 1200 NJ 1200 NJ
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.minutes,(SLAVE)pio_button_minutes.external_connection) 1 0 3 NJ 370 NJ 370 NJ
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_buzz_0.external_connection,(SLAVE)CPU1.buz) 1 0 3 NJ 1300 NJ 1300 NJ
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_set_alarm.external_connection,(SLAVE)CPU1.set_alarm) 1 0 3 NJ 900 NJ 900 NJ
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_switch_clock.external_connection,(SLAVE)CPU1.set_clock) 1 0 3 NJ 1000 NJ 1000 NJ
 preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_s3.external_connection,(SLAVE)CPU1.s3) 1 0 3 NJ 700 NJ 700 NJ
 preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.s2,(SLAVE)pio_s2.external_connection) 1 0 3 NJ 600 NJ 600 NJ
+preplace netloc FAN_OUT<net_container>CPU1</net_container>(MASTER)clk_0.clk,(SLAVE)pio_set_alarm.clk,(SLAVE)pio_s4.clk,(SLAVE)timer_0.clk,(SLAVE)pio_switch_reset.clk,(SLAVE)pio_switch_clock.clk,(SLAVE)pio_leds_0.clk,(SLAVE)pio_switch_off.clk,(SLAVE)pio_button_hours.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)pio_buzz_0.clk,(SLAVE)pio_button_minutes.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)pio_s1.clk,(SLAVE)pio_s3.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)pio_s2.clk) 1 0 3 120 230 560 140 880
 preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.s4,(SLAVE)pio_s4.external_connection) 1 0 3 NJ 800 NJ 800 NJ
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_button_hours.external_connection,(SLAVE)CPU1.hours) 1 0 3 NJ 300 NJ 300 NJ
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.clk,(SLAVE)clk_0.clk_in) 1 0 2 NJ 390 NJ
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.set_alarm,(SLAVE)pio_set_alarm.external_connection) 1 0 3 NJ 900 NJ 900 NJ
-preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.s1,(SLAVE)pio_s1.external_connection) 1 0 3 NJ 500 NJ 500 NJ
-preplace netloc INTERCONNECT<net_container>CPU1</net_container>(MASTER)nios2_gen2_0.instruction_master,(SLAVE)pio_s1.s1,(SLAVE)pio_switch_clock.s1,(SLAVE)pio_button_hours.s1,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)pio_switch_reset.s1,(SLAVE)pio_switch_off.s1,(SLAVE)pio_s2.s1,(SLAVE)pio_set_alarm.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)pio_s4.s1,(SLAVE)pio_button_minutes.s1,(SLAVE)timer_0.s1,(SLAVE)pio_buzz_0.s1,(SLAVE)pio_leds_0.s1,(SLAVE)onchip_memory2_0.s1,(SLAVE)pio_s3.s1) 1 0 3 140 250 520 180 840
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.leds,(SLAVE)pio_leds_0.external_connection) 1 0 3 NJ 40 NJ 40 NJ
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_button_hours.external_connection,(SLAVE)CPU1.hours) 1 0 3 NJ 320 NJ 320 NJ
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)CPU1.off,(SLAVE)pio_switch_off.external_connection) 1 0 3 NJ 1100 NJ 1100 NJ
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)clk_0.clk_in,(SLAVE)CPU1.clk) 1 0 2 NJ 390 NJ
+preplace netloc EXPORT<net_container>CPU1</net_container>(SLAVE)pio_s1.external_connection,(SLAVE)CPU1.s1) 1 0 3 NJ 500 NJ 500 NJ
 levelinfo -pg 1 0 90 1130
 levelinfo -hier CPU1 100 280 670 970 1120

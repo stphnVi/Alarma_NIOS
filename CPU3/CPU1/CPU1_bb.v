@@ -12,7 +12,8 @@ module CPU1 (
 	s4_export,
 	set_alarm_export,
 	set_clock_export,
-	switch_reset_export);	
+	switch_reset_export,
+	reset_reset_n);	
 
 	output		buz_export;
 	input		clk_clk;
@@ -27,4 +28,5 @@ module CPU1 (
 	input		set_alarm_export;
 	input		set_clock_export;
 	input		switch_reset_export;
+	input		reset_reset_n;
 endmodule

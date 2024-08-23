@@ -333,6 +333,7 @@
    internal="pio_switch_off.external_connection"
    type="conduit"
    dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
    name="s1"
    internal="pio_s1.external_connection"
@@ -617,7 +618,7 @@
   <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="FALLING" />
+  <parameter name="edgeType" value="RISING" />
   <parameter name="generateIRQ" value="true" />
   <parameter name="irqType" value="LEVEL" />
   <parameter name="resetValue" value="0" />
@@ -635,7 +636,7 @@
   <parameter name="captureEdge" value="true" />
   <parameter name="clockRate" value="50000000" />
   <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="FALLING" />
+  <parameter name="edgeType" value="RISING" />
   <parameter name="generateIRQ" value="true" />
   <parameter name="irqType" value="LEVEL" />
   <parameter name="resetValue" value="0" />
@@ -1232,11 +1233,6 @@
    version="18.1"
    start="clk_0.clk_reset"
    end="pio_button_hours.reset" />
- <connection
-   kind="reset"
-   version="18.1"
-   start="nios2_gen2_0.debug_reset_request"
-   end="clk_0.clk_in_reset" />
  <connection
    kind="reset"
    version="18.1"

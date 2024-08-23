@@ -16,6 +16,7 @@ module CPU1_inst (input clk,       reset, switch1, switch2, switch3, switch4,
   .set_alarm_export    (switch3),    //    set_alarm.export
   .off_export          (switch4),          //          off.export  
   .hours_export        (button1),        //        hours.export
-  .minutes_export      (button2) //      minutes.export 
+  .minutes_export      (button2), //      minutes.export 
+  .reset_reset_n       (reset) 
   );
 endmodule

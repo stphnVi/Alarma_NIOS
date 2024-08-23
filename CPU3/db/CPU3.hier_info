@@ -1,6 +1,6 @@
 |CPU1_inst
 clk => clk.IN1
-reset => ~NO_FANOUT~
+reset => reset.IN1
 switch1 => switch1.IN1
 switch2 => switch2.IN1
 switch3 => switch3.IN1
@@ -48,6 +48,7 @@ leds_export[0] <= CPU1_pio_leds_0:pio_leds_0.out_port
 leds_export[1] <= CPU1_pio_leds_0:pio_leds_0.out_port
 minutes_export => minutes_export.IN1
 off_export => off_export.IN1
+reset_reset_n => _.IN1
 s1_export[0] <= CPU1_pio_s1:pio_s1.out_port
 s1_export[1] <= CPU1_pio_s1:pio_s1.out_port
 s1_export[2] <= CPU1_pio_s1:pio_s1.out_port

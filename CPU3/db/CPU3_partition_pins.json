@@ -154,6 +154,10 @@
 				{
 					"name" : "switch1",
 					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
 				}
 			]
 		}

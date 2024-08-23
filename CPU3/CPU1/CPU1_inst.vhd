@@ -12,7 +12,8 @@
 			s4_export           : out std_logic_vector(6 downto 0);        -- export
 			set_alarm_export    : in  std_logic                    := 'X'; -- export
 			set_clock_export    : in  std_logic                    := 'X'; -- export
-			switch_reset_export : in  std_logic                    := 'X'  -- export
+			switch_reset_export : in  std_logic                    := 'X'; -- export
+			reset_reset_n       : in  std_logic                    := 'X'  -- reset_n
 		);
 	end component CPU1;
 
@@ -30,6 +31,7 @@
 			s4_export           => CONNECTED_TO_s4_export,           --           s4.export
 			set_alarm_export    => CONNECTED_TO_set_alarm_export,    --    set_alarm.export
 			set_clock_export    => CONNECTED_TO_set_clock_export,    --    set_clock.export
-			switch_reset_export => CONNECTED_TO_switch_reset_export  -- switch_reset.export
+			switch_reset_export => CONNECTED_TO_switch_reset_export, -- switch_reset.export
+			reset_reset_n       => CONNECTED_TO_reset_reset_n        --        reset.reset_n
 		);
 
