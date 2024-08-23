@@ -65,8 +65,8 @@ alt_u8 config_mode = 0;
 alt_u8 set_min = 0;
 alt_u8 set_h = 0;
 alt_u8 alarm = 0;
-alt_u8 alarm_h = 0;
-alt_u8 alarm_m = 0;
+alt_u8 alarm_h = 1337;
+alt_u8 alarm_m = 1337;
 alt_u8 off = 0;
 alt_u8 set_alarm = 0;
 
@@ -166,10 +166,10 @@ static void timer_isr(void * context, alt_u32 id) {
 		if (set_alarm == 1) {
 
 			// Mostrar la hora de la alarma en los displays
-            *seg1 = nm.mapping[alarm_m % 10];    // Unidad de minutos de la alarma
-            *seg2 = nm.mapping[alarm_m / 10];    // Decena de minutos de la alarma
-            *seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
-            *seg4 = nm.mapping[alarm_h / 10];
+			*seg1 = nm.mapping[alarm_m % 10];  // Unidad de minutos de la alarma
+			*seg2 = nm.mapping[alarm_m / 10];  // Decena de minutos de la alarma
+			*seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
+			*seg4 = nm.mapping[alarm_h / 10];
 		} else {
 			// Actualiza los displays con el tiempo actual
 			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
@@ -184,15 +184,36 @@ static void timer_isr(void * context, alt_u32 id) {
 			config_mode = 1; // Entrar en modo de configuración
 		}
 
-		check_alarm(hours, minutes, alarm_h, alarm_m, buzz,led1 , off);
+		check_alarm(seconds, hours, minutes, alarm_h, alarm_m, buzz, led1, off);
 	}
 }
 
-void check_alarm(int current_hours, int current_minutes, int alarm_hours, int alarm_minutes, volatile unsigned long *buzz, volatile unsigned long *led1, alt_u8 off) {
+void check_alarm(int current_seconds, int current_hours, int current_minutes,
+		int alarm_hours, int alarm_minutes, volatile unsigned long *buzz,
+		volatile unsigned long *led1, alt_u8 off) {
 	if (current_hours == alarm_hours && current_minutes == alarm_minutes) {
 		if (off == 0) {
-			*led1 = 1;
-			*buzz = 1; // Activa el buzzer
+			if (current_seconds < 30) {
+				if (current_seconds % 2 == 0) {
+					*led1 = 1;
+				} else {
+					*led1 = 0;
+					*buzz = 1;
+				}
+
+			} else {
+				alarm_m =0;
+				alarm_h = 0;
+				*led1 = 0;
+				*buzz = 0;
+			}
+
+		} else {
+			alarm_m =0;
+			alarm_h = 0;
+			*led1 = 0;
+			*buzz = 0;
+
 		}
 	} else {
 		*led1 = 0;

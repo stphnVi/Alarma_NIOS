@@ -1,12 +1,12 @@
-# system info CPU1 on 2024.08.22.19:39:55
+# system info CPU1 on 2024.08.22.21:55:35
 system_info:
 name,value
 DEVICE,5CSEMA5F31C6
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1724377183
+GENERATION_ID,1724385323
 #
 #
-# Files generated for CPU1 on 2024.08.22.19:39:55
+# Files generated for CPU1 on 2024.08.22.21:55:35
 files:
 filepath,kind,attributes,module,is_top
 simulation/CPU1.v,VERILOG,,CPU1,true

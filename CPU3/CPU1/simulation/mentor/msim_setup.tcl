@@ -94,7 +94,7 @@
 # within the Quartus project, and generate a unified
 # script which supports all the Altera IP within the design.
 # ----------------------------------------
-# ACDS 18.1 625 linux 2024.08.22.19:39:55
+# ACDS 18.1 625 linux 2024.08.22.21:55:35
 
 # ----------------------------------------
 # Initialize variables

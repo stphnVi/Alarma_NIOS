@@ -9,10 +9,10 @@ Program Header:
     LOAD off    0x00001000 vaddr 0x00001000 paddr 0x00001000 align 2**12
          filesz 0x00000020 memsz 0x00000020 flags r-x
     LOAD off    0x00001020 vaddr 0x00001020 paddr 0x00001020 align 2**12
-         filesz 0x00000ab4 memsz 0x00000ab4 flags r-x
-    LOAD off    0x00001ad4 vaddr 0x00001ad4 paddr 0x00001adc align 2**12
-         filesz 0x00000008 memsz 0x00000008 flags rw-
-    LOAD off    0x00001ae4 vaddr 0x00001ae4 paddr 0x00001ae4 align 2**12
+         filesz 0x00000ac4 memsz 0x00000ac4 flags r-x
+    LOAD off    0x00001ae4 vaddr 0x00001ae4 paddr 0x00001af0 align 2**12
+         filesz 0x0000000c memsz 0x0000000c flags rw-
+    LOAD off    0x00001afc vaddr 0x00001afc paddr 0x00001afc align 2**12
          filesz 0x00000000 memsz 0x00000158 flags rw-
 
 Sections:
@@ -21,66 +21,66 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .exceptions   00000160  00001020  00001020  00001020  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .text         00000954  00001180  00001180  00001180  2**2
+  2 .text         00000964  00001180  00001180  00001180  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  3 .rodata       00000000  00001ad4  00001ae4  00001adc  2**0
+  3 .rodata       00000000  00001ae4  00001afc  00001af0  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  4 .rwdata       00000008  00001ad4  00001adc  00001ad4  2**2
+  4 .rwdata       0000000c  00001ae4  00001af0  00001ae4  2**2
                   CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
-  5 .bss          00000158  00001ae4  00001ae4  00001ae4  2**2
+  5 .bss          00000158  00001afc  00001afc  00001afc  2**2
                   ALLOC, SMALL_DATA
-  6 .onchip_memory2_0 00000000  00001c3c  00001c3c  00001adc  2**0
+  6 .onchip_memory2_0 00000000  00001c54  00001c54  00001af0  2**0
                   CONTENTS
-  7 .comment      00000023  00000000  00000000  00001adc  2**0
+  7 .comment      00000023  00000000  00000000  00001af0  2**0
                   CONTENTS, READONLY
-  8 .debug_aranges 00000238  00000000  00000000  00001b00  2**3
+  8 .debug_aranges 00000238  00000000  00000000  00001b18  2**3
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_info   000019e3  00000000  00000000  00001d38  2**0
+  9 .debug_info   00001a18  00000000  00000000  00001d50  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 00000c94  00000000  00000000  0000371b  2**0
+ 10 .debug_abbrev 00000c8e  00000000  00000000  00003768  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   00000acd  00000000  00000000  000043af  2**0
+ 11 .debug_line   00000ada  00000000  00000000  000043f6  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  00000308  00000000  00000000  00004e7c  2**2
+ 12 .debug_frame  00000308  00000000  00000000  00004ed0  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    00000d51  00000000  00000000  00005184  2**0
+ 13 .debug_str    00000d59  00000000  00000000  000051d8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    00000b1a  00000000  00000000  00005ed5  2**0
+ 14 .debug_loc    00000af5  00000000  00000000  00005f31  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000010  00000000  00000000  000069f0  2**2
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  00006a28  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 00000160  00000000  00000000  00006a00  2**3
+ 16 .debug_ranges 00000160  00000000  00000000  00006a38  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  00007dbe  2**0
+ 17 .thread_model 00000003  00000000  00000000  00007df6  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  00007dc1  2**0
+ 18 .cpu          0000000c  00000000  00000000  00007df9  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  00007dcd  2**0
+ 19 .qsys         00000001  00000000  00000000  00007e05  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  00007dce  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  00007e06  2**0
                   CONTENTS, READONLY
- 21 .stderr_dev   0000000b  00000000  00000000  00007dcf  2**0
+ 21 .stderr_dev   0000000b  00000000  00000000  00007e07  2**0
                   CONTENTS, READONLY
- 22 .stdin_dev    0000000b  00000000  00000000  00007dda  2**0
+ 22 .stdin_dev    0000000b  00000000  00000000  00007e12  2**0
                   CONTENTS, READONLY
- 23 .stdout_dev   0000000b  00000000  00000000  00007de5  2**0
+ 23 .stdout_dev   0000000b  00000000  00000000  00007e1d  2**0
                   CONTENTS, READONLY
- 24 .sopc_system_name 00000004  00000000  00000000  00007df0  2**0
+ 24 .sopc_system_name 00000004  00000000  00000000  00007e28  2**0
                   CONTENTS, READONLY
- 25 .quartus_project_dir 0000002d  00000000  00000000  00007df4  2**0
+ 25 .quartus_project_dir 0000002d  00000000  00000000  00007e2c  2**0
                   CONTENTS, READONLY
- 26 .jdi          00004a90  00000000  00000000  00007e21  2**0
+ 26 .jdi          00004a90  00000000  00000000  00007e59  2**0
                   CONTENTS, READONLY
- 27 .sopcinfo     0008426e  00000000  00000000  0000c8b1  2**0
+ 27 .sopcinfo     0008426e  00000000  00000000  0000c8e9  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00001000 l    d  .entry	00000000 .entry
 00001020 l    d  .exceptions	00000000 .exceptions
 00001180 l    d  .text	00000000 .text
-00001ad4 l    d  .rodata	00000000 .rodata
-00001ad4 l    d  .rwdata	00000000 .rwdata
-00001ae4 l    d  .bss	00000000 .bss
-00001c3c l    d  .onchip_memory2_0	00000000 .onchip_memory2_0
+00001ae4 l    d  .rodata	00000000 .rodata
+00001ae4 l    d  .rwdata	00000000 .rwdata
+00001afc l    d  .bss	00000000 .bss
+00001c54 l    d  .onchip_memory2_0	00000000 .onchip_memory2_0
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_aranges	00000000 .debug_aranges
 00000000 l    d  .debug_info	00000000 .debug_info
@@ -96,11 +96,11 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 alt_irq_handler.c
 00000000 l    df *ABS*	00000000 alt_instruction_exception_entry.c
 00000000 l    df *ABS*	00000000 hello_world_small.c
-00001248 l     F .text	00000370 timer_isr
-00001aec l     O .bss	00000004 seconds.2642
-00001ae8 l     O .bss	00000004 minutes.2643
-00001ae4 l     O .bss	00000004 hours.2644
-00001b14 l     O .bss	00000028 nm.2645
+000012a4 l     F .text	0000035c timer_isr
+00001b04 l     O .bss	00000004 seconds.2642
+00001b00 l     O .bss	00000004 minutes.2643
+00001afc l     O .bss	00000004 hours.2644
+00001b2c l     O .bss	00000028 nm.2645
 00000000 l    df *ABS*	00000000 lib2-divmod.c
 00000000 l    df *ABS*	00000000 alt_iic.c
 00000000 l    df *ABS*	00000000 alt_iic_isr_register.c
@@ -111,76 +111,76 @@ SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 alt_dcache_flush_all.c
 00000000 l    df *ABS*	00000000 alt_icache_flush_all.c
 00000000 l    df *ABS*	00000000 altera_nios2_gen2_irq.c
-00001b10 g     O .bss	00000004 alt_instruction_exception_handler
-00001aff g     O .bss	00000001 config_mode
-00001a00 g     F .text	0000002c alt_main
-00001b3c g     O .bss	00000100 alt_irq
-00001adc g       *ABS*	00000000 __flash_rwdata_start
-00001af0 g     O .bss	00000004 change_hours
-00001acc g     F .text	00000008 altera_nios2_gen2_irq_init
+00001b28 g     O .bss	00000004 alt_instruction_exception_handler
+00001b15 g     O .bss	00000001 config_mode
+00001a10 g     F .text	0000002c alt_main
+00001b54 g     O .bss	00000100 alt_irq
+00001af0 g       *ABS*	00000000 __flash_rwdata_start
+00001b08 g     O .bss	00000004 change_hours
+00001adc g     F .text	00000008 altera_nios2_gen2_irq_init
 00001000 g     F .entry	0000000c __reset
 00001020 g       *ABS*	00000000 __flash_exceptions_start
-00001604 g     F .text	00000014 set_button_minutes
-00001b08 g     O .bss	00000004 alt_argv
-00009ad4 g       *ABS*	00000000 _gp
-00001afa g     O .bss	00000001 alarm_m
-00001618 g     F .text	00000014 set_switch_clock
-00001a58 g     F .text	00000074 alt_exception_cause_generated_bad_addr
+00001614 g     F .text	00000014 set_button_minutes
+00001b20 g     O .bss	00000004 alt_argv
+00009ae4 g       *ABS*	00000000 _gp
+00001ae4 g     O .rwdata	00000001 alarm_m
+00001628 g     F .text	00000014 set_switch_clock
+00001a68 g     F .text	00000074 alt_exception_cause_generated_bad_addr
 00001000 g       *ABS*	00000000 __alt_mem_onchip_memory2_0
-00001770 g     F .text	00000064 .hidden __udivsi3
+00001780 g     F .text	00000064 .hidden __udivsi3
 000011f8 g     F .text	00000050 initializeMapping
-000015b8 g     F .text	00000038 check_alarm
-00001c3c g       *ABS*	00000000 __bss_end
-000018b8 g     F .text	00000068 alt_iic_isr_register
-000018a0 g     F .text	00000018 alt_ic_irq_enabled
-00001afc g     O .bss	00000001 alarm
-00001b00 g     O .bss	00000004 alt_irq_active
+00001248 g     F .text	0000005c check_alarm
+00001c54 g       *ABS*	00000000 __bss_end
+000018c8 g     F .text	00000068 alt_iic_isr_register
+000018b0 g     F .text	00000018 alt_ic_irq_enabled
+00001b12 g     O .bss	00000001 alarm
+00001b18 g     O .bss	00000004 alt_irq_active
 000010fc g     F .exceptions	00000060 alt_irq_handler
-00001a50 g     F .text	00000004 alt_dcache_flush_all
-00001af8 g     O .bss	00000001 set_alarm
-00001adc g       *ABS*	00000000 __ram_rwdata_end
-00001ad4 g       *ABS*	00000000 __ram_rodata_end
-00001ad8 g     O .rwdata	00000004 jtag_uart_0
-000017d4 g     F .text	00000058 .hidden __umodsi3
-00001c3c g       *ABS*	00000000 end
+00001a60 g     F .text	00000004 alt_dcache_flush_all
+00001b10 g     O .bss	00000001 set_alarm
+00001af0 g       *ABS*	00000000 __ram_rwdata_end
+00001ae4 g       *ABS*	00000000 __ram_rodata_end
+00001aec g     O .rwdata	00000004 jtag_uart_0
+000017e4 g     F .text	00000058 .hidden __umodsi3
+00001c54 g       *ABS*	00000000 end
 0000115c g     F .exceptions	00000024 alt_instruction_exception_entry
 00002000 g       *ABS*	00000000 __alt_stack_pointer
 000011bc g     F .text	0000003c init_timer_interrupt
 00001180 g     F .text	0000003c _start
-00001afb g     O .bss	00000001 alarm_h
-00001a4c g     F .text	00000004 alt_sys_init
-00001ad4 g       *ABS*	00000000 __ram_rwdata_start
-00001ad4 g       *ABS*	00000000 __ram_rodata_start
-00001c3c g       *ABS*	00000000 __alt_stack_base
-00001ae4 g       *ABS*	00000000 __bss_start
-00001654 g     F .text	00000024 main
-00001b04 g     O .bss	00000004 alt_envp
-00001afd g     O .bss	00000001 set_h
-00001678 g     F .text	00000084 .hidden __divsi3
-00001ad4 g       *ABS*	00000000 __flash_rodata_start
-00001640 g     F .text	00000014 off_alarm
-00001a2c g     F .text	00000020 alt_irq_init
-00001b0c g     O .bss	00000004 alt_argc
+00001ae5 g     O .rwdata	00000001 alarm_h
+00001a5c g     F .text	00000004 alt_sys_init
+00001ae4 g       *ABS*	00000000 __ram_rwdata_start
+00001ae4 g       *ABS*	00000000 __ram_rodata_start
+00001c54 g       *ABS*	00000000 __alt_stack_base
+00001afc g       *ABS*	00000000 __bss_start
+00001664 g     F .text	00000024 main
+00001b1c g     O .bss	00000004 alt_envp
+00001b13 g     O .bss	00000001 set_h
+00001688 g     F .text	00000084 .hidden __divsi3
+00001ae4 g       *ABS*	00000000 __flash_rodata_start
+00001650 g     F .text	00000014 off_alarm
+00001a3c g     F .text	00000020 alt_irq_init
+00001b24 g     O .bss	00000004 alt_argc
 00001020 g       .exceptions	00000000 alt_irq_entry
-0000162c g     F .text	00000014 set_switch_alarm
-00001afe g     O .bss	00000001 set_min
+0000163c g     F .text	00000014 set_switch_alarm
+00001b14 g     O .bss	00000001 set_min
 00001020 g       *ABS*	00000000 __ram_exceptions_start
-00001af4 g     O .bss	00000004 change_min
-0000182c g     F .text	00000004 alt_ic_isr_register
-00001adc g       *ABS*	00000000 _edata
-00001af9 g     O .bss	00000001 off
-00001c3c g       *ABS*	00000000 _end
-000015f0 g     F .text	00000014 set_button_hours
+00001b0c g     O .bss	00000004 change_min
+0000183c g     F .text	00000004 alt_ic_isr_register
+00001af0 g       *ABS*	00000000 _edata
+00001b11 g     O .bss	00000001 off
+00001c54 g       *ABS*	00000000 _end
+00001600 g     F .text	00000014 set_button_hours
 00001180 g       *ABS*	00000000 __ram_exceptions_end
-00001868 g     F .text	00000038 alt_ic_irq_disable
-000016fc g     F .text	00000074 .hidden __modsi3
+00001878 g     F .text	00000038 alt_ic_irq_disable
+0000170c g     F .text	00000074 .hidden __modsi3
 00002000 g       *ABS*	00000000 __alt_data_end
 00001020 g     F .exceptions	00000000 alt_exception
 0000100c g       .entry	00000000 _exit
-00001a54 g     F .text	00000004 alt_icache_flush_all
-00001ad4 g     O .rwdata	00000004 alt_priority_mask
-00001830 g     F .text	00000038 alt_ic_irq_enable
-00001920 g     F .text	000000e0 alt_load
+00001a64 g     F .text	00000004 alt_icache_flush_all
+00001ae8 g     O .rwdata	00000004 alt_priority_mask
+00001840 g     F .text	00000038 alt_ic_irq_enable
+00001930 g     F .text	000000e0 alt_load
 
 
 
@@ -417,7 +417,7 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_irq_pending (void)
 #ifdef ALT_ENHANCED_INTERRUPT_API_PRESENT
         alt_irq[i].handler(alt_irq[i].context); 
     110c:	04000034 	movhi	r16,0
-    1110:	8406cf04 	addi	r16,r16,6972
+    1110:	8406d504 	addi	r16,r16,6996
 
   active = alt_irq_pending ();
 
@@ -481,7 +481,7 @@ static ALT_INLINE alt_u32 ALT_ALWAYS_INLINE alt_irq_pending (void)
 #endif /* NIOS2_HAS_EXTRA_EXCEPTION_INFO */
 
   if(alt_instruction_exception_handler) {
-    115c:	d0a00f17 	ldw	r2,-32708(gp)
+    115c:	d0a01117 	ldw	r2,-32700(gp)
     1160:	10000426 	beq	r2,zero,1174 <alt_instruction_exception_entry+0x18>
      * Call handler. Its return value indicates whether the exception-causing
      * instruction should be re-issued. The code that called us,
@@ -524,7 +524,7 @@ Disassembly of section .text:
     movhi gp, %hi(_gp)
     1188:	06800034 	movhi	gp,0
     ori gp, gp, %lo(_gp)
-    118c:	d6a6b514 	ori	gp,gp,39636
+    118c:	d6a6b914 	ori	gp,gp,39652
  */
 #ifndef ALT_SIM_OPTIMIZE
     /* Log that the BSS is about to be cleared. */
@@ -533,12 +533,12 @@ Disassembly of section .text:
     movhi r2, %hi(__bss_start)
     1190:	00800034 	movhi	r2,0
     ori r2, r2, %lo(__bss_start)
-    1194:	1086b914 	ori	r2,r2,6884
+    1194:	1086bf14 	ori	r2,r2,6908
 
     movhi r3, %hi(__bss_end)
     1198:	00c00034 	movhi	r3,0
     ori r3, r3, %lo(__bss_end)
-    119c:	18c70f14 	ori	r3,r3,7228
+    119c:	18c71514 	ori	r3,r3,7252
 
     beq r2, r3, 1f
     11a0:	10c00326 	beq	r2,r3,11b0 <_start+0x30>
@@ -556,14 +556,14 @@ Disassembly of section .text:
 #endif
 
     call alt_load
-    11b0:	00019200 	call	1920 <alt_load>
+    11b0:	00019300 	call	1930 <alt_load>
 
     /* Log that alt_main is about to be called. */
     ALT_LOG_PUTS(alt_log_msg_alt_main)
 
     /* Call the C entry point. It should never return. */
     call alt_main
-    11b4:	0001a000 	call	1a00 <alt_main>
+    11b4:	0001a100 	call	1a10 <alt_main>
 
 000011b8 <alt_after_alt_main>:
 
@@ -585,7 +585,7 @@ void init_timer_interrupt(void) {
     11c0:	01800034 	movhi	r6,0
     11c4:	d8000015 	stw	zero,0(sp)
     11c8:	000f883a 	mov	r7,zero
-    11cc:	31849204 	addi	r6,r6,4680
+    11cc:	3184a904 	addi	r6,r6,4772
     11d0:	014000c4 	movi	r5,3
     11d4:	0009883a 	mov	r4,zero
 	}
@@ -597,7 +597,7 @@ void init_timer_interrupt(void) {
     11d8:	dfc00115 	stw	ra,4(sp)
 	//Register the ISR with HAL
 	alt_ic_isr_register(TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID, TIMER_0_IRQ,
-    11dc:	000182c0 	call	182c <alt_ic_isr_register>
+    11dc:	000183c0 	call	183c <alt_ic_isr_register>
 			(void *) timer_isr, NULL, 0x0);
 
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE,
@@ -654,1173 +654,1196 @@ void initializeMapping(NumberMapping *nm) {
     1240:	20800915 	stw	r2,36(r4)
     1244:	f800283a 	ret
 
-00001248 <timer_isr>:
+00001248 <check_alarm>:
+	}
+}
+
+void check_alarm(int current_seconds, int current_hours, int current_minutes,
+		int alarm_hours, int alarm_minutes, volatile unsigned long *buzz,
+		volatile unsigned long *led1, alt_u8 off) {
+    1248:	d8c00117 	ldw	r3,4(sp)
+    124c:	d8800217 	ldw	r2,8(sp)
+    1250:	da000317 	ldw	r8,12(sp)
+	if (current_hours == alarm_hours && current_minutes == alarm_minutes) {
+    1254:	29c0101e 	bne	r5,r7,1298 <check_alarm+0x50>
+    1258:	d9400017 	ldw	r5,0(sp)
+    125c:	31400e1e 	bne	r6,r5,1298 <check_alarm+0x50>
+		if (off == 0) {
+    1260:	42003fcc 	andi	r8,r8,255
+    1264:	40000a1e 	bne	r8,zero,1290 <check_alarm+0x48>
+			if (current_seconds < 30) {
+    1268:	01400744 	movi	r5,29
+    126c:	29000816 	blt	r5,r4,1290 <check_alarm+0x48>
+				if (current_seconds % 2 == 0) {
+    1270:	2100004c 	andi	r4,r4,1
+    1274:	01400044 	movi	r5,1
+    1278:	2000021e 	bne	r4,zero,1284 <check_alarm+0x3c>
+					*led1 = 1;
+    127c:	11400015 	stw	r5,0(r2)
+    1280:	f800283a 	ret
+				} else {
+					*led1 = 0;
+    1284:	10000015 	stw	zero,0(r2)
+					*buzz = 1;
+    1288:	19400015 	stw	r5,0(r3)
+    128c:	f800283a 	ret
+				*led1 = 0;
+				*buzz = 0;
+			}
+
+		} else {
+			alarm_m =0;
+    1290:	d0200005 	stb	zero,-32768(gp)
+			alarm_h = 0;
+    1294:	d0200045 	stb	zero,-32767(gp)
+			*led1 = 0;
+			*buzz = 0;
+
+		}
+	} else {
+		*led1 = 0;
+    1298:	10000015 	stw	zero,0(r2)
+		*buzz = 0; // Desactiva el buzzer si la alarma no coincide
+    129c:	18000015 	stw	zero,0(r3)
+    12a0:	f800283a 	ret
+
+000012a4 <timer_isr>:
 	static NumberMapping nm;
 	int show_alarm_hours = 0;
 	int show_alarm_minutes = 0;
 
 	// Inicializa el mapeo si es la primera llamada a la ISR
 	if (seconds == 0 && minutes == 0 && hours == 0) {
-    1248:	d0a00617 	ldw	r2,-32744(gp)
+    12a4:	d0a00817 	ldw	r2,-32736(gp)
 alt_u8 set_alarm = 0;
 
 int change_min = 0;
 int change_hours = 0;
 
 static void timer_isr(void * context, alt_u32 id) {
-    124c:	defffd04 	addi	sp,sp,-12
-    1250:	dfc00215 	stw	ra,8(sp)
-    1254:	dc400115 	stw	r17,4(sp)
-    1258:	dc000015 	stw	r16,0(sp)
+    12a8:	defff904 	addi	sp,sp,-28
+    12ac:	dfc00615 	stw	ra,24(sp)
+    12b0:	dc400515 	stw	r17,20(sp)
+    12b4:	dc000415 	stw	r16,16(sp)
 	static NumberMapping nm;
 	int show_alarm_hours = 0;
 	int show_alarm_minutes = 0;
 
 	// Inicializa el mapeo si es la primera llamada a la ISR
 	if (seconds == 0 && minutes == 0 && hours == 0) {
-    125c:	1000071e 	bne	r2,zero,127c <timer_isr+0x34>
-    1260:	d0a00517 	ldw	r2,-32748(gp)
-    1264:	1000051e 	bne	r2,zero,127c <timer_isr+0x34>
-    1268:	d0a00417 	ldw	r2,-32752(gp)
-    126c:	1000031e 	bne	r2,zero,127c <timer_isr+0x34>
+    12b8:	1000071e 	bne	r2,zero,12d8 <timer_isr+0x34>
+    12bc:	d0a00717 	ldw	r2,-32740(gp)
+    12c0:	1000051e 	bne	r2,zero,12d8 <timer_isr+0x34>
+    12c4:	d0a00617 	ldw	r2,-32744(gp)
+    12c8:	1000031e 	bne	r2,zero,12d8 <timer_isr+0x34>
 		initializeMapping(&nm);
-    1270:	01000034 	movhi	r4,0
-    1274:	2106c504 	addi	r4,r4,6932
-    1278:	00011f80 	call	11f8 <initializeMapping>
+    12cc:	01000034 	movhi	r4,0
+    12d0:	2106cb04 	addi	r4,r4,6956
+    12d4:	00011f80 	call	11f8 <initializeMapping>
 	}
 
 	// Limpia la interrupción del temporizador
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
-    127c:	008c0804 	movi	r2,12320
-    1280:	10000035 	stwio	zero,0(r2)
+    12d8:	008c0804 	movi	r2,12320
+    12dc:	10000035 	stwio	zero,0(r2)
 
 	// Verifica si el reloj está en modo de configuración
 
 	if (set_alarm == 1) {
-    1284:	d0e00903 	ldbu	r3,-32732(gp)
-    1288:	00800044 	movi	r2,1
-    128c:	1880141e 	bne	r3,r2,12e0 <timer_isr+0x98>
+    12e0:	d0e00b03 	ldbu	r3,-32724(gp)
+    12e4:	00800044 	movi	r2,1
+    12e8:	1880141e 	bne	r3,r2,133c <timer_isr+0x98>
 
 		// Modo de configuración de la alarma
 		if (set_h == 0) {
-    1290:	d0a00a43 	ldbu	r2,-32727(gp)
-    1294:	1000081e 	bne	r2,zero,12b8 <timer_isr+0x70>
+    12ec:	d0a00bc3 	ldbu	r2,-32721(gp)
+    12f0:	1000081e 	bne	r2,zero,1314 <timer_isr+0x70>
 
 			// Ajustar la hora de la alarma
 			if (alarm_h < 23) {
-    1298:	d0a009c3 	ldbu	r2,-32729(gp)
-    129c:	01400584 	movi	r5,22
-    12a0:	11003fcc 	andi	r4,r2,255
-    12a4:	29000336 	bltu	r5,r4,12b4 <timer_isr+0x6c>
+    12f4:	d0a00043 	ldbu	r2,-32767(gp)
+    12f8:	01400584 	movi	r5,22
+    12fc:	11003fcc 	andi	r4,r2,255
+    1300:	29000336 	bltu	r5,r4,1310 <timer_isr+0x6c>
 				alarm_h++;
-    12a8:	10800044 	addi	r2,r2,1
-    12ac:	d0a009c5 	stb	r2,-32729(gp)
-    12b0:	00000106 	br	12b8 <timer_isr+0x70>
+    1304:	10800044 	addi	r2,r2,1
+    1308:	d0a00045 	stb	r2,-32767(gp)
+    130c:	00000106 	br	1314 <timer_isr+0x70>
 			} else {
 				alarm_h = 0;
-    12b4:	d02009c5 	stb	zero,-32729(gp)
+    1310:	d0200045 	stb	zero,-32767(gp)
 			}
 		}
 
 		if (set_min == 0) {
-    12b8:	d0a00a83 	ldbu	r2,-32726(gp)
-    12bc:	1000081e 	bne	r2,zero,12e0 <timer_isr+0x98>
+    1314:	d0a00c03 	ldbu	r2,-32720(gp)
+    1318:	1000081e 	bne	r2,zero,133c <timer_isr+0x98>
 
 			// Ajustar los minutos de la alarma
 			if (alarm_m < 59) {
-    12c0:	d0a00983 	ldbu	r2,-32730(gp)
-    12c4:	01400e84 	movi	r5,58
-    12c8:	11003fcc 	andi	r4,r2,255
-    12cc:	29000336 	bltu	r5,r4,12dc <timer_isr+0x94>
+    131c:	d0a00003 	ldbu	r2,-32768(gp)
+    1320:	01400e84 	movi	r5,58
+    1324:	11003fcc 	andi	r4,r2,255
+    1328:	29000336 	bltu	r5,r4,1338 <timer_isr+0x94>
 				alarm_m++;
-    12d0:	10800044 	addi	r2,r2,1
-    12d4:	d0a00985 	stb	r2,-32730(gp)
-    12d8:	00000106 	br	12e0 <timer_isr+0x98>
+    132c:	10800044 	addi	r2,r2,1
+    1330:	d0a00005 	stb	r2,-32768(gp)
+    1334:	00000106 	br	133c <timer_isr+0x98>
 			} else {
 				alarm_m = 0;
-    12dc:	d0200985 	stb	zero,-32730(gp)
+    1338:	d0200005 	stb	zero,-32768(gp)
 			}
 		}
 	}
 
 	if (config_mode == 1) {
-    12e0:	d1200ac3 	ldbu	r4,-32725(gp)
-    12e4:	04000034 	movhi	r16,0
-    12e8:	00800044 	movi	r2,1
-    12ec:	8406c504 	addi	r16,r16,6932
-    12f0:	2080391e 	bne	r4,r2,13d8 <timer_isr+0x190>
+    133c:	d1200c43 	ldbu	r4,-32719(gp)
+    1340:	04000034 	movhi	r16,0
+    1344:	00800044 	movi	r2,1
+    1348:	8406cb04 	addi	r16,r16,6956
+    134c:	2080391e 	bne	r4,r2,1434 <timer_isr+0x190>
 		//*led1 = 0;
 		if (set_h == 0) {
-    12f4:	d0a00a43 	ldbu	r2,-32727(gp)
-    12f8:	1000071e 	bne	r2,zero,1318 <timer_isr+0xd0>
+    1350:	d0a00bc3 	ldbu	r2,-32721(gp)
+    1354:	1000071e 	bne	r2,zero,1374 <timer_isr+0xd0>
 			if (hours < 23) {
-    12fc:	d0a00417 	ldw	r2,-32752(gp)
-    1300:	00c00584 	movi	r3,22
-    1304:	18800316 	blt	r3,r2,1314 <timer_isr+0xcc>
+    1358:	d0a00617 	ldw	r2,-32744(gp)
+    135c:	00c00584 	movi	r3,22
+    1360:	18800316 	blt	r3,r2,1370 <timer_isr+0xcc>
 				hours++;
-    1308:	10800044 	addi	r2,r2,1
-    130c:	d0a00415 	stw	r2,-32752(gp)
-    1310:	00000106 	br	1318 <timer_isr+0xd0>
+    1364:	10800044 	addi	r2,r2,1
+    1368:	d0a00615 	stw	r2,-32744(gp)
+    136c:	00000106 	br	1374 <timer_isr+0xd0>
 			} else {
 				hours = 0;
-    1314:	d0200415 	stw	zero,-32752(gp)
+    1370:	d0200615 	stw	zero,-32744(gp)
 			}
 
 		}
 		if (set_min == 0) {
-    1318:	d0a00a83 	ldbu	r2,-32726(gp)
-    131c:	1000071e 	bne	r2,zero,133c <timer_isr+0xf4>
+    1374:	d0a00c03 	ldbu	r2,-32720(gp)
+    1378:	1000071e 	bne	r2,zero,1398 <timer_isr+0xf4>
 			if (minutes < 59) {
-    1320:	d0a00517 	ldw	r2,-32748(gp)
-    1324:	00c00e84 	movi	r3,58
-    1328:	18800316 	blt	r3,r2,1338 <timer_isr+0xf0>
+    137c:	d0a00717 	ldw	r2,-32740(gp)
+    1380:	00c00e84 	movi	r3,58
+    1384:	18800316 	blt	r3,r2,1394 <timer_isr+0xf0>
 				minutes++;
-    132c:	10800044 	addi	r2,r2,1
-    1330:	d0a00515 	stw	r2,-32748(gp)
-    1334:	00000106 	br	133c <timer_isr+0xf4>
+    1388:	10800044 	addi	r2,r2,1
+    138c:	d0a00715 	stw	r2,-32740(gp)
+    1390:	00000106 	br	1398 <timer_isr+0xf4>
 			} else {
 				minutes = 0;
-    1338:	d0200515 	stw	zero,-32748(gp)
+    1394:	d0200715 	stw	zero,-32740(gp)
 			}
 
 		}
 
 		*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
-    133c:	d4600517 	ldw	r17,-32748(gp)
-    1340:	01400284 	movi	r5,10
-    1344:	8809883a 	mov	r4,r17
-    1348:	00016fc0 	call	16fc <__modsi3>
-    134c:	1085883a 	add	r2,r2,r2
-    1350:	1085883a 	add	r2,r2,r2
-    1354:	8085883a 	add	r2,r16,r2
-    1358:	10c00017 	ldw	r3,0(r2)
-    135c:	008c6404 	movi	r2,12688
+    1398:	d4600717 	ldw	r17,-32740(gp)
+    139c:	01400284 	movi	r5,10
+    13a0:	8809883a 	mov	r4,r17
+    13a4:	000170c0 	call	170c <__modsi3>
+    13a8:	1085883a 	add	r2,r2,r2
+    13ac:	1085883a 	add	r2,r2,r2
+    13b0:	8085883a 	add	r2,r16,r2
+    13b4:	10c00017 	ldw	r3,0(r2)
+    13b8:	008c6404 	movi	r2,12688
 		*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
-    1360:	8809883a 	mov	r4,r17
+    13bc:	8809883a 	mov	r4,r17
 				minutes = 0;
 			}
 
 		}
 
 		*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
-    1364:	10c00015 	stw	r3,0(r2)
+    13c0:	10c00015 	stw	r3,0(r2)
 		*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
-    1368:	01400284 	movi	r5,10
-    136c:	00016780 	call	1678 <__divsi3>
-    1370:	1085883a 	add	r2,r2,r2
-    1374:	1085883a 	add	r2,r2,r2
-    1378:	8085883a 	add	r2,r16,r2
-    137c:	10c00017 	ldw	r3,0(r2)
+    13c4:	01400284 	movi	r5,10
+    13c8:	00016880 	call	1688 <__divsi3>
+    13cc:	1085883a 	add	r2,r2,r2
+    13d0:	1085883a 	add	r2,r2,r2
+    13d4:	8085883a 	add	r2,r16,r2
+    13d8:	10c00017 	ldw	r3,0(r2)
 		*seg3 = nm.mapping[hours % 10];      // Unidad de horas
-    1380:	d4600417 	ldw	r17,-32752(gp)
+    13dc:	d4600617 	ldw	r17,-32744(gp)
 			}
 
 		}
 
 		*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
 		*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
-    1384:	008c6004 	movi	r2,12672
-    1388:	10c00015 	stw	r3,0(r2)
+    13e0:	008c6004 	movi	r2,12672
+    13e4:	10c00015 	stw	r3,0(r2)
 		*seg3 = nm.mapping[hours % 10];      // Unidad de horas
-    138c:	01400284 	movi	r5,10
-    1390:	8809883a 	mov	r4,r17
-    1394:	00016fc0 	call	16fc <__modsi3>
-    1398:	1085883a 	add	r2,r2,r2
-    139c:	1085883a 	add	r2,r2,r2
-    13a0:	8085883a 	add	r2,r16,r2
-    13a4:	10c00017 	ldw	r3,0(r2)
-    13a8:	008c5c04 	movi	r2,12656
+    13e8:	01400284 	movi	r5,10
+    13ec:	8809883a 	mov	r4,r17
+    13f0:	000170c0 	call	170c <__modsi3>
+    13f4:	1085883a 	add	r2,r2,r2
+    13f8:	1085883a 	add	r2,r2,r2
+    13fc:	8085883a 	add	r2,r16,r2
+    1400:	10c00017 	ldw	r3,0(r2)
+    1404:	008c5c04 	movi	r2,12656
 		*seg4 = nm.mapping[hours / 10];      // Decena de horas
-    13ac:	01400284 	movi	r5,10
+    1408:	01400284 	movi	r5,10
 
 		}
 
 		*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
 		*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
 		*seg3 = nm.mapping[hours % 10];      // Unidad de horas
-    13b0:	10c00015 	stw	r3,0(r2)
+    140c:	10c00015 	stw	r3,0(r2)
 		*seg4 = nm.mapping[hours / 10];      // Decena de horas
-    13b4:	8809883a 	mov	r4,r17
-    13b8:	00016780 	call	1678 <__divsi3>
-    13bc:	1085883a 	add	r2,r2,r2
-    13c0:	1085883a 	add	r2,r2,r2
-    13c4:	80a1883a 	add	r16,r16,r2
-    13c8:	80c00017 	ldw	r3,0(r16)
-    13cc:	008c6804 	movi	r2,12704
-    13d0:	10c00015 	stw	r3,0(r2)
-    13d4:	00007306 	br	15a4 <timer_isr+0x35c>
+    1410:	8809883a 	mov	r4,r17
+    1414:	00016880 	call	1688 <__divsi3>
+    1418:	1085883a 	add	r2,r2,r2
+    141c:	1085883a 	add	r2,r2,r2
+    1420:	80a1883a 	add	r16,r16,r2
+    1424:	80c00017 	ldw	r3,0(r16)
+    1428:	008c6804 	movi	r2,12704
+    142c:	10c00015 	stw	r3,0(r2)
+    1430:	00006e06 	br	15ec <timer_isr+0x348>
 
 	} else {
 		//*led1 = 0;
 		seconds++;
-    13d8:	d0a00617 	ldw	r2,-32744(gp)
+    1434:	d0a00817 	ldw	r2,-32736(gp)
 		if (seconds > 60) {
-    13dc:	01000f04 	movi	r4,60
+    1438:	01000f04 	movi	r4,60
 		*seg3 = nm.mapping[hours % 10];      // Unidad de horas
 		*seg4 = nm.mapping[hours / 10];      // Decena de horas
 
 	} else {
 		//*led1 = 0;
 		seconds++;
-    13e0:	10800044 	addi	r2,r2,1
+    143c:	10800044 	addi	r2,r2,1
 		if (seconds > 60) {
-    13e4:	20800216 	blt	r4,r2,13f0 <timer_isr+0x1a8>
+    1440:	20800216 	blt	r4,r2,144c <timer_isr+0x1a8>
 		*seg3 = nm.mapping[hours % 10];      // Unidad de horas
 		*seg4 = nm.mapping[hours / 10];      // Decena de horas
 
 	} else {
 		//*led1 = 0;
 		seconds++;
-    13e8:	d0a00615 	stw	r2,-32744(gp)
-    13ec:	00000e06 	br	1428 <timer_isr+0x1e0>
+    1444:	d0a00815 	stw	r2,-32736(gp)
+    1448:	00000e06 	br	1484 <timer_isr+0x1e0>
 		if (seconds > 60) {
 			seconds = 0;
 			minutes++;
-    13f0:	d0a00517 	ldw	r2,-32748(gp)
+    144c:	d0a00717 	ldw	r2,-32740(gp)
 
 	} else {
 		//*led1 = 0;
 		seconds++;
 		if (seconds > 60) {
 			seconds = 0;
-    13f4:	d0200615 	stw	zero,-32744(gp)
+    1450:	d0200815 	stw	zero,-32736(gp)
 			minutes++;
-    13f8:	10800044 	addi	r2,r2,1
+    1454:	10800044 	addi	r2,r2,1
 			if (minutes > 60) {
-    13fc:	20800216 	blt	r4,r2,1408 <timer_isr+0x1c0>
+    1458:	20800216 	blt	r4,r2,1464 <timer_isr+0x1c0>
 	} else {
 		//*led1 = 0;
 		seconds++;
 		if (seconds > 60) {
 			seconds = 0;
 			minutes++;
-    1400:	d0a00515 	stw	r2,-32748(gp)
-    1404:	00000806 	br	1428 <timer_isr+0x1e0>
+    145c:	d0a00715 	stw	r2,-32740(gp)
+    1460:	00000806 	br	1484 <timer_isr+0x1e0>
 			if (minutes > 60) {
 				minutes = 0;
 				hours++;
-    1408:	d0a00417 	ldw	r2,-32752(gp)
+    1464:	d0a00617 	ldw	r2,-32744(gp)
 		seconds++;
 		if (seconds > 60) {
 			seconds = 0;
 			minutes++;
 			if (minutes > 60) {
 				minutes = 0;
-    140c:	d0200515 	stw	zero,-32748(gp)
+    1468:	d0200715 	stw	zero,-32740(gp)
 				hours++;
 				if (hours > 24) {
-    1410:	01000604 	movi	r4,24
+    146c:	01000604 	movi	r4,24
 		if (seconds > 60) {
 			seconds = 0;
 			minutes++;
 			if (minutes > 60) {
 				minutes = 0;
 				hours++;
-    1414:	10800044 	addi	r2,r2,1
+    1470:	10800044 	addi	r2,r2,1
 				if (hours > 24) {
-    1418:	20800216 	blt	r4,r2,1424 <timer_isr+0x1dc>
+    1474:	20800216 	blt	r4,r2,1480 <timer_isr+0x1dc>
 		if (seconds > 60) {
 			seconds = 0;
 			minutes++;
 			if (minutes > 60) {
 				minutes = 0;
 				hours++;
-    141c:	d0a00415 	stw	r2,-32752(gp)
-    1420:	00000106 	br	1428 <timer_isr+0x1e0>
+    1478:	d0a00615 	stw	r2,-32744(gp)
+    147c:	00000106 	br	1484 <timer_isr+0x1e0>
 				if (hours > 24) {
 					hours = 0;
-    1424:	d0200415 	stw	zero,-32752(gp)
+    1480:	d0200615 	stw	zero,-32744(gp)
 				}
 			}
 		}
 
 		if (set_alarm == 1) {
-    1428:	00800044 	movi	r2,1
-    142c:	1880251e 	bne	r3,r2,14c4 <timer_isr+0x27c>
+    1484:	00800044 	movi	r2,1
+    1488:	1880251e 	bne	r3,r2,1520 <timer_isr+0x27c>
 
 			// Mostrar la hora de la alarma en los displays
-            *seg1 = nm.mapping[alarm_m % 10];    // Unidad de minutos de la alarma
-    1430:	d4600983 	ldbu	r17,-32730(gp)
-    1434:	01400284 	movi	r5,10
-    1438:	8809883a 	mov	r4,r17
-    143c:	00017d40 	call	17d4 <__umodsi3>
-    1440:	10803fcc 	andi	r2,r2,255
-    1444:	1085883a 	add	r2,r2,r2
-    1448:	1085883a 	add	r2,r2,r2
-    144c:	8085883a 	add	r2,r16,r2
-    1450:	10c00017 	ldw	r3,0(r2)
-    1454:	008c6404 	movi	r2,12688
-            *seg2 = nm.mapping[alarm_m / 10];    // Decena de minutos de la alarma
-    1458:	8809883a 	mov	r4,r17
-		}
-
-		if (set_alarm == 1) {
-
-			// Mostrar la hora de la alarma en los displays
-            *seg1 = nm.mapping[alarm_m % 10];    // Unidad de minutos de la alarma
-    145c:	10c00015 	stw	r3,0(r2)
-            *seg2 = nm.mapping[alarm_m / 10];    // Decena de minutos de la alarma
-    1460:	01400284 	movi	r5,10
-    1464:	00017700 	call	1770 <__udivsi3>
-    1468:	10803fcc 	andi	r2,r2,255
-    146c:	1085883a 	add	r2,r2,r2
-    1470:	1085883a 	add	r2,r2,r2
-    1474:	8085883a 	add	r2,r16,r2
-    1478:	10c00017 	ldw	r3,0(r2)
-    147c:	008c6004 	movi	r2,12672
-            *seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
-    1480:	01400284 	movi	r5,10
-
-		if (set_alarm == 1) {
-
-			// Mostrar la hora de la alarma en los displays
-            *seg1 = nm.mapping[alarm_m % 10];    // Unidad de minutos de la alarma
-            *seg2 = nm.mapping[alarm_m / 10];    // Decena de minutos de la alarma
-    1484:	10c00015 	stw	r3,0(r2)
-            *seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
-    1488:	d46009c3 	ldbu	r17,-32729(gp)
-    148c:	8809883a 	mov	r4,r17
-    1490:	00017d40 	call	17d4 <__umodsi3>
-    1494:	10803fcc 	andi	r2,r2,255
-    1498:	1085883a 	add	r2,r2,r2
-    149c:	1085883a 	add	r2,r2,r2
-    14a0:	8085883a 	add	r2,r16,r2
-    14a4:	10c00017 	ldw	r3,0(r2)
-    14a8:	008c5c04 	movi	r2,12656
-            *seg4 = nm.mapping[alarm_h / 10];
-    14ac:	01400284 	movi	r5,10
-		if (set_alarm == 1) {
-
-			// Mostrar la hora de la alarma en los displays
-            *seg1 = nm.mapping[alarm_m % 10];    // Unidad de minutos de la alarma
-            *seg2 = nm.mapping[alarm_m / 10];    // Decena de minutos de la alarma
-            *seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
-    14b0:	10c00015 	stw	r3,0(r2)
-            *seg4 = nm.mapping[alarm_h / 10];
+			*seg1 = nm.mapping[alarm_m % 10];  // Unidad de minutos de la alarma
+    148c:	d4600003 	ldbu	r17,-32768(gp)
+    1490:	01400284 	movi	r5,10
+    1494:	8809883a 	mov	r4,r17
+    1498:	00017e40 	call	17e4 <__umodsi3>
+    149c:	10803fcc 	andi	r2,r2,255
+    14a0:	1085883a 	add	r2,r2,r2
+    14a4:	1085883a 	add	r2,r2,r2
+    14a8:	8085883a 	add	r2,r16,r2
+    14ac:	10c00017 	ldw	r3,0(r2)
+    14b0:	008c6404 	movi	r2,12688
+			*seg2 = nm.mapping[alarm_m / 10];  // Decena de minutos de la alarma
     14b4:	8809883a 	mov	r4,r17
-    14b8:	00017700 	call	1770 <__udivsi3>
-    14bc:	10803fcc 	andi	r2,r2,255
-    14c0:	00002006 	br	1544 <timer_isr+0x2fc>
-		} else {
-			// Actualiza los displays con el tiempo actual
-			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
-    14c4:	d4600517 	ldw	r17,-32748(gp)
-    14c8:	01400284 	movi	r5,10
-    14cc:	8809883a 	mov	r4,r17
-    14d0:	00016fc0 	call	16fc <__modsi3>
-    14d4:	1085883a 	add	r2,r2,r2
-    14d8:	1085883a 	add	r2,r2,r2
-    14dc:	8085883a 	add	r2,r16,r2
-    14e0:	10c00017 	ldw	r3,0(r2)
-    14e4:	008c6404 	movi	r2,12688
-			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
-    14e8:	8809883a 	mov	r4,r17
-            *seg2 = nm.mapping[alarm_m / 10];    // Decena de minutos de la alarma
-            *seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
-            *seg4 = nm.mapping[alarm_h / 10];
-		} else {
-			// Actualiza los displays con el tiempo actual
-			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
-    14ec:	10c00015 	stw	r3,0(r2)
-			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
-    14f0:	01400284 	movi	r5,10
-    14f4:	00016780 	call	1678 <__divsi3>
-    14f8:	1085883a 	add	r2,r2,r2
-    14fc:	1085883a 	add	r2,r2,r2
-    1500:	8085883a 	add	r2,r16,r2
-    1504:	10c00017 	ldw	r3,0(r2)
-			*seg3 = nm.mapping[hours % 10];      // Unidad de horas
-    1508:	d4600417 	ldw	r17,-32752(gp)
-            *seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
-            *seg4 = nm.mapping[alarm_h / 10];
-		} else {
-			// Actualiza los displays con el tiempo actual
-			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
-			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
-    150c:	008c6004 	movi	r2,12672
-    1510:	10c00015 	stw	r3,0(r2)
-			*seg3 = nm.mapping[hours % 10];      // Unidad de horas
-    1514:	01400284 	movi	r5,10
-    1518:	8809883a 	mov	r4,r17
-    151c:	00016fc0 	call	16fc <__modsi3>
-    1520:	1085883a 	add	r2,r2,r2
-    1524:	1085883a 	add	r2,r2,r2
-    1528:	8085883a 	add	r2,r16,r2
-    152c:	10c00017 	ldw	r3,0(r2)
-    1530:	008c5c04 	movi	r2,12656
-			*seg4 = nm.mapping[hours / 10];      // Decena de horas
-    1534:	01400284 	movi	r5,10
-            *seg4 = nm.mapping[alarm_h / 10];
-		} else {
-			// Actualiza los displays con el tiempo actual
-			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
-			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
-			*seg3 = nm.mapping[hours % 10];      // Unidad de horas
-    1538:	10c00015 	stw	r3,0(r2)
-			*seg4 = nm.mapping[hours / 10];      // Decena de horas
-    153c:	8809883a 	mov	r4,r17
-    1540:	00016780 	call	1678 <__divsi3>
-    1544:	1085883a 	add	r2,r2,r2
-    1548:	1085883a 	add	r2,r2,r2
-    154c:	80a1883a 	add	r16,r16,r2
-    1550:	80c00017 	ldw	r3,0(r16)
-    1554:	008c6804 	movi	r2,12704
-    1558:	10c00015 	stw	r3,0(r2)
-		check_alarm(hours, minutes, alarm_h, alarm_m, buzz,led1 , off);
-	}
-}
-
-void check_alarm(int current_hours, int current_minutes, int alarm_hours, int alarm_minutes, volatile unsigned long *buzz, volatile unsigned long *led1, alt_u8 off) {
-	if (current_hours == alarm_hours && current_minutes == alarm_minutes) {
-    155c:	d0a009c3 	ldbu	r2,-32729(gp)
-    1560:	d0e00417 	ldw	r3,-32752(gp)
-    1564:	18800b1e 	bne	r3,r2,1594 <timer_isr+0x34c>
-    1568:	d0a00983 	ldbu	r2,-32730(gp)
-    156c:	d0e00517 	ldw	r3,-32748(gp)
-    1570:	1880081e 	bne	r3,r2,1594 <timer_isr+0x34c>
-		if (off == 0) {
-    1574:	d0a00943 	ldbu	r2,-32731(gp)
-    1578:	10000a1e 	bne	r2,zero,15a4 <timer_isr+0x35c>
-			*led1 = 1;
-    157c:	00800044 	movi	r2,1
-    1580:	00cc6c04 	movi	r3,12720
-    1584:	18800015 	stw	r2,0(r3)
-			*buzz = 1; // Activa el buzzer
-    1588:	00cc5804 	movi	r3,12640
-    158c:	18800015 	stw	r2,0(r3)
-    1590:	00000406 	br	15a4 <timer_isr+0x35c>
 		}
-	} else {
-		*led1 = 0;
-    1594:	008c6c04 	movi	r2,12720
-    1598:	10000015 	stw	zero,0(r2)
-		*buzz = 0; // Desactiva el buzzer si la alarma no coincide
-    159c:	008c5804 	movi	r2,12640
-    15a0:	10000015 	stw	zero,0(r2)
+
+		if (set_alarm == 1) {
+
+			// Mostrar la hora de la alarma en los displays
+			*seg1 = nm.mapping[alarm_m % 10];  // Unidad de minutos de la alarma
+    14b8:	10c00015 	stw	r3,0(r2)
+			*seg2 = nm.mapping[alarm_m / 10];  // Decena de minutos de la alarma
+    14bc:	01400284 	movi	r5,10
+    14c0:	00017800 	call	1780 <__udivsi3>
+    14c4:	10803fcc 	andi	r2,r2,255
+    14c8:	1085883a 	add	r2,r2,r2
+    14cc:	1085883a 	add	r2,r2,r2
+    14d0:	8085883a 	add	r2,r16,r2
+    14d4:	10c00017 	ldw	r3,0(r2)
+    14d8:	008c6004 	movi	r2,12672
+			*seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
+    14dc:	01400284 	movi	r5,10
+
+		if (set_alarm == 1) {
+
+			// Mostrar la hora de la alarma en los displays
+			*seg1 = nm.mapping[alarm_m % 10];  // Unidad de minutos de la alarma
+			*seg2 = nm.mapping[alarm_m / 10];  // Decena de minutos de la alarma
+    14e0:	10c00015 	stw	r3,0(r2)
+			*seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
+    14e4:	d4600043 	ldbu	r17,-32767(gp)
+    14e8:	8809883a 	mov	r4,r17
+    14ec:	00017e40 	call	17e4 <__umodsi3>
+    14f0:	10803fcc 	andi	r2,r2,255
+    14f4:	1085883a 	add	r2,r2,r2
+    14f8:	1085883a 	add	r2,r2,r2
+    14fc:	8085883a 	add	r2,r16,r2
+    1500:	10c00017 	ldw	r3,0(r2)
+    1504:	008c5c04 	movi	r2,12656
+			*seg4 = nm.mapping[alarm_h / 10];
+    1508:	01400284 	movi	r5,10
+		if (set_alarm == 1) {
+
+			// Mostrar la hora de la alarma en los displays
+			*seg1 = nm.mapping[alarm_m % 10];  // Unidad de minutos de la alarma
+			*seg2 = nm.mapping[alarm_m / 10];  // Decena de minutos de la alarma
+			*seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
+    150c:	10c00015 	stw	r3,0(r2)
+			*seg4 = nm.mapping[alarm_h / 10];
+    1510:	8809883a 	mov	r4,r17
+    1514:	00017800 	call	1780 <__udivsi3>
+    1518:	10803fcc 	andi	r2,r2,255
+    151c:	00002006 	br	15a0 <timer_isr+0x2fc>
+		} else {
+			// Actualiza los displays con el tiempo actual
+			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
+    1520:	d4600717 	ldw	r17,-32740(gp)
+    1524:	01400284 	movi	r5,10
+    1528:	8809883a 	mov	r4,r17
+    152c:	000170c0 	call	170c <__modsi3>
+    1530:	1085883a 	add	r2,r2,r2
+    1534:	1085883a 	add	r2,r2,r2
+    1538:	8085883a 	add	r2,r16,r2
+    153c:	10c00017 	ldw	r3,0(r2)
+    1540:	008c6404 	movi	r2,12688
+			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
+    1544:	8809883a 	mov	r4,r17
+			*seg2 = nm.mapping[alarm_m / 10];  // Decena de minutos de la alarma
+			*seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
+			*seg4 = nm.mapping[alarm_h / 10];
+		} else {
+			// Actualiza los displays con el tiempo actual
+			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
+    1548:	10c00015 	stw	r3,0(r2)
+			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
+    154c:	01400284 	movi	r5,10
+    1550:	00016880 	call	1688 <__divsi3>
+    1554:	1085883a 	add	r2,r2,r2
+    1558:	1085883a 	add	r2,r2,r2
+    155c:	8085883a 	add	r2,r16,r2
+    1560:	10c00017 	ldw	r3,0(r2)
+			*seg3 = nm.mapping[hours % 10];      // Unidad de horas
+    1564:	d4600617 	ldw	r17,-32744(gp)
+			*seg3 = nm.mapping[alarm_h % 10];    // Unidad de horas de la alarma
+			*seg4 = nm.mapping[alarm_h / 10];
+		} else {
+			// Actualiza los displays con el tiempo actual
+			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
+			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
+    1568:	008c6004 	movi	r2,12672
+    156c:	10c00015 	stw	r3,0(r2)
+			*seg3 = nm.mapping[hours % 10];      // Unidad de horas
+    1570:	01400284 	movi	r5,10
+    1574:	8809883a 	mov	r4,r17
+    1578:	000170c0 	call	170c <__modsi3>
+    157c:	1085883a 	add	r2,r2,r2
+    1580:	1085883a 	add	r2,r2,r2
+    1584:	8085883a 	add	r2,r16,r2
+    1588:	10c00017 	ldw	r3,0(r2)
+    158c:	008c5c04 	movi	r2,12656
+			*seg4 = nm.mapping[hours / 10];      // Decena de horas
+    1590:	01400284 	movi	r5,10
+			*seg4 = nm.mapping[alarm_h / 10];
+		} else {
+			// Actualiza los displays con el tiempo actual
+			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
+			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
+			*seg3 = nm.mapping[hours % 10];      // Unidad de horas
+    1594:	10c00015 	stw	r3,0(r2)
+			*seg4 = nm.mapping[hours / 10];      // Decena de horas
+    1598:	8809883a 	mov	r4,r17
+    159c:	00016880 	call	1688 <__divsi3>
+    15a0:	1085883a 	add	r2,r2,r2
+    15a4:	1085883a 	add	r2,r2,r2
+    15a8:	80a1883a 	add	r16,r16,r2
+    15ac:	80c00017 	ldw	r3,0(r16)
+    15b0:	008c6804 	movi	r2,12704
+		// Lee el switch para entrar en modo de configuración
+		if (config_mode == 1) {
 			config_mode = 1; // Entrar en modo de configuración
 		}
 
-		check_alarm(hours, minutes, alarm_h, alarm_m, buzz,led1 , off);
+		check_alarm(seconds, hours, minutes, alarm_h, alarm_m, buzz, led1, off);
+    15b4:	d1a00717 	ldw	r6,-32740(gp)
+		} else {
+			// Actualiza los displays con el tiempo actual
+			*seg1 = nm.mapping[minutes % 10];    // Unidad de minutos
+			*seg2 = nm.mapping[minutes / 10];    // Decena de minutos
+			*seg3 = nm.mapping[hours % 10];      // Unidad de horas
+			*seg4 = nm.mapping[hours / 10];      // Decena de horas
+    15b8:	10c00015 	stw	r3,0(r2)
+		// Lee el switch para entrar en modo de configuración
+		if (config_mode == 1) {
+			config_mode = 1; // Entrar en modo de configuración
+		}
+
+		check_alarm(seconds, hours, minutes, alarm_h, alarm_m, buzz, led1, off);
+    15bc:	d0a00b43 	ldbu	r2,-32723(gp)
+    15c0:	d1e00043 	ldbu	r7,-32767(gp)
+    15c4:	d1600617 	ldw	r5,-32744(gp)
+    15c8:	d8800315 	stw	r2,12(sp)
+    15cc:	008c6c04 	movi	r2,12720
+    15d0:	d8800215 	stw	r2,8(sp)
+    15d4:	008c5804 	movi	r2,12640
+    15d8:	d8800115 	stw	r2,4(sp)
+    15dc:	d0a00003 	ldbu	r2,-32768(gp)
+    15e0:	d1200817 	ldw	r4,-32736(gp)
+    15e4:	d8800015 	stw	r2,0(sp)
+    15e8:	00012480 	call	1248 <check_alarm>
 	}
 }
-    15a4:	dfc00217 	ldw	ra,8(sp)
-    15a8:	dc400117 	ldw	r17,4(sp)
-    15ac:	dc000017 	ldw	r16,0(sp)
-    15b0:	dec00304 	addi	sp,sp,12
-    15b4:	f800283a 	ret
+    15ec:	dfc00617 	ldw	ra,24(sp)
+    15f0:	dc400517 	ldw	r17,20(sp)
+    15f4:	dc000417 	ldw	r16,16(sp)
+    15f8:	dec00704 	addi	sp,sp,28
+    15fc:	f800283a 	ret
 
-000015b8 <check_alarm>:
-
-void check_alarm(int current_hours, int current_minutes, int alarm_hours, int alarm_minutes, volatile unsigned long *buzz, volatile unsigned long *led1, alt_u8 off) {
-    15b8:	d8c00017 	ldw	r3,0(sp)
-    15bc:	da000117 	ldw	r8,4(sp)
-    15c0:	d8800217 	ldw	r2,8(sp)
-	if (current_hours == alarm_hours && current_minutes == alarm_minutes) {
-    15c4:	2180071e 	bne	r4,r6,15e4 <check_alarm+0x2c>
-    15c8:	29c0061e 	bne	r5,r7,15e4 <check_alarm+0x2c>
-		if (off == 0) {
-    15cc:	10803fcc 	andi	r2,r2,255
-    15d0:	1000061e 	bne	r2,zero,15ec <check_alarm+0x34>
-			*led1 = 1;
-    15d4:	00800044 	movi	r2,1
-    15d8:	40800015 	stw	r2,0(r8)
-			*buzz = 1; // Activa el buzzer
-    15dc:	18800015 	stw	r2,0(r3)
-    15e0:	f800283a 	ret
-		}
-	} else {
-		*led1 = 0;
-    15e4:	40000015 	stw	zero,0(r8)
-		*buzz = 0; // Desactiva el buzzer si la alarma no coincide
-    15e8:	18000015 	stw	zero,0(r3)
-    15ec:	f800283a 	ret
-
-000015f0 <set_button_hours>:
+00001600 <set_button_hours>:
 	}
 }
 
 void set_button_hours() {
 	alt_u8 button_status = 0;
 	button_status = IORD_ALTERA_AVALON_PIO_DATA(PIO_BUTTON_HOURS_BASE) & 0x01;
-    15f0:	008c4404 	movi	r2,12560
-    15f4:	10800037 	ldwio	r2,0(r2)
+    1600:	008c4404 	movi	r2,12560
+    1604:	10800037 	ldwio	r2,0(r2)
 	set_h = button_status;
-    15f8:	1080004c 	andi	r2,r2,1
-    15fc:	d0a00a45 	stb	r2,-32727(gp)
-    1600:	f800283a 	ret
+    1608:	1080004c 	andi	r2,r2,1
+    160c:	d0a00bc5 	stb	r2,-32721(gp)
+    1610:	f800283a 	ret
 
-00001604 <set_button_minutes>:
+00001614 <set_button_minutes>:
 }
 
 void set_button_minutes() {
 	alt_u8 button_status = 0;
 	button_status = IORD_ALTERA_AVALON_PIO_DATA(PIO_BUTTON_MINUTES_BASE) & 0x01;
-    1604:	008c4004 	movi	r2,12544
-    1608:	10800037 	ldwio	r2,0(r2)
+    1614:	008c4004 	movi	r2,12544
+    1618:	10800037 	ldwio	r2,0(r2)
 	set_min = button_status;
-    160c:	1080004c 	andi	r2,r2,1
-    1610:	d0a00a85 	stb	r2,-32726(gp)
-    1614:	f800283a 	ret
+    161c:	1080004c 	andi	r2,r2,1
+    1620:	d0a00c05 	stb	r2,-32720(gp)
+    1624:	f800283a 	ret
 
-00001618 <set_switch_clock>:
+00001628 <set_switch_clock>:
 }
 
 void set_switch_clock() {
 	//volatile unsigned long *led1 = (volatile unsigned long *) 0x31b0; // Display de horas (decena)
 	alt_u8 switch_status = 0;
 	switch_status = IORD_ALTERA_AVALON_PIO_DATA(PIO_SWITCH_CLOCK_BASE) & 0x01;
-    1618:	008c4c04 	movi	r2,12592
-    161c:	10800037 	ldwio	r2,0(r2)
+    1628:	008c4c04 	movi	r2,12592
+    162c:	10800037 	ldwio	r2,0(r2)
 	//*led1 = 1;
 	//return switch_status;
 	//IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, ~switch_status);
 	config_mode = switch_status;
-    1620:	1080004c 	andi	r2,r2,1
-    1624:	d0a00ac5 	stb	r2,-32725(gp)
-    1628:	f800283a 	ret
+    1630:	1080004c 	andi	r2,r2,1
+    1634:	d0a00c45 	stb	r2,-32719(gp)
+    1638:	f800283a 	ret
 
-0000162c <set_switch_alarm>:
+0000163c <set_switch_alarm>:
 }
 
 void set_switch_alarm() {
 	alt_u8 switch_status = 0;
 	switch_status = IORD_ALTERA_AVALON_PIO_DATA(PIO_SET_ALARM_BASE) & 0x01;
-    162c:	008c5004 	movi	r2,12608
-    1630:	10800037 	ldwio	r2,0(r2)
+    163c:	008c5004 	movi	r2,12608
+    1640:	10800037 	ldwio	r2,0(r2)
 	//IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, ~switch_status);
 	set_alarm = switch_status;
-    1634:	1080004c 	andi	r2,r2,1
-    1638:	d0a00905 	stb	r2,-32732(gp)
-    163c:	f800283a 	ret
+    1644:	1080004c 	andi	r2,r2,1
+    1648:	d0a00b05 	stb	r2,-32724(gp)
+    164c:	f800283a 	ret
 
-00001640 <off_alarm>:
+00001650 <off_alarm>:
 
 }
 
 void off_alarm() {
 	alt_u8 switch_status = 0;
 	switch_status = IORD_ALTERA_AVALON_PIO_DATA(PIO_SWITCH_OFF_BASE) & 0x01;
-    1640:	008c5404 	movi	r2,12624
-    1644:	10800037 	ldwio	r2,0(r2)
+    1650:	008c5404 	movi	r2,12624
+    1654:	10800037 	ldwio	r2,0(r2)
 	//IOWR_ALTERA_AVALON_PIO_DATA(PIO_LEDS_0_BASE, ~switch_status);
 
 	off = switch_status;
-    1648:	1080004c 	andi	r2,r2,1
-    164c:	d0a00945 	stb	r2,-32731(gp)
-    1650:	f800283a 	ret
+    1658:	1080004c 	andi	r2,r2,1
+    165c:	d0a00b45 	stb	r2,-32723(gp)
+    1660:	f800283a 	ret
 
-00001654 <main>:
+00001664 <main>:
 #define PIO_SWITCH_OFF_BASE 0x3150
 
 void init_timer_interrupt(void);
 static void timer_isr(void * context, alt_u32 id);
 
 int main() {
-    1654:	deffff04 	addi	sp,sp,-4
-    1658:	dfc00015 	stw	ra,0(sp)
+    1664:	deffff04 	addi	sp,sp,-4
+    1668:	dfc00015 	stw	ra,0(sp)
 	init_timer_interrupt();
-    165c:	00011bc0 	call	11bc <init_timer_interrupt>
+    166c:	00011bc0 	call	11bc <init_timer_interrupt>
 
 	/* Event loop never exits. */
 	while (1) {
 		set_switch_clock();
-    1660:	00016180 	call	1618 <set_switch_clock>
+    1670:	00016280 	call	1628 <set_switch_clock>
 		set_button_hours();
-    1664:	00015f00 	call	15f0 <set_button_hours>
+    1674:	00016000 	call	1600 <set_button_hours>
 		set_button_minutes();
-    1668:	00016040 	call	1604 <set_button_minutes>
+    1678:	00016140 	call	1614 <set_button_minutes>
 		set_switch_alarm();
-    166c:	000162c0 	call	162c <set_switch_alarm>
+    167c:	000163c0 	call	163c <set_switch_alarm>
 		off_alarm();
-    1670:	00016400 	call	1640 <off_alarm>
-    1674:	003ffa06 	br	1660 <main+0xc>
+    1680:	00016500 	call	1650 <off_alarm>
+    1684:	003ffa06 	br	1670 <main+0xc>
 
-00001678 <__divsi3>:
-    1678:	20001b16 	blt	r4,zero,16e8 <__divsi3+0x70>
-    167c:	000f883a 	mov	r7,zero
-    1680:	28001616 	blt	r5,zero,16dc <__divsi3+0x64>
-    1684:	200d883a 	mov	r6,r4
-    1688:	29001a2e 	bgeu	r5,r4,16f4 <__divsi3+0x7c>
-    168c:	00800804 	movi	r2,32
-    1690:	00c00044 	movi	r3,1
-    1694:	00000106 	br	169c <__divsi3+0x24>
-    1698:	10000d26 	beq	r2,zero,16d0 <__divsi3+0x58>
-    169c:	294b883a 	add	r5,r5,r5
-    16a0:	10bfffc4 	addi	r2,r2,-1
-    16a4:	18c7883a 	add	r3,r3,r3
-    16a8:	293ffb36 	bltu	r5,r4,1698 <__divsi3+0x20>
-    16ac:	0005883a 	mov	r2,zero
-    16b0:	18000726 	beq	r3,zero,16d0 <__divsi3+0x58>
-    16b4:	0005883a 	mov	r2,zero
-    16b8:	31400236 	bltu	r6,r5,16c4 <__divsi3+0x4c>
-    16bc:	314dc83a 	sub	r6,r6,r5
-    16c0:	10c4b03a 	or	r2,r2,r3
-    16c4:	1806d07a 	srli	r3,r3,1
-    16c8:	280ad07a 	srli	r5,r5,1
-    16cc:	183ffa1e 	bne	r3,zero,16b8 <__divsi3+0x40>
-    16d0:	38000126 	beq	r7,zero,16d8 <__divsi3+0x60>
-    16d4:	0085c83a 	sub	r2,zero,r2
-    16d8:	f800283a 	ret
-    16dc:	014bc83a 	sub	r5,zero,r5
-    16e0:	39c0005c 	xori	r7,r7,1
-    16e4:	003fe706 	br	1684 <__divsi3+0xc>
-    16e8:	0109c83a 	sub	r4,zero,r4
-    16ec:	01c00044 	movi	r7,1
-    16f0:	003fe306 	br	1680 <__divsi3+0x8>
-    16f4:	00c00044 	movi	r3,1
-    16f8:	003fee06 	br	16b4 <__divsi3+0x3c>
+00001688 <__divsi3>:
+    1688:	20001b16 	blt	r4,zero,16f8 <__divsi3+0x70>
+    168c:	000f883a 	mov	r7,zero
+    1690:	28001616 	blt	r5,zero,16ec <__divsi3+0x64>
+    1694:	200d883a 	mov	r6,r4
+    1698:	29001a2e 	bgeu	r5,r4,1704 <__divsi3+0x7c>
+    169c:	00800804 	movi	r2,32
+    16a0:	00c00044 	movi	r3,1
+    16a4:	00000106 	br	16ac <__divsi3+0x24>
+    16a8:	10000d26 	beq	r2,zero,16e0 <__divsi3+0x58>
+    16ac:	294b883a 	add	r5,r5,r5
+    16b0:	10bfffc4 	addi	r2,r2,-1
+    16b4:	18c7883a 	add	r3,r3,r3
+    16b8:	293ffb36 	bltu	r5,r4,16a8 <__divsi3+0x20>
+    16bc:	0005883a 	mov	r2,zero
+    16c0:	18000726 	beq	r3,zero,16e0 <__divsi3+0x58>
+    16c4:	0005883a 	mov	r2,zero
+    16c8:	31400236 	bltu	r6,r5,16d4 <__divsi3+0x4c>
+    16cc:	314dc83a 	sub	r6,r6,r5
+    16d0:	10c4b03a 	or	r2,r2,r3
+    16d4:	1806d07a 	srli	r3,r3,1
+    16d8:	280ad07a 	srli	r5,r5,1
+    16dc:	183ffa1e 	bne	r3,zero,16c8 <__divsi3+0x40>
+    16e0:	38000126 	beq	r7,zero,16e8 <__divsi3+0x60>
+    16e4:	0085c83a 	sub	r2,zero,r2
+    16e8:	f800283a 	ret
+    16ec:	014bc83a 	sub	r5,zero,r5
+    16f0:	39c0005c 	xori	r7,r7,1
+    16f4:	003fe706 	br	1694 <__divsi3+0xc>
+    16f8:	0109c83a 	sub	r4,zero,r4
+    16fc:	01c00044 	movi	r7,1
+    1700:	003fe306 	br	1690 <__divsi3+0x8>
+    1704:	00c00044 	movi	r3,1
+    1708:	003fee06 	br	16c4 <__divsi3+0x3c>
 
-000016fc <__modsi3>:
-    16fc:	20001716 	blt	r4,zero,175c <__modsi3+0x60>
-    1700:	000f883a 	mov	r7,zero
-    1704:	2005883a 	mov	r2,r4
-    1708:	28001216 	blt	r5,zero,1754 <__modsi3+0x58>
-    170c:	2900162e 	bgeu	r5,r4,1768 <__modsi3+0x6c>
-    1710:	01800804 	movi	r6,32
-    1714:	00c00044 	movi	r3,1
-    1718:	00000106 	br	1720 <__modsi3+0x24>
-    171c:	30000a26 	beq	r6,zero,1748 <__modsi3+0x4c>
-    1720:	294b883a 	add	r5,r5,r5
-    1724:	31bfffc4 	addi	r6,r6,-1
-    1728:	18c7883a 	add	r3,r3,r3
-    172c:	293ffb36 	bltu	r5,r4,171c <__modsi3+0x20>
-    1730:	18000526 	beq	r3,zero,1748 <__modsi3+0x4c>
-    1734:	1806d07a 	srli	r3,r3,1
-    1738:	11400136 	bltu	r2,r5,1740 <__modsi3+0x44>
-    173c:	1145c83a 	sub	r2,r2,r5
-    1740:	280ad07a 	srli	r5,r5,1
-    1744:	183ffb1e 	bne	r3,zero,1734 <__modsi3+0x38>
-    1748:	38000126 	beq	r7,zero,1750 <__modsi3+0x54>
-    174c:	0085c83a 	sub	r2,zero,r2
-    1750:	f800283a 	ret
-    1754:	014bc83a 	sub	r5,zero,r5
-    1758:	003fec06 	br	170c <__modsi3+0x10>
-    175c:	0109c83a 	sub	r4,zero,r4
-    1760:	01c00044 	movi	r7,1
-    1764:	003fe706 	br	1704 <__modsi3+0x8>
-    1768:	00c00044 	movi	r3,1
-    176c:	003ff106 	br	1734 <__modsi3+0x38>
+0000170c <__modsi3>:
+    170c:	20001716 	blt	r4,zero,176c <__modsi3+0x60>
+    1710:	000f883a 	mov	r7,zero
+    1714:	2005883a 	mov	r2,r4
+    1718:	28001216 	blt	r5,zero,1764 <__modsi3+0x58>
+    171c:	2900162e 	bgeu	r5,r4,1778 <__modsi3+0x6c>
+    1720:	01800804 	movi	r6,32
+    1724:	00c00044 	movi	r3,1
+    1728:	00000106 	br	1730 <__modsi3+0x24>
+    172c:	30000a26 	beq	r6,zero,1758 <__modsi3+0x4c>
+    1730:	294b883a 	add	r5,r5,r5
+    1734:	31bfffc4 	addi	r6,r6,-1
+    1738:	18c7883a 	add	r3,r3,r3
+    173c:	293ffb36 	bltu	r5,r4,172c <__modsi3+0x20>
+    1740:	18000526 	beq	r3,zero,1758 <__modsi3+0x4c>
+    1744:	1806d07a 	srli	r3,r3,1
+    1748:	11400136 	bltu	r2,r5,1750 <__modsi3+0x44>
+    174c:	1145c83a 	sub	r2,r2,r5
+    1750:	280ad07a 	srli	r5,r5,1
+    1754:	183ffb1e 	bne	r3,zero,1744 <__modsi3+0x38>
+    1758:	38000126 	beq	r7,zero,1760 <__modsi3+0x54>
+    175c:	0085c83a 	sub	r2,zero,r2
+    1760:	f800283a 	ret
+    1764:	014bc83a 	sub	r5,zero,r5
+    1768:	003fec06 	br	171c <__modsi3+0x10>
+    176c:	0109c83a 	sub	r4,zero,r4
+    1770:	01c00044 	movi	r7,1
+    1774:	003fe706 	br	1714 <__modsi3+0x8>
+    1778:	00c00044 	movi	r3,1
+    177c:	003ff106 	br	1744 <__modsi3+0x38>
 
-00001770 <__udivsi3>:
-    1770:	200d883a 	mov	r6,r4
-    1774:	2900152e 	bgeu	r5,r4,17cc <__udivsi3+0x5c>
-    1778:	28001416 	blt	r5,zero,17cc <__udivsi3+0x5c>
-    177c:	00800804 	movi	r2,32
-    1780:	00c00044 	movi	r3,1
-    1784:	00000206 	br	1790 <__udivsi3+0x20>
-    1788:	10000e26 	beq	r2,zero,17c4 <__udivsi3+0x54>
-    178c:	28000516 	blt	r5,zero,17a4 <__udivsi3+0x34>
-    1790:	294b883a 	add	r5,r5,r5
-    1794:	10bfffc4 	addi	r2,r2,-1
-    1798:	18c7883a 	add	r3,r3,r3
-    179c:	293ffa36 	bltu	r5,r4,1788 <__udivsi3+0x18>
-    17a0:	18000826 	beq	r3,zero,17c4 <__udivsi3+0x54>
-    17a4:	0005883a 	mov	r2,zero
-    17a8:	31400236 	bltu	r6,r5,17b4 <__udivsi3+0x44>
-    17ac:	314dc83a 	sub	r6,r6,r5
-    17b0:	10c4b03a 	or	r2,r2,r3
-    17b4:	1806d07a 	srli	r3,r3,1
-    17b8:	280ad07a 	srli	r5,r5,1
-    17bc:	183ffa1e 	bne	r3,zero,17a8 <__udivsi3+0x38>
-    17c0:	f800283a 	ret
-    17c4:	0005883a 	mov	r2,zero
-    17c8:	f800283a 	ret
-    17cc:	00c00044 	movi	r3,1
-    17d0:	003ff406 	br	17a4 <__udivsi3+0x34>
+00001780 <__udivsi3>:
+    1780:	200d883a 	mov	r6,r4
+    1784:	2900152e 	bgeu	r5,r4,17dc <__udivsi3+0x5c>
+    1788:	28001416 	blt	r5,zero,17dc <__udivsi3+0x5c>
+    178c:	00800804 	movi	r2,32
+    1790:	00c00044 	movi	r3,1
+    1794:	00000206 	br	17a0 <__udivsi3+0x20>
+    1798:	10000e26 	beq	r2,zero,17d4 <__udivsi3+0x54>
+    179c:	28000516 	blt	r5,zero,17b4 <__udivsi3+0x34>
+    17a0:	294b883a 	add	r5,r5,r5
+    17a4:	10bfffc4 	addi	r2,r2,-1
+    17a8:	18c7883a 	add	r3,r3,r3
+    17ac:	293ffa36 	bltu	r5,r4,1798 <__udivsi3+0x18>
+    17b0:	18000826 	beq	r3,zero,17d4 <__udivsi3+0x54>
+    17b4:	0005883a 	mov	r2,zero
+    17b8:	31400236 	bltu	r6,r5,17c4 <__udivsi3+0x44>
+    17bc:	314dc83a 	sub	r6,r6,r5
+    17c0:	10c4b03a 	or	r2,r2,r3
+    17c4:	1806d07a 	srli	r3,r3,1
+    17c8:	280ad07a 	srli	r5,r5,1
+    17cc:	183ffa1e 	bne	r3,zero,17b8 <__udivsi3+0x38>
+    17d0:	f800283a 	ret
+    17d4:	0005883a 	mov	r2,zero
+    17d8:	f800283a 	ret
+    17dc:	00c00044 	movi	r3,1
+    17e0:	003ff406 	br	17b4 <__udivsi3+0x34>
 
-000017d4 <__umodsi3>:
-    17d4:	2005883a 	mov	r2,r4
-    17d8:	2900122e 	bgeu	r5,r4,1824 <__umodsi3+0x50>
-    17dc:	28001116 	blt	r5,zero,1824 <__umodsi3+0x50>
-    17e0:	01800804 	movi	r6,32
-    17e4:	00c00044 	movi	r3,1
-    17e8:	00000206 	br	17f4 <__umodsi3+0x20>
-    17ec:	30000c26 	beq	r6,zero,1820 <__umodsi3+0x4c>
-    17f0:	28000516 	blt	r5,zero,1808 <__umodsi3+0x34>
-    17f4:	294b883a 	add	r5,r5,r5
-    17f8:	31bfffc4 	addi	r6,r6,-1
-    17fc:	18c7883a 	add	r3,r3,r3
-    1800:	293ffa36 	bltu	r5,r4,17ec <__umodsi3+0x18>
-    1804:	18000626 	beq	r3,zero,1820 <__umodsi3+0x4c>
-    1808:	1806d07a 	srli	r3,r3,1
-    180c:	11400136 	bltu	r2,r5,1814 <__umodsi3+0x40>
-    1810:	1145c83a 	sub	r2,r2,r5
-    1814:	280ad07a 	srli	r5,r5,1
-    1818:	183ffb1e 	bne	r3,zero,1808 <__umodsi3+0x34>
-    181c:	f800283a 	ret
-    1820:	f800283a 	ret
-    1824:	00c00044 	movi	r3,1
-    1828:	003ff706 	br	1808 <__umodsi3+0x34>
+000017e4 <__umodsi3>:
+    17e4:	2005883a 	mov	r2,r4
+    17e8:	2900122e 	bgeu	r5,r4,1834 <__umodsi3+0x50>
+    17ec:	28001116 	blt	r5,zero,1834 <__umodsi3+0x50>
+    17f0:	01800804 	movi	r6,32
+    17f4:	00c00044 	movi	r3,1
+    17f8:	00000206 	br	1804 <__umodsi3+0x20>
+    17fc:	30000c26 	beq	r6,zero,1830 <__umodsi3+0x4c>
+    1800:	28000516 	blt	r5,zero,1818 <__umodsi3+0x34>
+    1804:	294b883a 	add	r5,r5,r5
+    1808:	31bfffc4 	addi	r6,r6,-1
+    180c:	18c7883a 	add	r3,r3,r3
+    1810:	293ffa36 	bltu	r5,r4,17fc <__umodsi3+0x18>
+    1814:	18000626 	beq	r3,zero,1830 <__umodsi3+0x4c>
+    1818:	1806d07a 	srli	r3,r3,1
+    181c:	11400136 	bltu	r2,r5,1824 <__umodsi3+0x40>
+    1820:	1145c83a 	sub	r2,r2,r5
+    1824:	280ad07a 	srli	r5,r5,1
+    1828:	183ffb1e 	bne	r3,zero,1818 <__umodsi3+0x34>
+    182c:	f800283a 	ret
+    1830:	f800283a 	ret
+    1834:	00c00044 	movi	r3,1
+    1838:	003ff706 	br	1818 <__umodsi3+0x34>
 
-0000182c <alt_ic_isr_register>:
+0000183c <alt_ic_isr_register>:
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_isr_register(alt_u32 ic_id, alt_u32 irq, alt_isr_func isr, 
   void *isr_context, void *flags)
 {
     return alt_iic_isr_register(ic_id, irq, isr, isr_context, flags);
-    182c:	00018b81 	jmpi	18b8 <alt_iic_isr_register>
+    183c:	00018c81 	jmpi	18c8 <alt_iic_isr_register>
 
-00001830 <alt_ic_irq_enable>:
+00001840 <alt_ic_irq_enable>:
 static ALT_INLINE alt_irq_context ALT_ALWAYS_INLINE 
        alt_irq_disable_all (void)
 {
   alt_irq_context context;
 
   NIOS2_READ_STATUS (context);
-    1830:	0009303a 	rdctl	r4,status
+    1840:	0009303a 	rdctl	r4,status
 
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
-    1834:	00bfff84 	movi	r2,-2
-    1838:	2084703a 	and	r2,r4,r2
-    183c:	1001703a 	wrctl	status,r2
+    1844:	00bfff84 	movi	r2,-2
+    1848:	2084703a 	and	r2,r4,r2
+    184c:	1001703a 	wrctl	status,r2
   alt_irq_context  status;
   extern volatile alt_u32 alt_irq_active;
 
   status = alt_irq_disable_all ();
 
   alt_irq_active |= (1 << id);
-    1840:	00c00044 	movi	r3,1
-    1844:	d0a00b17 	ldw	r2,-32724(gp)
-    1848:	194a983a 	sll	r5,r3,r5
-    184c:	288ab03a 	or	r5,r5,r2
-    1850:	d1600b15 	stw	r5,-32724(gp)
+    1850:	00c00044 	movi	r3,1
+    1854:	d0a00d17 	ldw	r2,-32716(gp)
+    1858:	194a983a 	sll	r5,r3,r5
+    185c:	288ab03a 	or	r5,r5,r2
+    1860:	d1600d15 	stw	r5,-32716(gp)
   NIOS2_WRITE_IENABLE (alt_irq_active);
-    1854:	d0a00b17 	ldw	r2,-32724(gp)
-    1858:	100170fa 	wrctl	ienable,r2
+    1864:	d0a00d17 	ldw	r2,-32716(gp)
+    1868:	100170fa 	wrctl	ienable,r2
   status &= ~NIOS2_STATUS_PIE_MSK;
   status |= (context & NIOS2_STATUS_PIE_MSK);
   
   NIOS2_WRITE_STATUS (status);
 #else
   NIOS2_WRITE_STATUS (context);
-    185c:	2001703a 	wrctl	status,r4
+    186c:	2001703a 	wrctl	status,r4
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_irq_enable (alt_u32 ic_id, alt_u32 irq)
 {
     return alt_irq_enable(irq);
 }
-    1860:	0005883a 	mov	r2,zero
-    1864:	f800283a 	ret
+    1870:	0005883a 	mov	r2,zero
+    1874:	f800283a 	ret
 
-00001868 <alt_ic_irq_disable>:
+00001878 <alt_ic_irq_disable>:
 static ALT_INLINE alt_irq_context ALT_ALWAYS_INLINE 
        alt_irq_disable_all (void)
 {
   alt_irq_context context;
 
   NIOS2_READ_STATUS (context);
-    1868:	0009303a 	rdctl	r4,status
+    1878:	0009303a 	rdctl	r4,status
 
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
-    186c:	00bfff84 	movi	r2,-2
-    1870:	2084703a 	and	r2,r4,r2
-    1874:	1001703a 	wrctl	status,r2
+    187c:	00bfff84 	movi	r2,-2
+    1880:	2084703a 	and	r2,r4,r2
+    1884:	1001703a 	wrctl	status,r2
   alt_irq_context  status;
   extern volatile alt_u32 alt_irq_active;
 
   status = alt_irq_disable_all ();
 
   alt_irq_active &= ~(1 << id);
-    1878:	00ffff84 	movi	r3,-2
-    187c:	d0a00b17 	ldw	r2,-32724(gp)
-    1880:	194a183a 	rol	r5,r3,r5
-    1884:	288a703a 	and	r5,r5,r2
-    1888:	d1600b15 	stw	r5,-32724(gp)
+    1888:	00ffff84 	movi	r3,-2
+    188c:	d0a00d17 	ldw	r2,-32716(gp)
+    1890:	194a183a 	rol	r5,r3,r5
+    1894:	288a703a 	and	r5,r5,r2
+    1898:	d1600d15 	stw	r5,-32716(gp)
   NIOS2_WRITE_IENABLE (alt_irq_active);
-    188c:	d0a00b17 	ldw	r2,-32724(gp)
-    1890:	100170fa 	wrctl	ienable,r2
+    189c:	d0a00d17 	ldw	r2,-32716(gp)
+    18a0:	100170fa 	wrctl	ienable,r2
   status &= ~NIOS2_STATUS_PIE_MSK;
   status |= (context & NIOS2_STATUS_PIE_MSK);
   
   NIOS2_WRITE_STATUS (status);
 #else
   NIOS2_WRITE_STATUS (context);
-    1894:	2001703a 	wrctl	status,r4
+    18a4:	2001703a 	wrctl	status,r4
   * @return                 0 if successful, else error (-1)
   */
 int alt_ic_irq_disable(alt_u32 ic_id, alt_u32 irq)
 {
     return alt_irq_disable(irq);
 }
-    1898:	0005883a 	mov	r2,zero
-    189c:	f800283a 	ret
+    18a8:	0005883a 	mov	r2,zero
+    18ac:	f800283a 	ret
 
-000018a0 <alt_ic_irq_enabled>:
+000018b0 <alt_ic_irq_enabled>:
   */
 alt_u32 alt_ic_irq_enabled(alt_u32 ic_id, alt_u32 irq)
 {
     alt_u32 irq_enabled;
 
     NIOS2_READ_IENABLE(irq_enabled);
-    18a0:	000730fa 	rdctl	r3,ienable
+    18b0:	000730fa 	rdctl	r3,ienable
 
     return (irq_enabled & (1 << irq)) ? 1: 0;
-    18a4:	00800044 	movi	r2,1
-    18a8:	1144983a 	sll	r2,r2,r5
-    18ac:	10c4703a 	and	r2,r2,r3
+    18b4:	00800044 	movi	r2,1
+    18b8:	1144983a 	sll	r2,r2,r5
+    18bc:	10c4703a 	and	r2,r2,r3
 }
-    18b0:	1004c03a 	cmpne	r2,r2,zero
-    18b4:	f800283a 	ret
+    18c0:	1004c03a 	cmpne	r2,r2,zero
+    18c4:	f800283a 	ret
 
-000018b8 <alt_iic_isr_register>:
+000018c8 <alt_iic_isr_register>:
 {
   int rc = -EINVAL;  
   int id = irq;             /* IRQ interpreted as the interrupt ID. */
   alt_irq_context status;
 
   if (id < ALT_NIRQ)
-    18b8:	00c007c4 	movi	r3,31
-    18bc:	19401616 	blt	r3,r5,1918 <alt_iic_isr_register+0x60>
+    18c8:	00c007c4 	movi	r3,31
+    18cc:	19401616 	blt	r3,r5,1928 <alt_iic_isr_register+0x60>
   * @param flags            
   * @return                 0 if successful, else error (-1)
   */
 int alt_iic_isr_register(alt_u32 ic_id, alt_u32 irq, alt_isr_func isr, 
   void *isr_context, void *flags)
 {
-    18c0:	defffe04 	addi	sp,sp,-8
-    18c4:	dfc00115 	stw	ra,4(sp)
-    18c8:	dc000015 	stw	r16,0(sp)
+    18d0:	defffe04 	addi	sp,sp,-8
+    18d4:	dfc00115 	stw	ra,4(sp)
+    18d8:	dc000015 	stw	r16,0(sp)
 static ALT_INLINE alt_irq_context ALT_ALWAYS_INLINE 
        alt_irq_disable_all (void)
 {
   alt_irq_context context;
 
   NIOS2_READ_STATUS (context);
-    18cc:	0021303a 	rdctl	r16,status
+    18dc:	0021303a 	rdctl	r16,status
 
   NIOS2_WRITE_STATUS (context & ~NIOS2_STATUS_PIE_MSK);
-    18d0:	00ffff84 	movi	r3,-2
-    18d4:	80c6703a 	and	r3,r16,r3
-    18d8:	1801703a 	wrctl	status,r3
+    18e0:	00ffff84 	movi	r3,-2
+    18e4:	80c6703a 	and	r3,r16,r3
+    18e8:	1801703a 	wrctl	status,r3
      * state.
      */
 
     status = alt_irq_disable_all();
 
     alt_irq[id].handler = isr;
-    18dc:	280490fa 	slli	r2,r5,3
-    18e0:	00c00034 	movhi	r3,0
-    18e4:	18c6cf04 	addi	r3,r3,6972
-    18e8:	1885883a 	add	r2,r3,r2
-    18ec:	11800015 	stw	r6,0(r2)
+    18ec:	280490fa 	slli	r2,r5,3
+    18f0:	00c00034 	movhi	r3,0
+    18f4:	18c6d504 	addi	r3,r3,6996
+    18f8:	1885883a 	add	r2,r3,r2
+    18fc:	11800015 	stw	r6,0(r2)
     alt_irq[id].context = isr_context;
-    18f0:	11c00115 	stw	r7,4(r2)
+    1900:	11c00115 	stw	r7,4(r2)
 
     rc = (isr) ? alt_ic_irq_enable(ic_id, id) : alt_ic_irq_disable(ic_id, id);
-    18f4:	30000226 	beq	r6,zero,1900 <alt_iic_isr_register+0x48>
-    18f8:	00018300 	call	1830 <alt_ic_irq_enable>
-    18fc:	00000106 	br	1904 <alt_iic_isr_register+0x4c>
-    1900:	00018680 	call	1868 <alt_ic_irq_disable>
+    1904:	30000226 	beq	r6,zero,1910 <alt_iic_isr_register+0x48>
+    1908:	00018400 	call	1840 <alt_ic_irq_enable>
+    190c:	00000106 	br	1914 <alt_iic_isr_register+0x4c>
+    1910:	00018780 	call	1878 <alt_ic_irq_disable>
   status &= ~NIOS2_STATUS_PIE_MSK;
   status |= (context & NIOS2_STATUS_PIE_MSK);
   
   NIOS2_WRITE_STATUS (status);
 #else
   NIOS2_WRITE_STATUS (context);
-    1904:	8001703a 	wrctl	status,r16
+    1914:	8001703a 	wrctl	status,r16
 
     alt_irq_enable_all(status);
   }
 
   return rc; 
 }
-    1908:	dfc00117 	ldw	ra,4(sp)
-    190c:	dc000017 	ldw	r16,0(sp)
-    1910:	dec00204 	addi	sp,sp,8
-    1914:	f800283a 	ret
+    1918:	dfc00117 	ldw	ra,4(sp)
+    191c:	dc000017 	ldw	r16,0(sp)
+    1920:	dec00204 	addi	sp,sp,8
+    1924:	f800283a 	ret
   * @return                 0 if successful, else error (-1)
   */
 int alt_iic_isr_register(alt_u32 ic_id, alt_u32 irq, alt_isr_func isr, 
   void *isr_context, void *flags)
 {
   int rc = -EINVAL;  
-    1918:	00bffa84 	movi	r2,-22
-    191c:	f800283a 	ret
+    1928:	00bffa84 	movi	r2,-22
+    192c:	f800283a 	ret
 
-00001920 <alt_load>:
+00001930 <alt_load>:
  * there is no bootloader, so this application is responsible for loading to
  * RAM any sections that are required.
  */  
 
 void alt_load (void)
 {
-    1920:	deffff04 	addi	sp,sp,-4
-    1924:	01000034 	movhi	r4,0
-    1928:	01400034 	movhi	r5,0
-    192c:	dfc00015 	stw	ra,0(sp)
-    1930:	2106b504 	addi	r4,r4,6868
-    1934:	2946b704 	addi	r5,r5,6876
+    1930:	deffff04 	addi	sp,sp,-4
+    1934:	01000034 	movhi	r4,0
+    1938:	01400034 	movhi	r5,0
+    193c:	dfc00015 	stw	ra,0(sp)
+    1940:	2106b904 	addi	r4,r4,6884
+    1944:	2946bc04 	addi	r5,r5,6896
 
 static void ALT_INLINE alt_load_section (alt_u32* from, 
                                          alt_u32* to, 
                                          alt_u32* end)
 {
   if (to != from)
-    1938:	2140061e 	bne	r4,r5,1954 <alt_load+0x34>
-    193c:	01000034 	movhi	r4,0
-    1940:	01400034 	movhi	r5,0
-    1944:	21040804 	addi	r4,r4,4128
-    1948:	29440804 	addi	r5,r5,4128
-    194c:	2140121e 	bne	r4,r5,1998 <alt_load+0x78>
-    1950:	00000b06 	br	1980 <alt_load+0x60>
-    1954:	00c00034 	movhi	r3,0
-    1958:	18c6b704 	addi	r3,r3,6876
-    195c:	1907c83a 	sub	r3,r3,r4
-    1960:	0005883a 	mov	r2,zero
+    1948:	2140061e 	bne	r4,r5,1964 <alt_load+0x34>
+    194c:	01000034 	movhi	r4,0
+    1950:	01400034 	movhi	r5,0
+    1954:	21040804 	addi	r4,r4,4128
+    1958:	29440804 	addi	r5,r5,4128
+    195c:	2140121e 	bne	r4,r5,19a8 <alt_load+0x78>
+    1960:	00000b06 	br	1990 <alt_load+0x60>
+    1964:	00c00034 	movhi	r3,0
+    1968:	18c6bc04 	addi	r3,r3,6896
+    196c:	1907c83a 	sub	r3,r3,r4
+    1970:	0005883a 	mov	r2,zero
   {
     while( to != end )
-    1964:	10fff526 	beq	r2,r3,193c <alt_load+0x1c>
+    1974:	10fff526 	beq	r2,r3,194c <alt_load+0x1c>
     {
       *to++ = *from++;
-    1968:	114f883a 	add	r7,r2,r5
-    196c:	39c00017 	ldw	r7,0(r7)
-    1970:	110d883a 	add	r6,r2,r4
-    1974:	10800104 	addi	r2,r2,4
-    1978:	31c00015 	stw	r7,0(r6)
-    197c:	003ff906 	br	1964 <alt_load+0x44>
-    1980:	01000034 	movhi	r4,0
-    1984:	01400034 	movhi	r5,0
-    1988:	2106b504 	addi	r4,r4,6868
-    198c:	2946b504 	addi	r5,r5,6868
+    1978:	114f883a 	add	r7,r2,r5
+    197c:	39c00017 	ldw	r7,0(r7)
+    1980:	110d883a 	add	r6,r2,r4
+    1984:	10800104 	addi	r2,r2,4
+    1988:	31c00015 	stw	r7,0(r6)
+    198c:	003ff906 	br	1974 <alt_load+0x44>
+    1990:	01000034 	movhi	r4,0
+    1994:	01400034 	movhi	r5,0
+    1998:	2106b904 	addi	r4,r4,6884
+    199c:	2946b904 	addi	r5,r5,6884
 
 static void ALT_INLINE alt_load_section (alt_u32* from, 
                                          alt_u32* to, 
                                          alt_u32* end)
 {
   if (to != from)
-    1990:	2140101e 	bne	r4,r5,19d4 <alt_load+0xb4>
-    1994:	00000b06 	br	19c4 <alt_load+0xa4>
-    1998:	00c00034 	movhi	r3,0
-    199c:	18c46004 	addi	r3,r3,4480
-    19a0:	1907c83a 	sub	r3,r3,r4
-    19a4:	0005883a 	mov	r2,zero
+    19a0:	2140101e 	bne	r4,r5,19e4 <alt_load+0xb4>
+    19a4:	00000b06 	br	19d4 <alt_load+0xa4>
+    19a8:	00c00034 	movhi	r3,0
+    19ac:	18c46004 	addi	r3,r3,4480
+    19b0:	1907c83a 	sub	r3,r3,r4
+    19b4:	0005883a 	mov	r2,zero
   {
     while( to != end )
-    19a8:	10fff526 	beq	r2,r3,1980 <alt_load+0x60>
+    19b8:	10fff526 	beq	r2,r3,1990 <alt_load+0x60>
     {
       *to++ = *from++;
-    19ac:	114f883a 	add	r7,r2,r5
-    19b0:	39c00017 	ldw	r7,0(r7)
-    19b4:	110d883a 	add	r6,r2,r4
-    19b8:	10800104 	addi	r2,r2,4
-    19bc:	31c00015 	stw	r7,0(r6)
-    19c0:	003ff906 	br	19a8 <alt_load+0x88>
+    19bc:	114f883a 	add	r7,r2,r5
+    19c0:	39c00017 	ldw	r7,0(r7)
+    19c4:	110d883a 	add	r6,r2,r4
+    19c8:	10800104 	addi	r2,r2,4
+    19cc:	31c00015 	stw	r7,0(r6)
+    19d0:	003ff906 	br	19b8 <alt_load+0x88>
   
   /*
    * Now ensure that the caches are in synch.
    */
   
   alt_dcache_flush_all();
-    19c4:	0001a500 	call	1a50 <alt_dcache_flush_all>
+    19d4:	0001a600 	call	1a60 <alt_dcache_flush_all>
   alt_icache_flush_all();
 }
-    19c8:	dfc00017 	ldw	ra,0(sp)
-    19cc:	dec00104 	addi	sp,sp,4
+    19d8:	dfc00017 	ldw	ra,0(sp)
+    19dc:	dec00104 	addi	sp,sp,4
   /*
    * Now ensure that the caches are in synch.
    */
   
   alt_dcache_flush_all();
   alt_icache_flush_all();
-    19d0:	0001a541 	jmpi	1a54 <alt_icache_flush_all>
-    19d4:	00c00034 	movhi	r3,0
-    19d8:	18c6b504 	addi	r3,r3,6868
-    19dc:	1907c83a 	sub	r3,r3,r4
+    19e0:	0001a641 	jmpi	1a64 <alt_icache_flush_all>
+    19e4:	00c00034 	movhi	r3,0
+    19e8:	18c6b904 	addi	r3,r3,6884
+    19ec:	1907c83a 	sub	r3,r3,r4
 
 static void ALT_INLINE alt_load_section (alt_u32* from, 
                                          alt_u32* to, 
                                          alt_u32* end)
 {
   if (to != from)
-    19e0:	0005883a 	mov	r2,zero
+    19f0:	0005883a 	mov	r2,zero
   {
     while( to != end )
-    19e4:	18bff726 	beq	r3,r2,19c4 <alt_load+0xa4>
+    19f4:	18bff726 	beq	r3,r2,19d4 <alt_load+0xa4>
     {
       *to++ = *from++;
-    19e8:	114f883a 	add	r7,r2,r5
-    19ec:	39c00017 	ldw	r7,0(r7)
-    19f0:	110d883a 	add	r6,r2,r4
-    19f4:	10800104 	addi	r2,r2,4
-    19f8:	31c00015 	stw	r7,0(r6)
-    19fc:	003ff906 	br	19e4 <alt_load+0xc4>
+    19f8:	114f883a 	add	r7,r2,r5
+    19fc:	39c00017 	ldw	r7,0(r7)
+    1a00:	110d883a 	add	r6,r2,r4
+    1a04:	10800104 	addi	r2,r2,4
+    1a08:	31c00015 	stw	r7,0(r6)
+    1a0c:	003ff906 	br	19f4 <alt_load+0xc4>
 
-00001a00 <alt_main>:
+00001a10 <alt_main>:
  * devices/filesystems/components in the system; and call the entry point for
  * the users application, i.e. main().
  */
 
 void alt_main (void)
 {
-    1a00:	deffff04 	addi	sp,sp,-4
+    1a10:	deffff04 	addi	sp,sp,-4
 #endif
 
   /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
   ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
   /* Initialize the interrupt controller. */
   alt_irq_init (NULL);
-    1a04:	0009883a 	mov	r4,zero
+    1a14:	0009883a 	mov	r4,zero
  * devices/filesystems/components in the system; and call the entry point for
  * the users application, i.e. main().
  */
 
 void alt_main (void)
 {
-    1a08:	dfc00015 	stw	ra,0(sp)
+    1a18:	dfc00015 	stw	ra,0(sp)
 #endif
 
   /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
   ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
   /* Initialize the interrupt controller. */
   alt_irq_init (NULL);
-    1a0c:	0001a2c0 	call	1a2c <alt_irq_init>
+    1a1c:	0001a3c0 	call	1a3c <alt_irq_init>
   ALT_LOG_PRINT_BOOT("[alt_main.c] Done OS Init, calling alt_sem_create.\r\n");
   ALT_SEM_CREATE (&alt_fd_list_lock, 1);
 
   /* Initialize the device drivers/software components. */
   ALT_LOG_PRINT_BOOT("[alt_main.c] Calling alt_sys_init.\r\n");
   alt_sys_init();
-    1a10:	0001a4c0 	call	1a4c <alt_sys_init>
+    1a20:	0001a5c0 	call	1a5c <alt_sys_init>
    */
 
   ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
 
 #ifdef ALT_NO_EXIT
   main (alt_argc, alt_argv, alt_envp);
-    1a14:	d1a00c17 	ldw	r6,-32720(gp)
-    1a18:	d1600d17 	ldw	r5,-32716(gp)
-    1a1c:	d1200e17 	ldw	r4,-32712(gp)
+    1a24:	d1a00e17 	ldw	r6,-32712(gp)
+    1a28:	d1600f17 	ldw	r5,-32708(gp)
+    1a2c:	d1201017 	ldw	r4,-32704(gp)
   close(STDOUT_FILENO);
   exit (result);
 #endif
 
   ALT_LOG_PRINT_BOOT("[alt_main.c] After main - we should not be here?.\r\n");
 }
-    1a20:	dfc00017 	ldw	ra,0(sp)
-    1a24:	dec00104 	addi	sp,sp,4
+    1a30:	dfc00017 	ldw	ra,0(sp)
+    1a34:	dec00104 	addi	sp,sp,4
    */
 
   ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
 
 #ifdef ALT_NO_EXIT
   main (alt_argc, alt_argv, alt_envp);
-    1a28:	00016541 	jmpi	1654 <main>
+    1a38:	00016641 	jmpi	1664 <main>
 
-00001a2c <alt_irq_init>:
+00001a3c <alt_irq_init>:
  * The "base" parameter is ignored and only
  * present for backwards-compatibility.
  */
 
 void alt_irq_init ( const void* base )
 {
-    1a2c:	deffff04 	addi	sp,sp,-4
-    1a30:	dfc00015 	stw	ra,0(sp)
+    1a3c:	deffff04 	addi	sp,sp,-4
+    1a40:	dfc00015 	stw	ra,0(sp)
     ALTERA_NIOS2_GEN2_IRQ_INIT ( NIOS2_GEN2_0, nios2_gen2_0);
-    1a34:	0001acc0 	call	1acc <altera_nios2_gen2_irq_init>
+    1a44:	0001adc0 	call	1adc <altera_nios2_gen2_irq_init>
  * alt_irq_cpu_enable_interrupts() enables the CPU to start taking interrupts.
  */
 static ALT_INLINE void ALT_ALWAYS_INLINE 
        alt_irq_cpu_enable_interrupts (void)
 {
     NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
-    1a38:	00800044 	movi	r2,1
-    1a3c:	1001703a 	wrctl	status,r2
+    1a48:	00800044 	movi	r2,1
+    1a4c:	1001703a 	wrctl	status,r2
     alt_irq_cpu_enable_interrupts();
 }
-    1a40:	dfc00017 	ldw	ra,0(sp)
-    1a44:	dec00104 	addi	sp,sp,4
-    1a48:	f800283a 	ret
+    1a50:	dfc00017 	ldw	ra,0(sp)
+    1a54:	dec00104 	addi	sp,sp,4
+    1a58:	f800283a 	ret
 
-00001a4c <alt_sys_init>:
+00001a5c <alt_sys_init>:
  * Initialize the non-interrupt controller devices.
  * Called after alt_irq_init().
  */
 
 void alt_sys_init( void )
 {
-    1a4c:	f800283a 	ret
+    1a5c:	f800283a 	ret
 
-00001a50 <alt_dcache_flush_all>:
+00001a60 <alt_dcache_flush_all>:
 /*
  * alt_dcache_flush_all() is called to flush the entire data cache.
  */
 
 void alt_dcache_flush_all (void)
 {
-    1a50:	f800283a 	ret
+    1a60:	f800283a 	ret
 
-00001a54 <alt_icache_flush_all>:
+00001a64 <alt_icache_flush_all>:
 /*
  * alt_icache_flush_all() is called to flush the entire instruction cache.
  */
 
 void alt_icache_flush_all (void)
 {
-    1a54:	f800283a 	ret
+    1a64:	f800283a 	ret
 
-00001a58 <alt_exception_cause_generated_bad_addr>:
+00001a68 <alt_exception_cause_generated_bad_addr>:
  *         0: BADADDR is not valid
  */
 int 
 alt_exception_cause_generated_bad_addr(alt_exception_cause cause)
 {
   switch (cause) {
-    1a58:	213ffe84 	addi	r4,r4,-6
-    1a5c:	008003c4 	movi	r2,15
-    1a60:	11001636 	bltu	r2,r4,1abc <alt_exception_cause_generated_bad_addr+0x64>
-    1a64:	200890ba 	slli	r4,r4,2
-    1a68:	00800034 	movhi	r2,0
-    1a6c:	10869f04 	addi	r2,r2,6780
-    1a70:	2089883a 	add	r4,r4,r2
-    1a74:	20800017 	ldw	r2,0(r4)
-    1a78:	1000683a 	jmp	r2
-    1a7c:	00001ac4 	movi	zero,107
-    1a80:	00001ac4 	movi	zero,107
-    1a84:	00001abc 	xorhi	zero,zero,106
-    1a88:	00001abc 	xorhi	zero,zero,106
-    1a8c:	00001abc 	xorhi	zero,zero,106
-    1a90:	00001ac4 	movi	zero,107
-    1a94:	00001abc 	xorhi	zero,zero,106
-    1a98:	00001abc 	xorhi	zero,zero,106
-    1a9c:	00001ac4 	movi	zero,107
-    1aa0:	00001ac4 	movi	zero,107
-    1aa4:	00001abc 	xorhi	zero,zero,106
-    1aa8:	00001ac4 	movi	zero,107
-    1aac:	00001abc 	xorhi	zero,zero,106
-    1ab0:	00001abc 	xorhi	zero,zero,106
-    1ab4:	00001abc 	xorhi	zero,zero,106
-    1ab8:	00001ac4 	movi	zero,107
+    1a68:	213ffe84 	addi	r4,r4,-6
+    1a6c:	008003c4 	movi	r2,15
+    1a70:	11001636 	bltu	r2,r4,1acc <alt_exception_cause_generated_bad_addr+0x64>
+    1a74:	200890ba 	slli	r4,r4,2
+    1a78:	00800034 	movhi	r2,0
+    1a7c:	1086a304 	addi	r2,r2,6796
+    1a80:	2089883a 	add	r4,r4,r2
+    1a84:	20800017 	ldw	r2,0(r4)
+    1a88:	1000683a 	jmp	r2
+    1a8c:	00001ad4 	movui	zero,107
+    1a90:	00001ad4 	movui	zero,107
+    1a94:	00001acc 	andi	zero,zero,107
+    1a98:	00001acc 	andi	zero,zero,107
+    1a9c:	00001acc 	andi	zero,zero,107
+    1aa0:	00001ad4 	movui	zero,107
+    1aa4:	00001acc 	andi	zero,zero,107
+    1aa8:	00001acc 	andi	zero,zero,107
+    1aac:	00001ad4 	movui	zero,107
+    1ab0:	00001ad4 	movui	zero,107
+    1ab4:	00001acc 	andi	zero,zero,107
+    1ab8:	00001ad4 	movui	zero,107
+    1abc:	00001acc 	andi	zero,zero,107
+    1ac0:	00001acc 	andi	zero,zero,107
+    1ac4:	00001acc 	andi	zero,zero,107
+    1ac8:	00001ad4 	movui	zero,107
   case NIOS2_EXCEPTION_ECC_DATA_ERR:
     return 1;
 
   case NIOS2_EXCEPTION_TLB_MISS:
   case NIOS2_EXCEPTION_ECC_TLB_ERR:
     return 0;
-    1abc:	0005883a 	mov	r2,zero
-    1ac0:	f800283a 	ret
+    1acc:	0005883a 	mov	r2,zero
+    1ad0:	f800283a 	ret
   case NIOS2_EXCEPTION_MISALIGNED_TARGET_PC:
   case NIOS2_EXCEPTION_TLB_READ_PERM_VIOLATION:
   case NIOS2_EXCEPTION_TLB_WRITE_PERM_VIOLATION:
   case NIOS2_EXCEPTION_MPU_DATA_REGION_VIOLATION:
   case NIOS2_EXCEPTION_ECC_DATA_ERR:
     return 1;
-    1ac4:	00800044 	movi	r2,1
+    1ad4:	00800044 	movi	r2,1
     return 0;
 
   default:
     return 0;
   }
 }
-    1ac8:	f800283a 	ret
+    1ad8:	f800283a 	ret
 
-00001acc <altera_nios2_gen2_irq_init>:
+00001adc <altera_nios2_gen2_irq_init>:
  * To initialize the internal interrupt controller, just clear the IENABLE
  * register so that all possible IRQs are disabled.
  */
 void altera_nios2_gen2_irq_init(void) 
 {
     NIOS2_WRITE_IENABLE(0);
-    1acc:	000170fa 	wrctl	ienable,zero
-    1ad0:	f800283a 	ret
+    1adc:	000170fa 	wrctl	ienable,zero
+    1ae0:	f800283a 	ret
