@@ -1,12 +1,12 @@
-# system info CPU1 on 2024.08.19.23:18:04
+# system info CPU1 on 2024.08.22.14:35:42
 system_info:
 name,value
 DEVICE,5CSEMA5F31C6
 DEVICE_FAMILY,Cyclone V
-GENERATION_ID,1724131069
+GENERATION_ID,1724358892
 #
 #
-# Files generated for CPU1 on 2024.08.19.23:18:04
+# Files generated for CPU1 on 2024.08.22.14:35:42
 files:
 filepath,kind,attributes,module,is_top
 simulation/CPU1.v,VERILOG,,CPU1,true
@@ -25,22 +25,22 @@ simulation/submodules/CPU1_irq_mapper.sv,SYSTEM_VERILOG,,CPU1_irq_mapper,false
 simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
 simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
 simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+simulation/submodules/CPU1_nios2_gen2_0_cpu.sdc,SDC,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/CPU1_nios2_gen2_0_cpu.v,VERILOG,,CPU1_nios2_gen2_0_cpu,false
-simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v,VERILOG,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_sysclk.v,VERILOG,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_tck.v,VERILOG,,CPU1_nios2_gen2_0_cpu,false
-simulation/submodules/CPU1_nios2_gen2_0_cpu_test_bench.v,VERILOG,,CPU1_nios2_gen2_0_cpu,false
+simulation/submodules/CPU1_nios2_gen2_0_cpu_debug_slave_wrapper.v,VERILOG,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/CPU1_nios2_gen2_0_cpu_nios2_waves.do,OTHER,,CPU1_nios2_gen2_0_cpu,false
-simulation/submodules/CPU1_nios2_gen2_0_cpu.sdc,SDC,,CPU1_nios2_gen2_0_cpu,false
-simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex,HEX,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.dat,DAT,,CPU1_nios2_gen2_0_cpu,false
+simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.hex,HEX,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/CPU1_nios2_gen2_0_cpu_ociram_default_contents.mif,MIF,,CPU1_nios2_gen2_0_cpu,false
-simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex,HEX,,CPU1_nios2_gen2_0_cpu,false
-simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat,DAT,,CPU1_nios2_gen2_0_cpu,false
-simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif,MIF,,CPU1_nios2_gen2_0_cpu,false
-simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex,HEX,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.dat,DAT,,CPU1_nios2_gen2_0_cpu,false
+simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.hex,HEX,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_a.mif,MIF,,CPU1_nios2_gen2_0_cpu,false
+simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.dat,DAT,,CPU1_nios2_gen2_0_cpu,false
+simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.hex,HEX,,CPU1_nios2_gen2_0_cpu,false
+simulation/submodules/CPU1_nios2_gen2_0_cpu_rf_ram_b.mif,MIF,,CPU1_nios2_gen2_0_cpu,false
+simulation/submodules/CPU1_nios2_gen2_0_cpu_test_bench.v,VERILOG,,CPU1_nios2_gen2_0_cpu,false
 simulation/submodules/altera_merlin_master_translator.sv,SYSTEM_VERILOG,,altera_merlin_master_translator,false
 simulation/submodules/altera_merlin_slave_translator.sv,SYSTEM_VERILOG,,altera_merlin_slave_translator,false
 simulation/submodules/altera_merlin_master_agent.sv,SYSTEM_VERILOG,,altera_merlin_master_agent,false

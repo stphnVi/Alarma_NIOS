@@ -27,14 +27,16 @@ Progress: Adding pio_s3 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_s3
 Progress: Adding pio_s4 [altera_avalon_pio 18.1]
 Progress: Parameterizing module pio_s4
-Progress: Adding pio_swich_alarm [altera_avalon_pio 18.1]
-Progress: Parameterizing module pio_swich_alarm
-Progress: Adding pio_swich_clock [altera_avalon_pio 18.1]
-Progress: Parameterizing module pio_swich_clock
-Progress: Adding pio_swich_off [altera_avalon_pio 18.1]
-Progress: Parameterizing module pio_swich_off
-Progress: Adding pio_swich_reset [altera_avalon_pio 18.1]
-Progress: Parameterizing module pio_swich_reset
+Progress: Adding pio_set_alarm [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_set_alarm
+Progress: Adding pio_switch_clock [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_switch_clock
+Progress: Adding pio_switch_off [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_switch_off
+Progress: Adding pio_switch_reset [altera_avalon_pio 18.1]
+Progress: Parameterizing module pio_switch_reset
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -42,10 +44,10 @@ Progress: Done reading input file
 Info: CPU1.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: CPU1.pio_button_hours: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: CPU1.pio_button_minutes: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: CPU1.pio_swich_alarm: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: CPU1.pio_swich_clock: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: CPU1.pio_swich_off: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: CPU1.pio_swich_reset: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: CPU1.pio_set_alarm: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: CPU1.pio_switch_clock: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: CPU1.pio_switch_off: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: CPU1.pio_switch_reset: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: qsys-generate succeeded.
 Info: Loading IP catalog for testbench.
 Progress: 
@@ -62,7 +64,7 @@ Info: Reading index C:\Users\yangr\Documents\GitHub\Alarma_NIOS\CPU3\CPU1\testbe
 Progress: Loading CPU3/CPU1.qsys
 Info: C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/* matched 20 files in 0.00 seconds
 Info: C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/ip/**/* matched 0 files in 0.00 seconds
-Info: C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/*/* matched 351 files in 0.02 seconds
+Info: C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/*/* matched 355 files in 0.02 seconds
 Info: C:\Users\yangr\Documents\GitHub\Alarma_NIOS\CPU3\CPU1\testbench\CPU1.ipx described 0 plugins, 3 paths, in 0.02 seconds
 Progress: Loading testbench/CPU1_tb.qsys
 Info: C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/* matched 12 files in 0.04 seconds
@@ -72,18 +74,18 @@ Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* 
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx
-Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.09 seconds
-Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.10 seconds
+Info: C:\intelfpga_lite\18.1\ip\altera\altera_components.ipx described 2035 plugins, 0 paths, in 0.11 seconds
+Info: C:/intelfpga_lite/18.1/ip/**/* matched 139 files in 0.12 seconds
 Info: C:/intelfpga_lite/ip/**/* matched 0 files in 0.00 seconds
 Info: Reading index C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.00 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.00 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
 Info: Reading index C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx
 Info: C:\intelfpga_lite\18.1\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.01 seconds
 Info: C:/intelfpga_lite/18.1/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
 Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
-Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.15 seconds
-Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.15 seconds
+Info: C:\intelfpga_lite\18.1\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.17 seconds
+Info: C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.17 seconds
 Progress: 
 Progress: 
 Progress: 
@@ -111,8 +113,8 @@ Info: get_interface_property minutes EXPORT_OF
 Info: get_instance_property pio_button_minutes CLASS_NAME
 Info: get_instance_assignment pio_button_minutes testbench.partner.map.external_connection
 Info: get_interface_property off EXPORT_OF
-Info: get_instance_property pio_swich_off CLASS_NAME
-Info: get_instance_assignment pio_swich_off testbench.partner.map.external_connection
+Info: get_instance_property pio_switch_off CLASS_NAME
+Info: get_instance_assignment pio_switch_off testbench.partner.map.external_connection
 Info: get_interface_property s1 EXPORT_OF
 Info: get_instance_property pio_s1 CLASS_NAME
 Info: get_instance_assignment pio_s1 testbench.partner.map.external_connection
@@ -126,14 +128,14 @@ Info: get_interface_property s4 EXPORT_OF
 Info: get_instance_property pio_s4 CLASS_NAME
 Info: get_instance_assignment pio_s4 testbench.partner.map.external_connection
 Info: get_interface_property set_alarm EXPORT_OF
-Info: get_instance_property pio_swich_alarm CLASS_NAME
-Info: get_instance_assignment pio_swich_alarm testbench.partner.map.external_connection
+Info: get_instance_property pio_set_alarm CLASS_NAME
+Info: get_instance_assignment pio_set_alarm testbench.partner.map.external_connection
 Info: get_interface_property set_clock EXPORT_OF
-Info: get_instance_property pio_swich_clock CLASS_NAME
-Info: get_instance_assignment pio_swich_clock testbench.partner.map.external_connection
-Info: get_interface_property swich_reset EXPORT_OF
-Info: get_instance_property pio_swich_reset CLASS_NAME
-Info: get_instance_assignment pio_swich_reset testbench.partner.map.external_connection
+Info: get_instance_property pio_switch_clock CLASS_NAME
+Info: get_instance_assignment pio_switch_clock testbench.partner.map.external_connection
+Info: get_interface_property switch_reset EXPORT_OF
+Info: get_instance_property pio_switch_reset CLASS_NAME
+Info: get_instance_assignment pio_switch_reset testbench.partner.map.external_connection
 Info: send_message Info TB_Gen: Creating testbench system : CPU1_tb with all standard BFMs
 Info: TB_Gen: Creating testbench system : CPU1_tb with all standard BFMs
 Info: create_system CPU1_tb
@@ -152,7 +154,7 @@ Info: get_instance_interface_property CPU1_inst s3 CLASS_NAME
 Info: get_instance_interface_property CPU1_inst s4 CLASS_NAME
 Info: get_instance_interface_property CPU1_inst set_alarm CLASS_NAME
 Info: get_instance_interface_property CPU1_inst set_clock CLASS_NAME
-Info: get_instance_interface_property CPU1_inst swich_reset CLASS_NAME
+Info: get_instance_interface_property CPU1_inst switch_reset CLASS_NAME
 Info: get_instance_interface_property CPU1_inst clk CLASS_NAME
 Info: send_message Info TB_Gen: clock_sink found: clk
 Info: TB_Gen: clock_sink found: clk
@@ -409,28 +411,28 @@ Info: get_instance_interface_property CPU1_inst set_clock CLASS_NAME
 Info: get_instance_interfaces CPU1_inst_set_clock_bfm
 Info: get_instance_interface_property CPU1_inst_set_clock_bfm conduit CLASS_NAME
 Info: add_connection CPU1_inst_set_clock_bfm.conduit CPU1_inst.set_clock
-Info: get_instance_interface_property CPU1_inst swich_reset CLASS_NAME
-Info: send_message Info TB_Gen: conduit_end found: swich_reset
-Info: TB_Gen: conduit_end found: swich_reset
-Info: get_instance_interface_property CPU1_inst swich_reset CLASS_NAME
-Info: add_instance CPU1_inst_swich_reset_bfm altera_conduit_bfm 
-Info: get_instance_property CPU1_inst_swich_reset_bfm CLASS_NAME
-Info: get_instance_interface_parameter_value CPU1_inst swich_reset associatedClock
-Info: get_instance_interface_parameter_value CPU1_inst swich_reset associatedReset
-Info: get_instance_interface_ports CPU1_inst swich_reset
-Info: get_instance_interface_port_property CPU1_inst swich_reset swich_reset_export ROLE
-Info: get_instance_interface_port_property CPU1_inst swich_reset swich_reset_export WIDTH
-Info: get_instance_interface_port_property CPU1_inst swich_reset swich_reset_export DIRECTION
-Info: set_instance_parameter_value CPU1_inst_swich_reset_bfm CLOCKED_SIGNAL 0
-Info: set_instance_parameter_value CPU1_inst_swich_reset_bfm ENABLE_RESET 0
-Info: set_instance_parameter_value CPU1_inst_swich_reset_bfm SIGNAL_ROLES export
-Info: set_instance_parameter_value CPU1_inst_swich_reset_bfm SIGNAL_WIDTHS 1
-Info: set_instance_parameter_value CPU1_inst_swich_reset_bfm SIGNAL_DIRECTIONS output
-Info: get_instance_property CPU1_inst_swich_reset_bfm CLASS_NAME
-Info: get_instance_interface_property CPU1_inst swich_reset CLASS_NAME
-Info: get_instance_interfaces CPU1_inst_swich_reset_bfm
-Info: get_instance_interface_property CPU1_inst_swich_reset_bfm conduit CLASS_NAME
-Info: add_connection CPU1_inst_swich_reset_bfm.conduit CPU1_inst.swich_reset
+Info: get_instance_interface_property CPU1_inst switch_reset CLASS_NAME
+Info: send_message Info TB_Gen: conduit_end found: switch_reset
+Info: TB_Gen: conduit_end found: switch_reset
+Info: get_instance_interface_property CPU1_inst switch_reset CLASS_NAME
+Info: add_instance CPU1_inst_switch_reset_bfm altera_conduit_bfm 
+Info: get_instance_property CPU1_inst_switch_reset_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value CPU1_inst switch_reset associatedClock
+Info: get_instance_interface_parameter_value CPU1_inst switch_reset associatedReset
+Info: get_instance_interface_ports CPU1_inst switch_reset
+Info: get_instance_interface_port_property CPU1_inst switch_reset switch_reset_export ROLE
+Info: get_instance_interface_port_property CPU1_inst switch_reset switch_reset_export WIDTH
+Info: get_instance_interface_port_property CPU1_inst switch_reset switch_reset_export DIRECTION
+Info: set_instance_parameter_value CPU1_inst_switch_reset_bfm CLOCKED_SIGNAL 0
+Info: set_instance_parameter_value CPU1_inst_switch_reset_bfm ENABLE_RESET 0
+Info: set_instance_parameter_value CPU1_inst_switch_reset_bfm SIGNAL_ROLES export
+Info: set_instance_parameter_value CPU1_inst_switch_reset_bfm SIGNAL_WIDTHS 1
+Info: set_instance_parameter_value CPU1_inst_switch_reset_bfm SIGNAL_DIRECTIONS output
+Info: get_instance_property CPU1_inst_switch_reset_bfm CLASS_NAME
+Info: get_instance_interface_property CPU1_inst switch_reset CLASS_NAME
+Info: get_instance_interfaces CPU1_inst_switch_reset_bfm
+Info: get_instance_interface_property CPU1_inst_switch_reset_bfm conduit CLASS_NAME
+Info: add_connection CPU1_inst_switch_reset_bfm.conduit CPU1_inst.switch_reset
 Info: send_message Info TB_Gen: Saving testbench system: CPU1_tb.qsys
 Info: TB_Gen: Saving testbench system: CPU1_tb.qsys
 Info: save_system CPU1_tb.qsys
@@ -467,8 +469,8 @@ Progress: Adding CPU1_inst_set_alarm_bfm [altera_conduit_bfm 18.1]
 Progress: Parameterizing module CPU1_inst_set_alarm_bfm
 Progress: Adding CPU1_inst_set_clock_bfm [altera_conduit_bfm 18.1]
 Progress: Parameterizing module CPU1_inst_set_clock_bfm
-Progress: Adding CPU1_inst_swich_reset_bfm [altera_conduit_bfm 18.1]
-Progress: Parameterizing module CPU1_inst_swich_reset_bfm
+Progress: Adding CPU1_inst_switch_reset_bfm [altera_conduit_bfm 18.1]
+Progress: Parameterizing module CPU1_inst_switch_reset_bfm
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -476,10 +478,10 @@ Progress: Done reading input file
 Info: CPU1_tb.CPU1_inst.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: CPU1_tb.CPU1_inst.pio_button_hours: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: CPU1_tb.CPU1_inst.pio_button_minutes: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: CPU1_tb.CPU1_inst.pio_swich_alarm: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: CPU1_tb.CPU1_inst.pio_swich_clock: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: CPU1_tb.CPU1_inst.pio_swich_off: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: CPU1_tb.CPU1_inst.pio_swich_reset: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: CPU1_tb.CPU1_inst.pio_set_alarm: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: CPU1_tb.CPU1_inst.pio_switch_clock: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: CPU1_tb.CPU1_inst.pio_switch_off: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: CPU1_tb.CPU1_inst.pio_switch_reset: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: CPU1_tb.CPU1_inst_clk_bfm: Elaborate: altera_clock_source
 Info: CPU1_tb.CPU1_inst_clk_bfm:            $Revision: #1 $
 Info: CPU1_tb.CPU1_inst_clk_bfm:            $Date: 2018/07/18 $
@@ -495,34 +497,38 @@ Info: Reusing file C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testben
 Info: CPU1_inst_s1_bfm: "CPU1_tb" instantiated altera_conduit_bfm "CPU1_inst_s1_bfm"
 Info: Reusing file C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/CPU1_tb/simulation/submodules/verbosity_pkg.sv
 Info: jtag_uart_0: Starting RTL generation for module 'CPU1_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=CPU1_jtag_uart_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0089_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0089_jtag_uart_0_gen//CPU1_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0089_jtag_uart_0_gen/  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=CPU1_jtag_uart_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0054_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0054_jtag_uart_0_gen//CPU1_jtag_uart_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0054_jtag_uart_0_gen/  ]
 Info: jtag_uart_0: Done RTL generation for module 'CPU1_jtag_uart_0'
 Info: jtag_uart_0: "CPU1_inst" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "CPU1_inst" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'CPU1_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=CPU1_onchip_memory2_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0090_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0090_onchip_memory2_0_gen//CPU1_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0090_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=CPU1_onchip_memory2_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0055_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0055_onchip_memory2_0_gen//CPU1_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0055_onchip_memory2_0_gen/  ]
 Info: onchip_memory2_0: Done RTL generation for module 'CPU1_onchip_memory2_0'
 Info: onchip_memory2_0: "CPU1_inst" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: pio_button_hours: Starting RTL generation for module 'CPU1_pio_button_hours'
-Info: pio_button_hours:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_button_hours --dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0091_pio_button_hours_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0091_pio_button_hours_gen//CPU1_pio_button_hours_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0091_pio_button_hours_gen/  ]
+Info: pio_button_hours:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_button_hours --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0056_pio_button_hours_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0056_pio_button_hours_gen//CPU1_pio_button_hours_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0056_pio_button_hours_gen/  ]
 Info: pio_button_hours: Done RTL generation for module 'CPU1_pio_button_hours'
 Info: pio_button_hours: "CPU1_inst" instantiated altera_avalon_pio "pio_button_hours"
 Info: pio_buzz_0: Starting RTL generation for module 'CPU1_pio_buzz_0'
-Info: pio_buzz_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_buzz_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0092_pio_buzz_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0092_pio_buzz_0_gen//CPU1_pio_buzz_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0092_pio_buzz_0_gen/  ]
+Info: pio_buzz_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_buzz_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0057_pio_buzz_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0057_pio_buzz_0_gen//CPU1_pio_buzz_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0057_pio_buzz_0_gen/  ]
 Info: pio_buzz_0: Done RTL generation for module 'CPU1_pio_buzz_0'
 Info: pio_buzz_0: "CPU1_inst" instantiated altera_avalon_pio "pio_buzz_0"
 Info: pio_leds_0: Starting RTL generation for module 'CPU1_pio_leds_0'
-Info: pio_leds_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_leds_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0093_pio_leds_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0093_pio_leds_0_gen//CPU1_pio_leds_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0093_pio_leds_0_gen/  ]
+Info: pio_leds_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_leds_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0058_pio_leds_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0058_pio_leds_0_gen//CPU1_pio_leds_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0058_pio_leds_0_gen/  ]
 Info: pio_leds_0: Done RTL generation for module 'CPU1_pio_leds_0'
 Info: pio_leds_0: "CPU1_inst" instantiated altera_avalon_pio "pio_leds_0"
 Info: pio_s1: Starting RTL generation for module 'CPU1_pio_s1'
-Info: pio_s1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_s1 --dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0094_pio_s1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0094_pio_s1_gen//CPU1_pio_s1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0094_pio_s1_gen/  ]
+Info: pio_s1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_s1 --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0059_pio_s1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0059_pio_s1_gen//CPU1_pio_s1_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0059_pio_s1_gen/  ]
 Info: pio_s1: Done RTL generation for module 'CPU1_pio_s1'
 Info: pio_s1: "CPU1_inst" instantiated altera_avalon_pio "pio_s1"
-Info: pio_swich_alarm: Starting RTL generation for module 'CPU1_pio_swich_alarm'
-Info: pio_swich_alarm:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_swich_alarm --dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0095_pio_swich_alarm_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0095_pio_swich_alarm_gen//CPU1_pio_swich_alarm_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0095_pio_swich_alarm_gen/  ]
-Info: pio_swich_alarm: Done RTL generation for module 'CPU1_pio_swich_alarm'
-Info: pio_swich_alarm: "CPU1_inst" instantiated altera_avalon_pio "pio_swich_alarm"
+Info: pio_set_alarm: Starting RTL generation for module 'CPU1_pio_set_alarm'
+Info: pio_set_alarm:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=CPU1_pio_set_alarm --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0060_pio_set_alarm_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0060_pio_set_alarm_gen//CPU1_pio_set_alarm_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0060_pio_set_alarm_gen/  ]
+Info: pio_set_alarm: Done RTL generation for module 'CPU1_pio_set_alarm'
+Info: pio_set_alarm: "CPU1_inst" instantiated altera_avalon_pio "pio_set_alarm"
+Info: timer_0: Starting RTL generation for module 'CPU1_timer_0'
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=CPU1_timer_0 --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0061_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0061_timer_0_gen//CPU1_timer_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0061_timer_0_gen/  ]
+Info: timer_0: Done RTL generation for module 'CPU1_timer_0'
+Info: timer_0: "CPU1_inst" instantiated altera_avalon_timer "timer_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
@@ -538,24 +544,25 @@ Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_013: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_014: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_015: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "CPU1_inst" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "CPU1_inst" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "CPU1_inst" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'CPU1_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=CPU1_nios2_gen2_0_cpu --dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0098_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0098_cpu_gen//CPU1_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0098_cpu_gen/  ]
-Info: cpu: # 2024.08.17 12:51:53 (*) Starting Nios II generation
-Info: cpu: # 2024.08.17 12:51:53 (*)   Checking for plaintext license.
-Info: cpu: # 2024.08.17 12:51:53 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2024.08.17 12:51:53 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2024.08.17 12:51:53 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2024.08.17 12:51:53 (*)   Plaintext license not found.
-Info: cpu: # 2024.08.17 12:51:53 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2024.08.17 12:51:53 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2024.08.17 12:51:53 (*)   Creating all objects for CPU
-Info: cpu: # 2024.08.17 12:51:54 (*)   Creating 'C:/Users/yangr/AppData/Local/Temp/alt9952_8431288747390935840.dir/0098_cpu_gen//CPU1_nios2_gen2_0_cpu_nios2_waves.do'
-Info: cpu: # 2024.08.17 12:51:54 (*)   Generating RTL from CPU objects
-Info: cpu: # 2024.08.17 12:51:54 (*)   Creating plain-text RTL
-Info: cpu: # 2024.08.17 12:51:55 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=CPU1_nios2_gen2_0_cpu --dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0064_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0064_cpu_gen//CPU1_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0064_cpu_gen/  ]
+Info: cpu: # 2024.08.20 01:14:19 (*) Starting Nios II generation
+Info: cpu: # 2024.08.20 01:14:19 (*)   Checking for plaintext license.
+Info: cpu: # 2024.08.20 01:14:20 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2024.08.20 01:14:20 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2024.08.20 01:14:20 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2024.08.20 01:14:20 (*)   Plaintext license not found.
+Info: cpu: # 2024.08.20 01:14:20 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2024.08.20 01:14:20 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2024.08.20 01:14:20 (*)   Creating all objects for CPU
+Info: cpu: # 2024.08.20 01:14:21 (*)   Creating 'C:/Users/yangr/AppData/Local/Temp/alt9955_3220308611491376339.dir/0064_cpu_gen//CPU1_nios2_gen2_0_cpu_nios2_waves.do'
+Info: cpu: # 2024.08.20 01:14:21 (*)   Generating RTL from CPU objects
+Info: cpu: # 2024.08.20 01:14:21 (*)   Creating plain-text RTL
+Info: cpu: # 2024.08.20 01:14:21 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'CPU1_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
@@ -572,7 +579,7 @@ Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_m
 Info: Reusing file C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/CPU1_tb/simulation/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: CPU1_tb: Done "CPU1_tb" with 32 modules, 53 files
+Info: CPU1_tb: Done "CPU1_tb" with 33 modules, 54 files
 Info: qsys-generate succeeded.
 Info: sim-script-gen --spd=C:\Users\yangr\Documents\GitHub\Alarma_NIOS\CPU3\CPU1_tb.spd --output-directory=C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/ --use-relative-paths=true
 Info: Doing: ip-make-simscript --spd=C:\Users\yangr\Documents\GitHub\Alarma_NIOS\CPU3\CPU1_tb.spd --output-directory=C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/ --use-relative-paths=true
@@ -587,7 +594,7 @@ Info: Generating the following file(s) for NCSIM simulator in C:/Users/yangr/Doc
 Info: 	cadence/cds.lib
 Info: 	cadence/hdl.var
 Info: 	cadence/ncsim_setup.sh
-Info: 	32 .cds.lib files in cadence/cds_libs/ directory
+Info: 	33 .cds.lib files in cadence/cds_libs/ directory
 Info: Generating the following file(s) for RIVIERA simulator in C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/ directory:
 Info: 	aldec/rivierapro_setup.tcl
 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/yangr/Documents/GitHub/Alarma_NIOS/CPU3/CPU1/testbench/.
