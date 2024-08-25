@@ -24,4 +24,6 @@ materiales: FPGA-cicloneV, protoboard, buzzer
 ## TRABAJO ESCRITO
 https://www.overleaf.com/project/66c79fdf2d204e594bcf48d2
 
+## PROYECTO EN GITHUB
+https://github.com/stphnVi/Alarma_NIOS/edit/test/README.md
 
