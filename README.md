@@ -21,9 +21,5 @@ materiales: FPGA-cicloneV, protoboard, buzzer
 4 switches de configuración: modo configuración reloj, modo configuración alarma, detener alarma y reset.
 2 pulsadores: configuración de horas y minutos.
 
-## TRABAJO ESCRITO
-https://www.overleaf.com/project/66c79fdf2d204e594bcf48d2
 
-## PROYECTO EN GITHUB
-https://github.com/stphnVi/Alarma_NIOS/edit/test/README.md
 
